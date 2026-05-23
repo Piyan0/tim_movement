@@ -1,63 +1,13 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://node_2d.gd" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://c7rljwoch4bvu" path="res://click_move_destination.gd" id="2_0e48y"]
-[ext_resource type="Texture2D" uid="uid://bx8mr4doopt34" path="res://icon.svg" id="3_epypp"]
 
-[node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("mr_click_pos", "player", "click_destination_pos")]
+[node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("cr_rect")]
 script = ExtResource("1_wtcfe")
-mr_click_pos = NodePath("ClickPos")
-player = NodePath("Player")
-click_destination_pos = NodePath("ClickMoveDestination")
+cr_rect = NodePath("ColorRect")
 
-[node name="Node2D4" type="Node2D" parent="." unique_id=181388032]
-position = Vector2(148, 70)
-
-[node name="ColorRect" type="ColorRect" parent="Node2D4" unique_id=1230652593]
-custom_minimum_size = Vector2(8, 8)
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="Node2D5" type="Node2D" parent="." unique_id=178272259]
-position = Vector2(185, 71)
-
-[node name="ColorRect" type="ColorRect" parent="Node2D5" unique_id=1839895842]
-custom_minimum_size = Vector2(8, 8)
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="Node2D6" type="Node2D" parent="." unique_id=611826560]
-position = Vector2(106, 45)
-
-[node name="ColorRect" type="ColorRect" parent="Node2D6" unique_id=526226175]
-custom_minimum_size = Vector2(8, 8)
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="ClickPos" type="Node2D" parent="." unique_id=901717916]
-position = Vector2(225, 71)
-
-[node name="ColorRect" type="ColorRect" parent="ClickPos" unique_id=1908098501]
-custom_minimum_size = Vector2(8, 8)
-offset_right = 8.0
-offset_bottom = 8.0
-color = Color(0.53, 0.53, 0.53, 1)
-
-[node name="Player" type="Node2D" parent="." unique_id=442179206]
-position = Vector2(81, 43)
-
-[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1539934055]
-custom_minimum_size = Vector2(8, 8)
-offset_right = 8.0
-offset_bottom = 8.0
-color = Color(0, 0, 0, 1)
-
-[node name="ClickMoveDestination" type="Node2D" parent="." unique_id=971118262 node_paths=PackedStringArray("mr_routes")]
-script = ExtResource("2_0e48y")
-mr_routes = [NodePath("../Node2D4"), NodePath("../Node2D5"), NodePath("../Node2D6")]
-metadata/_custom_type_script = "uid://c7rljwoch4bvu"
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=2110218535]
-position = Vector2(93, 109.00001)
-scale = Vector2(0.73437506, 0.75000006)
-texture = ExtResource("3_epypp")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1392485423]
+offset_left = 53.0
+offset_top = 52.0
+offset_right = 93.0
+offset_bottom = 92.0

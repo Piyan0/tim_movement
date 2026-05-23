@@ -1,14 +1,12 @@
 extends Node2D
 
-@export var mr_target_pos: Node2D
-@export var mr_click_pos: Node2D
-@export var player: Node2D
-@export var click_destination_pos: ClickMoveDestination
-func _ready():
-    await get_tree().create_timer(.2).timeout
-    var x = click_destination_pos.get_routes(player.position, mr_click_pos.position)
-    x.pop_front()
-    for i in x:
-        player.position = i
-        print(1)
-        await get_tree().create_timer(0.2).timeout
+
+@export var cr_rect: ColorRect
+
+func _input(event: InputEvent) -> void:
+    if event is InputEventMouseButton:
+        if event.button_index == MOUSE_BUTTON_LEFT:
+            if !event.is_pressed():
+                var rect = Rect2(cr_rect.position, cr_rect.size)
+                var mouse = get_global_mouse_position()
+                print(rect.has_point(mouse))
