@@ -14,8 +14,7 @@ func _ready() -> void:
 		reset_scale()
 	)
 
-
-
+    
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed && event.button_index == MOUSE_BUTTON_LEFT:

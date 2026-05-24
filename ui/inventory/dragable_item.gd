@@ -22,7 +22,7 @@ static func create(p_item_name, p_texture):
     return ins
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if !event.pressed && event.button_index == MOUSE_BUTTON_LEFT:
             vanish()
