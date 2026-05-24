@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnuvvd8e3uy4a"]
 
-[ext_resource type="Script" uid="uid://duxo0s4u3j81b" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://d228kqpfj746a" path="res://player_movement.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://duxo0s4u3j81b" path="res://entities/player/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d228kqpfj746a" path="res://commons/player_movement.gd" id="2_onrkg"]
 
 [node name="Player" type="Node2D" unique_id=1426917964 node_paths=PackedStringArray("movement", "lb_hint")]
 script = ExtResource("1_4flbx")

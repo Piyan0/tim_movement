@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bxikvddg4fkyy"]
+
+[ext_resource type="Script" uid="uid://b58ddt1fspc5f" path="res://ui/dialogue/dialogue.gd" id="1_0yra0"]
+[ext_resource type="Shader" uid="uid://qi8w70expfgm" path="res://commons/shaders/corner_radius.gdshader" id="2_jn1y7"]
+[ext_resource type="Texture2D" uid="uid://ccum6irbxsg6a" path="res://assets/portraits/FD_Portrait_Shane_01.png" id="3_y3bqr"]
+[ext_resource type="FontFile" uid="uid://bo36ifhuqcvp6" path="res://assets/fonts/FuturaHandwritten.ttf" id="4_ttafx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6aah"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16445974, 0.16445976, 0.16445968, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_17ocj"]
+shader = ExtResource("2_jn1y7")
+shader_parameter/radius_scale = 0.5000000074506
+shader_parameter/rounded_corner_top_left = true
+shader_parameter/rounded_corner_top_right = true
+shader_parameter/rounded_corner_bottom_left = true
+shader_parameter/rounded_corner_bottom_right = true
+shader_parameter/width = 1.0
+shader_parameter/height = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqenp"]
+line_spacing = -2.0
+font = ExtResource("4_ttafx")
+font_size = 24
+
+[node name="Dialogue" type="Control" unique_id=251633660]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0yra0")
+
+[node name="Control" type="MarginContainer" parent="." unique_id=1056418608]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = -228.0
+offset_right = -320.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel2" type="Panel" parent="Control" unique_id=1200165177]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q6aah")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=461862887]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Control/MarginContainer" unique_id=860562675]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=142188180]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/MarginContainer" unique_id=1426274461]
+material = SubResource("ShaderMaterial_17ocj")
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("3_y3bqr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=1405587513]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer" unique_id=269583546]
+modulate = Color(0.5568628, 0.5568628, 0.5568628, 1)
+layout_mode = 2
+text = "LILIAN"
+label_settings = SubResource("LabelSettings_tqenp")
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer" unique_id=204293044]
+layout_mode = 2
+text = "Wow! It’s so beautiful! You’ve got yourself a deal, mister."
+label_settings = SubResource("LabelSettings_tqenp")
+autowrap_mode = 2
