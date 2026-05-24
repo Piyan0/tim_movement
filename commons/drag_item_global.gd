@@ -1,9 +1,7 @@
 extends Node2D
 
 
-func add_drag_item(item):
-    item.reparent(self)
-    item.item_released.connect(func():
-        item.vanish()
-    )
-
+func add_drag_item(item_name, texture, pos):
+    var dragable = DragableItem.create(item_name, texture)
+    dragable.position = pos
+    add_child(dragable)

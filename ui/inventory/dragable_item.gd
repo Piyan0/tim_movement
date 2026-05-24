@@ -1,3 +1,4 @@
+class_name DragableItem
 extends Control
 
 signal item_released()
@@ -5,13 +6,28 @@ signal item_released()
 @export var click_rect: Control
 @export var tr_item: TextureRect
 @export var offset = Vector2(-40, -40)
+@export var item_name: String = "<item_name>"
 
 
 func _process(delta: float) -> void:
-    var drag_pos = get_global_mouse_position()
-    global_position = lerp(global_position + offset, drag_pos, 0.3)
+    var drag_pos = get_global_mouse_position() + offset
+    global_position = lerp(global_position, drag_pos, 0.3)
 
 
+
+static func create(p_item_name, p_texture):
+    var ins = load("uid://625071u2ypr4").instantiate()
+    ins.item_name = p_item_name
+    ins.tr_item.texture = p_texture
+    return ins
+
+
+func _unhandled_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton:
+        if !event.pressed && event.button_index == MOUSE_BUTTON_LEFT:
+            vanish()
+
+            
 func vanish():
     var t = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EaseType.EASE_IN)
     t.tween_property(tr_item, "scale", Vector2(0, 0), 0.2)

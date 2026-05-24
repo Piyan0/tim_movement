@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://625071u2ypr4" path="res://ui/inventory/dragable_item.tscn" id="2_vc640"]
 
 [node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("cr_rect")]
 script = ExtResource("1_wtcfe")
@@ -11,3 +12,5 @@ offset_left = 53.0
 offset_top = 52.0
 offset_right = 93.0
 offset_bottom = 92.0
+
+[node name="DragableItem" parent="." unique_id=1713004469 instance=ExtResource("2_vc640")]

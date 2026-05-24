@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkkle4jo6uc1q" path="res://assets/items/Candle.png" id="2_n02jd"]
 
 [node name="DragableItem" type="MarginContainer" unique_id=1713004469 node_paths=PackedStringArray("click_rect", "tr_item")]
+z_index = 10
 custom_minimum_size = Vector2(64, 64)
 offset_right = 48.0
 offset_bottom = 48.0
@@ -17,7 +18,6 @@ layout_mode = 2
 mouse_filter = 2
 border_color = Color(1, 1, 1, 1)
 border_width = 2.0
-editor_only = false
 
 [node name="Control" type="Control" parent="." unique_id=285728491]
 layout_mode = 2
