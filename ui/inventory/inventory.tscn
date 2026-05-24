@@ -43,9 +43,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -220.0
-offset_top = -140.0
+offset_top = -182.0
 offset_right = 220.0
-offset_bottom = 140.0
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -60,7 +60,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_lep46")
-play = true
 metadata/_custom_type_script = "uid://bbuyuu1vfg5og"
 
 [node name="Panel2" type="Panel" parent="MarginContainer/Control2/OpenCenter" unique_id=1577753715]
@@ -73,7 +72,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_f8i2h")
 
 [node name="Control" type="Control" parent="MarginContainer" unique_id=349753792]
-visible = false
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="MarginContainer/Control" unique_id=234456693]

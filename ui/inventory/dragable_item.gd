@@ -9,9 +9,13 @@ signal item_released()
 @export var item_name: String = "<item_name>"
 
 
+func _ready() -> void:
+    Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+
+
 func _process(delta: float) -> void:
     var drag_pos = get_global_mouse_position() + offset
-    global_position = lerp(global_position, drag_pos, 0.3)
+    global_position = lerp(global_position, drag_pos, 0.5)
 
 
 
@@ -32,6 +36,7 @@ func vanish():
     var t = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EaseType.EASE_IN)
     t.tween_property(tr_item, "scale", Vector2(0, 0), 0.2)
     await t.finished
+    Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
     queue_free()
 
     

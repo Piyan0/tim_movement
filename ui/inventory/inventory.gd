@@ -17,13 +17,16 @@ var _selected_item
 func _ready() -> void:
     for i in item_container.get_children():
         i.item_clicked.connect(func(item_name, texture):
+            if _is_dragging_item:
+                return 
+
+            _disable_select()
             _selected_item = i
-            if i.scale != Vector2(1,1):
-                await i.reset_scale()
-            i.tr_item.hide()
+            i.hide_item_icon(false)
             _is_dragging_item = true
             DragItemGlobal.add_drag_item(item_name, texture, i.global_position)
         )
+
     await get_tree().process_frame
     open_center.close_state()
     container.hide()
@@ -36,7 +39,8 @@ func _input(e):
             if not e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
                 _is_dragging_item = false
                 set_process(true)
-                _selected_item.tr_item.show()
+                _selected_item.show_item_icon()
+                _enable_select()
                 
                 
 func _process(d):
@@ -55,3 +59,13 @@ func close():
     container.hide()
     await open_center.close()
     queue_free()
+
+
+func _disable_select():
+    for i in item_container.get_children():
+        i.hover_effect = false
+
+
+func _enable_select():
+    for i in item_container.get_children():
+        i.hover_effect = true
