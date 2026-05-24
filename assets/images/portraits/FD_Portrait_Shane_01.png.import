@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccum6irbxsg6a"
-path="res://.godot/imported/FD_Portrait_Shane_01.png-9fd28547c183c6efa18e0e1e709f6f8f.ctex"
+path="res://.godot/imported/FD_Portrait_Shane_01.png-087809f2f7da0b2a22537cefff5b76a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/FD_Portrait_Shane_01.png"
-dest_files=["res://.godot/imported/FD_Portrait_Shane_01.png-9fd28547c183c6efa18e0e1e709f6f8f.ctex"]
+source_file="res://assets/images/portraits/FD_Portrait_Shane_01.png"
+dest_files=["res://.godot/imported/FD_Portrait_Shane_01.png-087809f2f7da0b2a22537cefff5b76a1.ctex"]
 
 [params]
 

@@ -17,9 +17,10 @@ signal animation_finished()
 
 
 func close_state():
-    var parent_size_y = size.y
+    var parent_size_y = get_parent().size.y
     position.y = parent_size_y / 2
     size.y = 0
+    # print(parent_size_y)
     
 
 func open():

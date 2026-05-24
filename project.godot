@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DragItemGlobal="*uid://ba4tovncgjkv2"
 DebugConsole="*uid://cptj8gk2xleig"
+GlobalCanvas="*uid://r1r6pjrclgvj"
 
 [display]
 
@@ -26,6 +27,7 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/window_width_override=640
 window/size/window_height_override=320
+window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 
 [editor_plugins]

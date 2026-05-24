@@ -5,6 +5,8 @@ func _hover_text():
 
 
 func _interact():
-    print("start")
-    await Engine.get_main_loop().create_timer(1).timeout
-    print("end")
+    var x = InteractActions.new()
+    var text = []
+    text.append("Lilian/ It's a good day right...")
+    text.append("Lilian/ See you later")
+    await x.text(text)
