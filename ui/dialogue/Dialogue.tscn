@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://b58ddt1fspc5f" path="res://ui/dialogue/dialogue.gd" id="1_0yra0"]
 [ext_resource type="Shader" uid="uid://qi8w70expfgm" path="res://commons/shaders/corner_radius.gdshader" id="2_jn1y7"]
 [ext_resource type="Script" uid="uid://bbuyuu1vfg5og" path="res://commons/ui/open_center.gd" id="2_y3bqr"]
-[ext_resource type="Texture2D" uid="uid://ccum6irbxsg6a" path="res://assets/images/portraits/FD_Portrait_Shane_01.png" id="3_y3bqr"]
+[ext_resource type="Texture2D" uid="uid://8flx0yjn7ifl" path="res://assets/images/portraits/shane.png" id="4_jn1y7"]
 [ext_resource type="FontFile" uid="uid://bo36ifhuqcvp6" path="res://assets/fonts/FuturaHandwritten.ttf" id="4_ttafx"]
+[ext_resource type="Texture2D" uid="uid://44b32twglmtv" path="res://ui/dialogue/next_hint.png" id="6_y3bqr"]
+[ext_resource type="Script" uid="uid://b4u7pdvrp05sb" path="res://commons/ui/animate_offset_loop.gd" id="7_ttafx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6aah"]
 bg_color = Color(0, 0, 0, 1)
@@ -36,7 +38,7 @@ font_size = 24
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yra0"]
 size = Vector2(1280, 720)
 
-[node name="Dialogue" type="Control" unique_id=251633660 node_paths=PackedStringArray("lb_content", "lb_name", "open_center", "main_container")]
+[node name="Dialogue" type="Control" unique_id=251633660 node_paths=PackedStringArray("lb_content", "lb_name", "open_center", "main_container", "tr_avatar", "tr_next_hint")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,6 +50,8 @@ lb_content = NodePath("Control/MarginContainer2/MarginContainer/VBoxContainer/HB
 lb_name = NodePath("Control/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/Label")
 open_center = NodePath("Control/Control/OpenCenter")
 main_container = NodePath("Control/MarginContainer2")
+tr_avatar = NodePath("Control/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/TextureRect")
+tr_next_hint = NodePath("Control/MarginContainer2/MarginContainer/VBoxContainer/Control/TextureRect")
 
 [node name="Control" type="MarginContainer" parent="." unique_id=1056418608]
 layout_mode = 1
@@ -112,7 +116,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource("3_y3bqr")
+texture = ExtResource("4_jn1y7")
 expand_mode = 1
 stretch_mode = 4
 
@@ -133,6 +137,30 @@ layout_mode = 2
 text = "Wow! It’s so beautiful! You’ve got yourself a deal, mister."
 label_settings = SubResource("LabelSettings_tqenp")
 autowrap_mode = 2
+
+[node name="Control" type="Control" parent="Control/MarginContainer2/MarginContainer/VBoxContainer" unique_id=220146771]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/MarginContainer/VBoxContainer/Control" unique_id=1376523867]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+texture = ExtResource("6_y3bqr")
+stretch_mode = 4
+
+[node name="AnimateOffsetLoop" type="Node" parent="Control/MarginContainer2/MarginContainer/VBoxContainer/Control" unique_id=710166541 node_paths=PackedStringArray("target")]
+script = ExtResource("7_ttafx")
+target = NodePath("../TextureRect")
+offset = Vector2(0, -10)
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=898284508]
 position = Vector2(636, 356)
