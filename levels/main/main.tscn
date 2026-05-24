@@ -27,13 +27,16 @@ interact_pages = Array[ExtResource("4_iab0w")]([SubResource("Resource_3ymrs")])
 texture = ExtResource("6_q42nm")
 offset = Vector2(0, -162)
 
-[node name="CollisionShape2D" parent="InteractClick/Area2D" parent_id_path=PackedInt32Array(508760350, 345686222) index="0" unique_id=2129240898]
-position = Vector2(92.75, -72.5)
-
-[node name="Control" parent="InteractClick" index="2" unique_id=134591522]
+[node name="Control" parent="InteractClick" index="1" unique_id=134591522]
 offset_left = 97.0
 offset_top = -156.0
 offset_right = 97.0
 offset_bottom = -156.0
+
+[node name="NinePatchRect" parent="InteractClick" index="2" unique_id=809710394]
+offset_left = 50.0
+offset_top = -149.0
+offset_right = 130.5
+offset_bottom = -6.0
 
 [editable path="InteractClick"]

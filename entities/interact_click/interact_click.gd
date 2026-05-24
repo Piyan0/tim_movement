@@ -6,7 +6,7 @@ extends Node2D
 
 @export_category("Node References")
 @export var spr_graphic: Sprite2D
-@export var click_area: Area2D
+@export var click_area: Control
 @export var lb_hover: Label
 @export_category("")
 
@@ -47,8 +47,12 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-                if interact_count > 0 || !_is_mouse_inside:
+                if !Rect2(click_area.global_position, click_area.size).has_point(get_global_mouse_position()):
                     return
+                if interact_count > 0:
+                    return
+                
+                _focus_state()
                 interact_count += 1
                 await _active_page.interact()
                 if !_is_mouse_inside:
@@ -62,7 +66,6 @@ func refresh_page(tag_list):
             _active_page = page
             _update_page(page)
             return
-
 
 func _reset_state():
     lb_hover.text = ""
