@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bbfv1a6s0ooko"]
+
+[ext_resource type="Script" uid="uid://uek2nwl50446" path="res://entities/interact_click/interact_click.gd" id="1_7j33t"]
+
+[node name="InteractClick" type="Node2D" unique_id=508760350 node_paths=PackedStringArray("spr_graphic")]
+script = ExtResource("1_7j33t")
+spr_graphic = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=542249545]
+centered = false
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=163555091]
+offset_right = 80.0
+offset_bottom = 120.0
+border_color = Color(0.49503195, 0.79802513, 2.3102762e-06, 1)
+border_width = 3.0
+editor_only = false

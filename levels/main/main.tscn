@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://625071u2ypr4" path="res://ui/inventory/dragable_item.tscn" id="2_vc640"]
+[ext_resource type="Texture2D" uid="uid://bx8mr4doopt34" path="res://icon.svg" id="2_vc640"]
+[ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="3_gonaa"]
+[ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="4_iab0w"]
 
-[node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("cr_rect")]
+[sub_resource type="Resource" id="Resource_3ymrs"]
+script = ExtResource("4_iab0w")
+tags = Array[String](["", ""])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[node name="Node2D" type="Node2D" unique_id=351564680]
 script = ExtResource("1_wtcfe")
-cr_rect = NodePath("ColorRect")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1392485423]
-offset_left = 53.0
-offset_top = 52.0
-offset_right = 93.0
-offset_bottom = 92.0
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1937167723]
+scale = Vector2(0.625, 0.625)
+texture_normal = ExtResource("2_vc640")
+action = "ui_up"
 
-[node name="DragableItem" parent="." unique_id=1713004469 instance=ExtResource("2_vc640")]
+[node name="InteractClick" parent="." unique_id=508760350 instance=ExtResource("3_gonaa")]
+position = Vector2(200, 40)
+interact_pages = Array[ExtResource("4_iab0w")]([SubResource("Resource_3ymrs")])
