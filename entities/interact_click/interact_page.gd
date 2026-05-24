@@ -1,10 +1,8 @@
 class_name InteractPage
 extends Resource
 
-@export var source: GDScript:
-    get():
-        return source.new()
-
+@export var source: GDScript
+@export var use_for_preview = false
 @export var idle_graphic: Texture2D
 @export var hover_graphic: Texture2D
 @export var offset: Vector2
@@ -12,11 +10,11 @@ extends Resource
 
 var hover_text:
     get():
-        return source._hover_text()
+        return source.new()._hover_text()
 
 
 func interact():
-    await source._interact()
+    await source.new()._interact()
         
 
 func is_active(tags_list):

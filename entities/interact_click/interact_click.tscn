@@ -1,17 +1,51 @@
 [gd_scene format=3 uid="uid://bbfv1a6s0ooko"]
 
 [ext_resource type="Script" uid="uid://uek2nwl50446" path="res://entities/interact_click/interact_click.gd" id="1_7j33t"]
+[ext_resource type="FontFile" uid="uid://bo36ifhuqcvp6" path="res://assets/fonts/FuturaHandwritten.ttf" id="2_n2amf"]
 
-[node name="InteractClick" type="Node2D" unique_id=508760350 node_paths=PackedStringArray("spr_graphic")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j33t"]
+size = Vector2(80.5, 143)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ldxf0"]
+line_spacing = -2.0
+font = ExtResource("2_n2amf")
+font_size = 24
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractClick" type="Node2D" unique_id=508760350 node_paths=PackedStringArray("spr_graphic", "click_area", "lb_hover")]
 script = ExtResource("1_7j33t")
 spr_graphic = NodePath("Sprite2D")
+click_area = NodePath("Area2D")
+lb_hover = NodePath("Control/Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=542249545]
 centered = false
 
-[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=163555091]
-offset_right = 80.0
-offset_bottom = 120.0
-border_color = Color(0.49503195, 0.79802513, 2.3102762e-06, 1)
-border_width = 3.0
-editor_only = false
+[node name="Area2D" type="Area2D" parent="." unique_id=345686222]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2129240898]
+position = Vector2(45, 61)
+shape = SubResource("RectangleShape2D_7j33t")
+
+[node name="Control" type="Control" parent="." unique_id=134591522]
+layout_mode = 3
+anchors_preset = 0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Control" unique_id=18356781]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -15.0
+offset_right = 71.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "<hover text>"
+label_settings = SubResource("LabelSettings_ldxf0")
+horizontal_alignment = 1

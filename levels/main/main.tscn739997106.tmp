@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bx8mr4doopt34" path="res://icon.svg" id="2_vc640"]
 [ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="3_gonaa"]
 [ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="4_iab0w"]
 [ext_resource type="Texture2D" uid="uid://bsovtpbkpwox2" path="res://assets/characters/FD_Characters_Lillian_hover_01.png" id="5_3ymrs"]
@@ -14,13 +15,19 @@ use_for_preview = true
 idle_graphic = ExtResource("6_q42nm")
 hover_graphic = ExtResource("5_3ymrs")
 offset = Vector2(0, -162)
+tags = null
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [node name="Node2D" type="Node2D" unique_id=351564680]
 script = ExtResource("1_wtcfe")
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1937167723]
+scale = Vector2(0.625, 0.625)
+texture_normal = ExtResource("2_vc640")
+action = "ui_up"
+
 [node name="InteractClick" parent="." unique_id=508760350 instance=ExtResource("3_gonaa")]
-position = Vector2(183, 238)
+position = Vector2(291, 264)
 interact_pages = Array[ExtResource("4_iab0w")]([SubResource("Resource_3ymrs")])
 
 [node name="Sprite2D" parent="InteractClick" index="0" unique_id=542249545]
@@ -29,11 +36,5 @@ offset = Vector2(0, -162)
 
 [node name="CollisionShape2D" parent="InteractClick/Area2D" parent_id_path=PackedInt32Array(508760350, 345686222) index="0" unique_id=2129240898]
 position = Vector2(92.75, -72.5)
-
-[node name="Control" parent="InteractClick" index="2" unique_id=134591522]
-offset_left = 97.0
-offset_top = -156.0
-offset_right = 97.0
-offset_bottom = -156.0
 
 [editable path="InteractClick"]
