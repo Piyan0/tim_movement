@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bvvw0ournvh56"]
+
+[ext_resource type="Script" uid="uid://bbuyuu1vfg5og" path="res://commons/ui/open_center.gd" id="1_syuel"]
+
+[node name="Test" type="Control" unique_id=1149894015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=2110222752]
+anchors_preset = 0
+offset_right = 376.0
+offset_bottom = 298.0
+
+[node name="OpenCenter" type="Control" parent="Control" unique_id=1820259523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 149.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syuel")
+metadata/_custom_type_script = "uid://bbuyuu1vfg5og"
+
+[node name="ColorRect" type="ColorRect" parent="Control/OpenCenter" unique_id=239663665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b8kkjdii5quo6"]
 
 [ext_resource type="Script" uid="uid://j0e3sap3lco2" path="res://ui/inventory/inventory.gd" id="1_62wf1"]
+[ext_resource type="Script" uid="uid://bbuyuu1vfg5og" path="res://commons/ui/open_center.gd" id="2_lep46"]
 [ext_resource type="Texture2D" uid="uid://cghvdd7ufvbnm" path="res://ui/inventory/item_empty.png" id="3_lep46"]
 [ext_resource type="PackedScene" uid="uid://625071u2ypr4" path="res://ui/inventory/dragable_item.tscn" id="3_qrt2q"]
-[ext_resource type="PackedScene" uid="uid://bxikvddg4fkyy" path="res://ui/dialogue/Dialogue.tscn" id="4_lep46"]
 [ext_resource type="FontFile" uid="uid://bo36ifhuqcvp6" path="res://assets/fonts/FuturaHandwritten.ttf" id="5_wbsyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8i2h"]
@@ -23,7 +23,7 @@ line_spacing = -2.0
 font = ExtResource("5_wbsyq")
 font_size = 32
 
-[node name="Inventory" type="Control" unique_id=1443804631 node_paths=PackedStringArray("item_container")]
+[node name="Inventory" type="Control" unique_id=1443804631]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,10 +32,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_62wf1")
-item_container = NodePath("MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer")
-
-[node name="Dialogue" parent="." unique_id=251633660 instance=ExtResource("4_lep46")]
-layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=150151791]
 layout_mode = 1
@@ -44,47 +40,82 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -217.0
-offset_top = -216.0
-offset_right = 217.0
-offset_bottom = 64.0
+offset_left = -220.0
+offset_top = -140.0
+offset_right = 220.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="MarginContainer" unique_id=234456693]
+[node name="Control2" type="Control" parent="MarginContainer" unique_id=1123339123]
 layout_mode = 2
+
+[node name="OpenCenter" type="Control" parent="MarginContainer/Control2" unique_id=1073013129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_lep46")
+metadata/_custom_type_script = "uid://bbuyuu1vfg5og"
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Control2/OpenCenter" unique_id=1577753715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_f8i2h")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1071634634]
+[node name="Control" type="Control" parent="MarginContainer" unique_id=349753792]
 layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/Control" unique_id=234456693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f8i2h")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control" unique_id=1071634634]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 48
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1418375902]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/MarginContainer" unique_id=1418375902]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=502666760]
+[node name="Label" type="Label" parent="MarginContainer/Control/MarginContainer/VBoxContainer" unique_id=502666760]
 layout_mode = 2
 text = "Inventory"
 label_settings = SubResource("LabelSettings_qrt2q")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=1793096274]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/MarginContainer/VBoxContainer" unique_id=1793096274]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 48
 theme_override_constants/margin_right = 48
 
-[node name="Control" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1337407871]
+[node name="Control" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer" unique_id=1337407871]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="FlowContainer2" type="FlowContainer" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control" unique_id=1352100014]
+[node name="FlowContainer2" type="FlowContainer" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control" unique_id=1352100014]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,12 +126,12 @@ mouse_filter = 2
 theme_override_constants/h_separation = 24
 theme_override_constants/v_separation = 24
 
-[node name="Control2" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=2051906823]
+[node name="Control2" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=2051906823]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control2" unique_id=873686999]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control2" unique_id=873686999]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -117,12 +148,12 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="Control3" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=266173523]
+[node name="Control3" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=266173523]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control3" unique_id=467042495]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control3" unique_id=467042495]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -139,12 +170,12 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="Control4" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=818084506]
+[node name="Control4" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=818084506]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control4" unique_id=1728662552]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control4" unique_id=1728662552]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -161,12 +192,12 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="Control5" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1205358872]
+[node name="Control5" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1205358872]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control5" unique_id=1389177439]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control5" unique_id=1389177439]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -183,12 +214,12 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="Control6" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1555552115]
+[node name="Control6" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1555552115]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control6" unique_id=366977364]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control6" unique_id=366977364]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -205,12 +236,12 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="Control7" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1029987882]
+[node name="Control7" type="Control" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2" unique_id=1029987882]
 modulate = Color(0.30588236, 0.30588236, 0.30588236, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control7" unique_id=1602346353]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer2/Control7" unique_id=1602346353]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 1
 anchors_preset = 8
@@ -227,27 +258,10 @@ grow_vertical = 2
 texture = ExtResource("3_lep46")
 expand_mode = 1
 
-[node name="FlowContainer" type="FlowContainer" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control" unique_id=757606143]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 24
-theme_override_constants/v_separation = 24
-
-[node name="DragableItem" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer" unique_id=2000693116 instance=ExtResource("3_qrt2q")]
-layout_mode = 2
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-
-[node name="DragableItem2" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer" unique_id=1713004469 instance=ExtResource("3_qrt2q")]
-layout_mode = 2
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-
-[node name="DragableItem3" parent="MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Control/FlowContainer" unique_id=356006012 instance=ExtResource("3_qrt2q")]
-layout_mode = 2
-mouse_filter = 1
-mouse_default_cursor_shape = 2
+[node name="DragableItem" parent="." unique_id=1713004469 instance=ExtResource("3_qrt2q")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 80.0
+offset_right = 344.0
+offset_bottom = 144.0
+offset = Vector2(0, 0)
