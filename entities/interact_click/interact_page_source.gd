@@ -7,3 +7,7 @@ func _hover_text():
 
 func _interact():
     print("default interact.")
+
+
+func _item_dropped(item_id):
+    print("given with id ", item_id, ".")

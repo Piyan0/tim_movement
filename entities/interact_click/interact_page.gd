@@ -15,7 +15,11 @@ var hover_text:
 
 func interact():
     await source.new()._interact()
-        
+
+
+func item_dropped(item_id):
+    await source.new()._item_dropped(item_id)
+
 
 func is_active(tags_list):
     if tags.is_empty():

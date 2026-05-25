@@ -15,6 +15,7 @@ var _selected_item
         await open()
 
 func _ready() -> void:
+    GlobalState.current_state = GlobalState.GameState.MENU
     for i in item_container.get_children():
         i.item_clicked.connect(func(item_name, texture):
             if _is_dragging_item:
@@ -59,6 +60,7 @@ func close():
     container.hide()
     await open_center.close()
     queue_free()
+    GlobalState.current_state = GlobalState.GameState.FREE
 
 
 func _disable_select():

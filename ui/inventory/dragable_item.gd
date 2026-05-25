@@ -1,7 +1,7 @@
 class_name DragableItem
 extends Control
 
-signal item_released()
+signal item_released(item_id, release_pos)
 
 @export var click_rect: Control
 @export var tr_item: TextureRect
@@ -11,6 +11,8 @@ signal item_released()
 
 func _ready() -> void:
     Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+    GlobalState.is_holding_item = true
+    GlobalState.current_state = GlobalState.GameState.DRAG_ITEM
 
 
 func _process(delta: float) -> void:
@@ -33,11 +35,18 @@ func _input(event: InputEvent) -> void:
 
             
 func vanish():
+    var drop_pos = get_global_mouse_position()
     var t = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EaseType.EASE_IN)
     t.tween_property(tr_item, "scale", Vector2(0, 0), 0.2)
     await t.finished
+    GlobalState.is_holding_item = false
+    GlobalState.current_state = GlobalState.GameState.FREE
     Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+    item_released.emit(item_name, drop_pos)
+
     queue_free()
+
+
 
     
 func _get_click_rect():

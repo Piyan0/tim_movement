@@ -16,6 +16,7 @@ var dialogue_batch = [
     ]
     
 func _ready():
+    modulate = Color.TRANSPARENT
     lb_content.text = ""
     lb_name.text = ""
     tr_avatar.hide()
@@ -44,8 +45,8 @@ func _ready():
     )
     
     await get_tree().process_frame
+    modulate = Color.WHITE
     open_center.close_state()
-    #await get_tree().create_timer(1).timeout
     main_container.hide()
     await open_center.open()
     main_container.show()

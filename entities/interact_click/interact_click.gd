@@ -47,10 +47,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-                if !Rect2(click_area.global_position, click_area.size).has_point(get_global_mouse_position()):
-                    return
-                if interact_count > 0:
-                    return
+                if !_can_interact(): return
                 
                 _focus_state()
                 interact_count += 1
@@ -59,6 +56,18 @@ func _input(event: InputEvent) -> void:
                     _reset_state()
                 interact_count -= 1
 
+
+func handle_item_drop(item_id, drop_position):
+    if !get_click_rect().has_point(drop_position):
+        return
+    interact_count += 1    
+    await _active_page.item_dropped(item_id)
+    _reset_state()
+    interact_count -= 1
+
+
+func get_click_rect():
+    return Rect2(click_area.global_position, click_area.size)
 
 func refresh_page(tag_list):
     for page in interact_pages:
@@ -80,3 +89,13 @@ func _focus_state():
 func _update_page(page: InteractPage):
     spr_graphic.texture = page.idle_graphic
     spr_graphic.offset = page.offset
+
+
+func _can_interact():
+    var conditions = [
+        GlobalState.current_state == GlobalState.GameState.FREE,
+        interact_count == 0,
+        get_click_rect().has_point(get_global_mouse_position())
+    ]
+
+    return conditions.all(func(cond): return cond == true) 
