@@ -9,35 +9,24 @@ func _ready() -> void:
     
     
 func get_routes(target_pos, click_pos):
-    var routes_to_move = [click_pos]
+    var routes_to_move = [target_pos]
     var available_routes = routes.duplicate()
-    available_routes.append(target_pos)
-    
+    available_routes.append(click_pos)
     while true:
-        var route_with_distance = []
-        
+        var shortest_distance = INF
+        var route_to_add = Vector2.ZERO
         for route in available_routes:
-            var current_shortest_route = routes_to_move.back()
-            var distance = route.distance_to(current_shortest_route)
-            route_with_distance.append({
-                distance = distance,
-                pos = route
-            })
-            
-        route_with_distance.sort_custom(func(a, b):
-            return a.distance < b.distance
-        )
-        var shortest_route = route_with_distance.front()
-        routes_to_move.append(shortest_route.pos)
-        
-        for i in range(0, available_routes.size() - 1):
-            if available_routes[i] == shortest_route.pos:
-                available_routes.pop_at(i)
-        
-        if shortest_route.pos == target_pos:
+            var distance = route.distance_to(routes_to_move.back())
+            if distance < shortest_distance:
+                route_to_add = route
+                shortest_distance = distance
+        routes_to_move.append(route_to_add)
+        available_routes.erase(route_to_add)
+        pass
+        if route_to_add == click_pos:
             break
-    
-    routes_to_move.reverse()
+        
+    #print(routes_to_move)
     return routes_to_move
         
         

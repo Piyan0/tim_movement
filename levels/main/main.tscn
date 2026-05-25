@@ -74,4 +74,28 @@ custom_minimum_size = Vector2(16, 16)
 offset_right = 4.0
 offset_bottom = 4.0
 
+[node name="pos_4" type="Marker2D" parent="." unique_id=1595050268 groups=["route"]]
+position = Vector2(765, 165)
+
+[node name="ColorRect" type="ColorRect" parent="pos_4" unique_id=1506034910]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
+
+[node name="pos_5" type="Marker2D" parent="." unique_id=1879792407 groups=["route"]]
+position = Vector2(774, 239)
+
+[node name="ColorRect" type="ColorRect" parent="pos_5" unique_id=697519079]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
+
+[node name="pos_6" type="Marker2D" parent="." unique_id=1599556554 groups=["route"]]
+position = Vector2(716, 283)
+
+[node name="ColorRect" type="ColorRect" parent="pos_6" unique_id=895603388]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
+
 [editable path="InteractClick"]
