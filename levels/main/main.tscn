@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="4_iab0w"]
 [ext_resource type="Texture2D" uid="uid://bsovtpbkpwox2" path="res://assets/characters/FD_Characters_Lillian_hover_01.png" id="5_3ymrs"]
 [ext_resource type="Texture2D" uid="uid://r6l8xvlrhaxi" path="res://assets/characters/FD_Characters_Lillian_idle_01.png" id="6_q42nm"]
+[ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
 [ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="7_q42nm"]
 
 [sub_resource type="Resource" id="Resource_3ymrs"]
@@ -16,8 +17,9 @@ hover_graphic = ExtResource("5_3ymrs")
 offset = Vector2(0, -162)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
-[node name="Node2D" type="Node2D" unique_id=351564680]
+[node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
 script = ExtResource("1_wtcfe")
+player = NodePath("Player")
 
 [node name="InteractClick" parent="." unique_id=508760350 instance=ExtResource("3_gonaa")]
 position = Vector2(183, 238)
@@ -38,5 +40,38 @@ offset_left = 50.0
 offset_top = -149.0
 offset_right = 130.5
 offset_bottom = -6.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="InteractClick" unique_id=1551981167]
+texture = ExtResource("6_q42nm")
+centered = false
+offset = Vector2(0, -162)
+
+[node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
+position = Vector2(416, 150)
+speed = 120
+
+[node name="pos_1" type="Marker2D" parent="." unique_id=922584420 groups=["route"]]
+position = Vector2(577, 197)
+
+[node name="ColorRect" type="ColorRect" parent="pos_1" unique_id=320846060]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
+
+[node name="pos_2" type="Marker2D" parent="." unique_id=1384890754 groups=["route"]]
+position = Vector2(647, 189)
+
+[node name="ColorRect" type="ColorRect" parent="pos_2" unique_id=1736890027]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
+
+[node name="pos_3" type="Marker2D" parent="." unique_id=488114896 groups=["route"]]
+position = Vector2(709, 147)
+
+[node name="ColorRect" type="ColorRect" parent="pos_3" unique_id=980271114]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 4.0
+offset_bottom = 4.0
 
 [editable path="InteractClick"]

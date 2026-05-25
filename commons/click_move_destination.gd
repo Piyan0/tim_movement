@@ -1,14 +1,8 @@
 class_name ClickMoveDestination
 extends Node2D
 
-@export var mr_routes: Array[Node2D]
 
-var _routes:
-    get():
-        var r = []
-        for i in mr_routes:
-            r.append(i.global_position)
-        return r
+var routes: Array
 
 func _ready() -> void:
     pass
@@ -16,7 +10,7 @@ func _ready() -> void:
     
 func get_routes(target_pos, click_pos):
     var routes_to_move = [click_pos]
-    var available_routes = _routes.duplicate()
+    var available_routes = routes.duplicate()
     available_routes.append(target_pos)
     
     while true:
