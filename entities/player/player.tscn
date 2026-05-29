@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://bnuvvd8e3uy4a"]
 
 [ext_resource type="Script" uid="uid://duxo0s4u3j81b" path="res://entities/player/player.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://c7rljwoch4bvu" path="res://commons/click_move_destination.gd" id="2_abrql"]
 
-[node name="Player" type="Node2D" unique_id=1426917964 node_paths=PackedStringArray("movement", "lb_hint")]
+[node name="Player" type="Node2D" unique_id=1426917964 node_paths=PackedStringArray("movement")]
 script = ExtResource("1_4flbx")
-movement = NodePath("ClickMoveDestination")
-lb_hint = NodePath("")
+movement = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2042547727]
 custom_minimum_size = Vector2(16, 16)
 offset_right = 16.0
 offset_bottom = 16.0
-
-[node name="ClickMoveDestination" type="Node2D" parent="." unique_id=359848132]
-script = ExtResource("2_abrql")
-metadata/_custom_type_script = "uid://c7rljwoch4bvu"

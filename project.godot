@@ -36,6 +36,10 @@ window/stretch/aspect="keep_height"
 
 enabled=PackedStringArray("res://addons/debug_console/plugin.cfg")
 
+[global_group]
+
+move_point=""
+
 [input]
 
 toggle_debug_console={

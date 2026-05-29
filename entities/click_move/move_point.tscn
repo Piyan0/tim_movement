@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bvp8r51j5m0e6"]
+
+[ext_resource type="Script" uid="uid://b0mgdpsfctvgi" path="res://entities/click_move/move_point.gd" id="1_uxaal"]
+
+[node name="MovePoint" type="Node2D" unique_id=1787537496 node_paths=PackedStringArray("point_hint")]
+script = ExtResource("1_uxaal")
+point_hint = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=502205525 groups=["move_point"]]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
