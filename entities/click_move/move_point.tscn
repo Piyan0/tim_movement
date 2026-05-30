@@ -6,7 +6,7 @@
 script = ExtResource("1_uxaal")
 point_hint = NodePath("ColorRect")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=502205525 groups=["move_point"]]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=502205525]
 custom_minimum_size = Vector2(16, 16)
 offset_right = 16.0
 offset_bottom = 16.0

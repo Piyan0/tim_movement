@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://duxo0s4u3j81b" path="res://entities/player/player.gd" id="1_4flbx"]
 
-[node name="Player" type="Node2D" unique_id=1426917964 node_paths=PackedStringArray("movement")]
+[node name="Player" type="Node2D" unique_id=1426917964]
 script = ExtResource("1_4flbx")
-movement = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2042547727]
 custom_minimum_size = Vector2(16, 16)

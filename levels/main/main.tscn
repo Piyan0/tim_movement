@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://r6l8xvlrhaxi" path="res://assets/characters/FD_Characters_Lillian_idle_01.png" id="6_q42nm"]
 [ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
 [ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="7_q42nm"]
+[ext_resource type="PackedScene" uid="uid://bvp8r51j5m0e6" path="res://entities/click_move/move_point.tscn" id="8_oclhf"]
 
 [sub_resource type="Resource" id="Resource_3ymrs"]
 script = ExtResource("4_iab0w")
@@ -47,31 +48,19 @@ centered = false
 offset = Vector2(0, -162)
 
 [node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(416, 150)
+position = Vector2(521, 118)
 speed = 120
 
-[node name="pos_1" type="Marker2D" parent="." unique_id=922584420 groups=["route"]]
-position = Vector2(577, 197)
+[node name="point1" parent="." unique_id=1787537496 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
+position = Vector2(583, 105)
+neighbours = [NodePath("../point2")]
 
-[node name="ColorRect" type="ColorRect" parent="pos_1" unique_id=320846060]
-custom_minimum_size = Vector2(16, 16)
-offset_right = 4.0
-offset_bottom = 4.0
+[node name="point2" parent="." unique_id=400521577 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
+position = Vector2(685, 99)
+neighbours = [NodePath("../point1"), NodePath("../point3")]
 
-[node name="pos_2" type="Marker2D" parent="." unique_id=1384890754 groups=["route"]]
-position = Vector2(647, 189)
-
-[node name="ColorRect" type="ColorRect" parent="pos_2" unique_id=1736890027]
-custom_minimum_size = Vector2(16, 16)
-offset_right = 4.0
-offset_bottom = 4.0
-
-[node name="pos_3" type="Marker2D" parent="." unique_id=488114896 groups=["route"]]
-position = Vector2(709, 147)
-
-[node name="ColorRect" type="ColorRect" parent="pos_3" unique_id=980271114]
-custom_minimum_size = Vector2(16, 16)
-offset_right = 4.0
-offset_bottom = 4.0
+[node name="point3" parent="." unique_id=165454107 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
+position = Vector2(765, 71)
+neighbours = [NodePath("../point2")]
 
 [editable path="InteractClick"]

@@ -8,6 +8,7 @@ var g = -1
 
 
 func _ready():
+    add_to_group("move_point")
     if !OS.is_debug_build():
         point_hint.hide()
         

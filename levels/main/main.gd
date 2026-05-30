@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
     get_tree().call_group("interact_click", "refresh_page", ["tag1", "tag2"])
-    player.set_path(get_tree().get_nodes_in_group("route").map(func(value):
-            return value.global_position
-            )
-        )
+    # player.set_path(get_tree().get_nodes_in_group("route").map(func(value):
+    #         return value.global_position
+    #         )
+    #     )

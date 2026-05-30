@@ -14,7 +14,7 @@ func _input(e):
     if e is InputEventMouseButton:
         if e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
             var click_pos = get_global_mouse_position()
-            var routes = Bootstrap.click_pos.get_routes(global_position, click_pos)
+            var routes = Bootstrap.click_move.get_routes(global_position, click_pos)
             print(routes)
             return
             # var t = create_tween()
