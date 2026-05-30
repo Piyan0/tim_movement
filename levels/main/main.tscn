@@ -48,19 +48,19 @@ centered = false
 offset = Vector2(0, -162)
 
 [node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(521, 118)
-speed = 120
+position = Vector2(793, 184)
+speed = 512
 
 [node name="point1" parent="." unique_id=1787537496 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(583, 105)
+position = Vector2(1061, 332)
 neighbours = [NodePath("../point2")]
 
 [node name="point2" parent="." unique_id=400521577 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(685, 99)
+position = Vector2(398, 155)
 neighbours = [NodePath("../point1"), NodePath("../point3")]
 
 [node name="point3" parent="." unique_id=165454107 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(765, 71)
+position = Vector2(165, 330)
 neighbours = [NodePath("../point2")]
 
 [editable path="InteractClick"]

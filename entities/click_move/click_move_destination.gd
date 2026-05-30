@@ -23,9 +23,20 @@ func get_routes(target_pos, click_pos):
     var current_g = 0
     var current_point: MovePoint = get_closest_point_to_pos.call(target_pos)
     var last_point: MovePoint = get_closest_point_to_pos.call(click_pos)
+    # breakpoint
     var routes = [current_point.global_position]
-    
+
+    var click_distance = target_pos.distance_to(click_pos)
+    var target_distance_from_first_point = target_pos.distance_to(current_point.global_position)
+    # breakpoint
+
     while true:
+        if click_distance < target_distance_from_first_point:
+            routes.pop_front()
+            break
+        if current_point == last_point:
+            break
+
         var shortest_f = INF
         var point: MovePoint = null
         var current_point_name = current_point.name
@@ -39,13 +50,14 @@ func get_routes(target_pos, click_pos):
                 shortest_f = f
                 point = neighbour
         routes.append(point.global_position)
-        breakpoint
+        # breakpoint
         current_g += g
         current_point = point
         
         if point == last_point:
             break
     
+    routes.append(click_pos)
     return routes
 
 
