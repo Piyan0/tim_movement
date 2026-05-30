@@ -51,16 +51,19 @@ offset = Vector2(0, -162)
 position = Vector2(793, 184)
 speed = 512
 
+[node name="point5" parent="." unique_id=987682202 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
+position = Vector2(485, 281)
+neighbours = [NodePath("../point1")]
+connect_click_pos = true
+
 [node name="point1" parent="." unique_id=1787537496 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(1061, 332)
+position = Vector2(88, 426)
 neighbours = [NodePath("../point2")]
+connect_click_pos = true
 
-[node name="point2" parent="." unique_id=400521577 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(398, 155)
-neighbours = [NodePath("../point1"), NodePath("../point3")]
-
-[node name="point3" parent="." unique_id=165454107 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(165, 330)
-neighbours = [NodePath("../point2")]
+[node name="point2" parent="." unique_id=1364581975 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
+position = Vector2(946, 561)
+neighbours = [NodePath("../point1")]
+connect_click_pos = true
 
 [editable path="InteractClick"]

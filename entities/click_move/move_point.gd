@@ -2,6 +2,7 @@ class_name MovePoint
 extends Node2D
 
 @export var neighbours: Array[MovePoint]
+@export var connect_click_pos = false
 @export var point_hint: Control
 var h = -1
 var g = -1
