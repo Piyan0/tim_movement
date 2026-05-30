@@ -17,9 +17,3 @@ func set_h(click_pos: Vector2):
     h = global_position.distance_to(click_pos)
 
 
-func set_g(initial_pos):
-    g = global_position.distance_to(initial_pos)
-    
-
-func get_f():
-    return g+h

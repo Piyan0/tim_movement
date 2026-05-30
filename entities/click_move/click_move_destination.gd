@@ -9,39 +9,41 @@ func _ready() -> void:
 
 
 func get_routes(target_pos, click_pos):
-    var get_closest_point = func():
+    var get_closest_point_to_pos = func(pos):
         var shortest_distance = INF
         var shortest_point
         for point in _get_points():
-            var distance = point.global_position.distance_to(target_pos)
+            var distance = point.global_position.distance_to(pos)
             if  distance < shortest_distance:
                 shortest_distance= distance
                 shortest_point = point
 
         return shortest_point
     
-    var current_point: MovePoint = get_closest_point.call()
+    var current_g = 0
+    var current_point: MovePoint = get_closest_point_to_pos.call(target_pos)
+    var last_point: MovePoint = get_closest_point_to_pos.call(click_pos)
     var routes = [current_point.global_position]
-    var current_point_distance = current_point.global_position.distance_to(click_pos)
-    breakpoint
+    
     while true:
         var shortest_f = INF
         var point: MovePoint = null
         var current_point_name = current_point.name
+        var g
         for neighbour: MovePoint in current_point.neighbours:
             neighbour.set_h(click_pos)
-            neighbour.set_g(target_pos)
             var neighbour_name = neighbour.name
-            var f = neighbour.get_f()
-            pass
+            g = current_point.global_position.distance_to(neighbour.global_position)
+            var f = (current_g + g) + neighbour.h
             if f < shortest_f:
                 shortest_f = f
                 point = neighbour
         routes.append(point.global_position)
-        current_point = point
-        var point_distance = point.global_position.distance_to(click_pos)
         breakpoint
-        if point_distance > current_point_distance:
+        current_g += g
+        current_point = point
+        
+        if point == last_point:
             break
     
     return routes
