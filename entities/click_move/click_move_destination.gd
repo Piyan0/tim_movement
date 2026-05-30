@@ -26,17 +26,14 @@ func get_routes(target_pos, click_pos):
     # breakpoint
     var routes = [current_point.global_position]
 
-    var click_distance = target_pos.distance_to(click_pos)
-    var target_distance_from_first_point = target_pos.distance_to(current_point.global_position)
-    # breakpoint
-
+    var click_distance_from_player = click_pos.distance_to(target_pos)
+    var click_distance_from_first_point = click_pos.distance_to(current_point.global_position)
+    #breakpoint
+    if click_distance_from_player < click_distance_from_first_point:
+        return [click_pos]
+       
     while true:
-        if click_distance < target_distance_from_first_point:
-            routes.pop_front()
-            break
-        if current_point == last_point:
-            break
-
+        var distance_from_click = current_point.global_position.distance_to(click_pos)
         var shortest_f = INF
         var point: MovePoint = null
         var current_point_name = current_point.name
@@ -49,17 +46,20 @@ func get_routes(target_pos, click_pos):
             if f < shortest_f:
                 shortest_f = f
                 point = neighbour
+        
+        # click in the middle of 2 point.
+        if distance_from_click < current_point.global_position.distance_to(point.global_position):
+            routes.append(click_pos)
+            return routes
+            
         routes.append(point.global_position)
-        # breakpoint
         current_g += g
         current_point = point
         
         if point == last_point:
-            break
+            routes.append(click_pos)
+            return routes
     
-    routes.append(click_pos)
-    return routes
-
 
 func _get_points():
     return Bootstrap.get_tree().get_nodes_in_group("move_point")
