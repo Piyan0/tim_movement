@@ -1,69 +1,185 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="3_gonaa"]
-[ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="4_iab0w"]
-[ext_resource type="Texture2D" uid="uid://bsovtpbkpwox2" path="res://assets/characters/FD_Characters_Lillian_hover_01.png" id="5_3ymrs"]
-[ext_resource type="Texture2D" uid="uid://r6l8xvlrhaxi" path="res://assets/characters/FD_Characters_Lillian_idle_01.png" id="6_q42nm"]
+[ext_resource type="Texture2D" uid="uid://bk1kcp2vpr4i8" path="res://assets/world_map/FD_Forrest_A_01.png" id="3_f6gjy"]
+[ext_resource type="Texture2D" uid="uid://bywjwr7rebltb" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_iab0w"]
+[ext_resource type="PackedScene" uid="uid://b1b3p4weerdbv" path="res://entities/texture_chunk/texture_chunk.tscn" id="6_h2jn1"]
+[ext_resource type="Texture2D" uid="uid://bdsapitqile22" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_oclhf"]
 [ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
-[ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="7_q42nm"]
-[ext_resource type="PackedScene" uid="uid://bvp8r51j5m0e6" path="res://entities/click_move/move_point.tscn" id="8_oclhf"]
+[ext_resource type="Texture2D" uid="uid://c4kndl5xinsdm" path="res://assets/world_map/FD_Forrest_C_01.png" id="7_sqa4f"]
+[ext_resource type="Texture2D" uid="uid://cmr5vjg822en6" path="res://assets/world_map/FD_Forrest_D_01.png" id="8_20bwc"]
+[ext_resource type="Texture2D" uid="uid://by8sdnqk02bmi" path="res://assets/world_map/FD_Forrest_E_01.png" id="9_yh2qj"]
+[ext_resource type="Texture2D" uid="uid://bpfvq88r8nc" path="res://assets/world_map/FD_Forrest_F_01.png" id="10_vged4"]
+[ext_resource type="Texture2D" uid="uid://xdk7g7p66flj" path="res://assets/world_map/FD_Forrest_G_01.png" id="11_u4gi4"]
+[ext_resource type="Texture2D" uid="uid://ct4fr3ciy6xk5" path="res://assets/world_map/FD_Forrest_H_01.png" id="12_dvq2k"]
+[ext_resource type="Texture2D" uid="uid://5fcfvrh82cla" path="res://assets/world_map/FD_Forrest_I_01.png" id="13_s50uu"]
+[ext_resource type="Texture2D" uid="uid://kjymom43k0b" path="res://assets/world_map/FD_Forrest_J_01.png" id="14_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://cqiyl1qbvbj71" path="res://assets/world_map/FD_Forrest_L_01.png" id="15_uj5r8"]
+[ext_resource type="Texture2D" uid="uid://cvu5xptxtg58o" path="res://assets/world_map/FD_Forrest_M_01.png" id="16_omhea"]
+[ext_resource type="Texture2D" uid="uid://boho6rhu4g6j4" path="res://assets/world_map/FD_Forrest_N_01.png" id="17_63fg0"]
+[ext_resource type="Texture2D" uid="uid://ba57fp47yvr8b" path="res://assets/world_map/FD_Forrest_O_01.png" id="18_vged4"]
+[ext_resource type="Texture2D" uid="uid://dtm2wn1bbcc3c" path="res://assets/world_map/FD_Forrest_P_01.png" id="19_u4gi4"]
+[ext_resource type="Texture2D" uid="uid://cbfvxrobskuhb" path="res://assets/world_map/FD_Forrest_Q_01.png" id="20_dvq2k"]
+[ext_resource type="Texture2D" uid="uid://cap2buk50um4t" path="res://assets/world_map/FD_Forrest_R_01.png" id="21_s50uu"]
+[ext_resource type="Texture2D" uid="uid://c5oearmfmq4a" path="res://assets/world_map/FD_Forrest_S_01.png" id="22_uj5r8"]
+[ext_resource type="Texture2D" uid="uid://cgmftu6pslmqn" path="res://assets/world_map/FD_Forrest_T_01.png" id="23_omhea"]
+[ext_resource type="Texture2D" uid="uid://s5gq4wttl4en" path="res://assets/world_map/FD_Forrest_U_01.png" id="24_omhea"]
+[ext_resource type="Texture2D" uid="uid://cyxafr08qy47u" path="res://assets/world_map/FD_Forrest_V_01.png" id="25_63fg0"]
 
-[sub_resource type="Resource" id="Resource_3ymrs"]
-script = ExtResource("4_iab0w")
-source = ExtResource("7_q42nm")
-use_for_preview = true
-idle_graphic = ExtResource("6_q42nm")
-hover_graphic = ExtResource("5_3ymrs")
-offset = Vector2(0, -162)
-metadata/_custom_type_script = "uid://b04vc5drymud0"
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_63fg0"]
+vertices = PackedVector2Array(9207.289, 2735.711, 5107.578, 5550.1563, 137.28125, 2630.7266, 4410.203, -44.320313)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(118, 2631, 4410, -56, 9226, 2735, 5108, 5562)])
 
 [node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
 script = ExtResource("1_wtcfe")
 player = NodePath("Player")
 
-[node name="InteractClick" parent="." unique_id=508760350 instance=ExtResource("3_gonaa")]
-position = Vector2(183, 238)
-interact_pages = Array[ExtResource("4_iab0w")]([SubResource("Resource_3ymrs")])
-
-[node name="Sprite2D" parent="InteractClick" index="0" unique_id=542249545]
-texture = ExtResource("6_q42nm")
-offset = Vector2(0, -162)
-
-[node name="Control" parent="InteractClick" index="1" unique_id=134591522]
-offset_left = 97.0
-offset_top = -156.0
-offset_right = 97.0
-offset_bottom = -156.0
-
-[node name="NinePatchRect" parent="InteractClick" index="2" unique_id=809710394]
-offset_left = 50.0
-offset_top = -149.0
-offset_right = 130.5
-offset_bottom = -6.0
-
-[node name="Sprite2D2" type="Sprite2D" parent="InteractClick" unique_id=1551981167]
-texture = ExtResource("6_q42nm")
-centered = false
-offset = Vector2(0, -162)
-
 [node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(793, 184)
+position = Vector2(3896, 2847)
 speed = 512
 
-[node name="point5" parent="." unique_id=987682202 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(485, 281)
-neighbours = [NodePath("../point1")]
-connect_click_pos = true
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1089403205]
+position = Vector2(1339, 2123)
+texture = ExtResource("3_iab0w")
+centered = false
 
-[node name="point1" parent="." unique_id=1787537496 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(88, 426)
-neighbours = [NodePath("../point2")]
-connect_click_pos = true
+[node name="TextureChunk" parent="Sprite2D2" unique_id=179023645 instance=ExtResource("6_h2jn1")]
 
-[node name="point2" parent="." unique_id=1364581975 node_paths=PackedStringArray("neighbours") instance=ExtResource("8_oclhf")]
-position = Vector2(946, 561)
-neighbours = [NodePath("../point1")]
-connect_click_pos = true
+[node name="VisibleOnScreenNotifier2D" parent="Sprite2D2/TextureChunk" index="0" unique_id=2144018069]
+position = Vector2(1023.9512, 851.14966)
+rect = Rect2(-638.9512, -640.14966, 1448, 852)
 
-[editable path="InteractClick"]
+[node name="FdForrestA01" type="Sprite2D" parent="." unique_id=883601948]
+position = Vector2(3518, 1501)
+texture = ExtResource("3_f6gjy")
+centered = false
+offset = Vector2(0, -10.74)
+
+[node name="TextureChunk" parent="FdForrestA01" unique_id=1640475733 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestB01" type="Sprite2D" parent="." unique_id=1949059289]
+position = Vector2(3750, 2809)
+texture = ExtResource("6_oclhf")
+
+[node name="TextureChunk" parent="FdForrestB01" unique_id=1612253034 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestC01" type="Sprite2D" parent="." unique_id=797968493]
+position = Vector2(5519, 2835)
+texture = ExtResource("7_sqa4f")
+
+[node name="TextureChunk" parent="FdForrestC01" unique_id=557486691 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestD01" type="Sprite2D" parent="." unique_id=62272632]
+position = Vector2(4600, 3509)
+texture = ExtResource("8_20bwc")
+
+[node name="TextureChunk" parent="FdForrestD01" unique_id=1575103436 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestE01" type="Sprite2D" parent="." unique_id=1018243676]
+position = Vector2(6028, 1834)
+texture = ExtResource("9_yh2qj")
+
+[node name="TextureChunk" parent="FdForrestE01" unique_id=6215099 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestF01" type="Sprite2D" parent="." unique_id=153900390]
+position = Vector2(6022, 3672)
+texture = ExtResource("10_vged4")
+
+[node name="TextureChunk" parent="FdForrestF01" unique_id=2007410412 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestG01" type="Sprite2D" parent="." unique_id=638810833]
+position = Vector2(4547, 4290)
+texture = ExtResource("11_u4gi4")
+
+[node name="TextureChunk" parent="FdForrestG01" unique_id=675785274 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestH01" type="Sprite2D" parent="." unique_id=80850260]
+position = Vector2(3320, 2015)
+texture = ExtResource("12_dvq2k")
+
+[node name="TextureChunk" parent="FdForrestH01" unique_id=1400420658 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestI01" type="Sprite2D" parent="." unique_id=706071599]
+position = Vector2(4620, 1389)
+texture = ExtResource("13_s50uu")
+
+[node name="TextureChunk" parent="FdForrestI01" unique_id=430319005 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestJ01" type="Sprite2D" parent="." unique_id=588288678]
+position = Vector2(6922, 2739)
+texture = ExtResource("14_dy3nw")
+
+[node name="TextureChunk" parent="FdForrestJ01" unique_id=1420773558 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestL01" type="Sprite2D" parent="." unique_id=934937391]
+position = Vector2(3165, 3653)
+texture = ExtResource("15_uj5r8")
+
+[node name="TextureChunk" parent="FdForrestL01" unique_id=1654268336 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestM01" type="Sprite2D" parent="." unique_id=850934487]
+position = Vector2(5658, 900)
+texture = ExtResource("16_omhea")
+
+[node name="TextureChunk" parent="FdForrestM01" unique_id=1626487358 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestN01" type="Sprite2D" parent="." unique_id=1194722433]
+position = Vector2(6785, 1491)
+texture = ExtResource("17_63fg0")
+
+[node name="TextureChunk" parent="FdForrestN01" unique_id=786962015 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestO01" type="Sprite2D" parent="." unique_id=10012619]
+position = Vector2(7936, 2364)
+texture = ExtResource("18_vged4")
+
+[node name="TextureChunk" parent="FdForrestO01" unique_id=75679323 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestP01" type="Sprite2D" parent="." unique_id=527008329]
+position = Vector2(7859, 3455)
+texture = ExtResource("19_u4gi4")
+
+[node name="TextureChunk" parent="FdForrestP01" unique_id=428934208 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestQ01" type="Sprite2D" parent="." unique_id=1031602293]
+position = Vector2(5367, 4851)
+texture = ExtResource("20_dvq2k")
+
+[node name="TextureChunk" parent="FdForrestQ01" unique_id=1406817802 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestU01" type="Sprite2D" parent="." unique_id=434252243]
+position = Vector2(3283, 1253)
+texture = ExtResource("24_omhea")
+
+[node name="TextureChunk" parent="FdForrestU01" unique_id=72146544 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestS01" type="Sprite2D" parent="." unique_id=758597162]
+position = Vector2(1139, 3095)
+texture = ExtResource("22_uj5r8")
+
+[node name="TextureChunk" parent="FdForrestS01" unique_id=1104033930 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestT01" type="Sprite2D" parent="." unique_id=2128380051]
+position = Vector2(1881, 2072)
+texture = ExtResource("23_omhea")
+
+[node name="TextureChunk" parent="FdForrestT01" unique_id=502095217 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestR01" type="Sprite2D" parent="." unique_id=965247525]
+position = Vector2(2931, 4248)
+texture = ExtResource("21_s50uu")
+
+[node name="TextureChunk" parent="FdForrestR01" unique_id=2124352037 instance=ExtResource("6_h2jn1")]
+
+[node name="FdForrestV01" type="Sprite2D" parent="." unique_id=2146154772]
+position = Vector2(4545, 454)
+texture = ExtResource("25_63fg0")
+
+[node name="TextureChunk" parent="FdForrestV01" unique_id=1169241481 instance=ExtResource("6_h2jn1")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2093413404]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_63fg0")
+
+[editable path="Sprite2D2/TextureChunk"]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b1b3p4weerdbv"]
+
+[ext_resource type="Script" uid="uid://cvl6345j1h3c6" path="res://entities/texture_chunk/texture_chunk.gd" id="1_lcneh"]
+
+[node name="TextureChunk" type="Node2D" unique_id=179023645 node_paths=PackedStringArray("notif")]
+script = ExtResource("1_lcneh")
+notif = NodePath("VisibleOnScreenNotifier2D")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2144018069]
+position = Vector2(59, 62)
+rect = Rect2(-120, -106, 130, 108)
