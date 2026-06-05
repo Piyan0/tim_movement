@@ -7,15 +7,22 @@ extends CharacterBody2D
 @export var nav_agent: NavigationAgent2D
 var is_moving = false 
 
-func _input(e):
-    if e is InputEventMouseButton:
-        if e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
-            var click_pos = get_global_mouse_position()
-            if !is_moving:
-                is_moving = true
-                var map_rid = get_world_2d().navigation_map
-                var valid_click_pos = NavigationServer2D.map_get_closest_point(map_rid, click_pos)
-                nav_agent.target_position = valid_click_pos
+
+func _ready() -> void:
+    var input_handler = InputHandler.new(self)
+    
+    input_handler.can_process = func():
+        return true
+
+    input_handler.handler = func(e: InputEvent):
+        if e is InputEventMouseButton:
+            if e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
+                var click_pos = get_global_mouse_position()
+                if !is_moving:
+                    is_moving = true
+                    var map_rid = get_world_2d().navigation_map
+                    var valid_click_pos = NavigationServer2D.map_get_closest_point(map_rid, click_pos)
+                    nav_agent.target_position = valid_click_pos
 
 
 func _physics_process(delta: float) -> void:
