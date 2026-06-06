@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://bk1kcp2vpr4i8" path="res://assets/world_map/FD_Forrest_A_01.png" id="3_f6gjy"]
 [ext_resource type="Texture2D" uid="uid://bywjwr7rebltb" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_iab0w"]
-[ext_resource type="PackedScene" uid="uid://b1b3p4weerdbv" path="res://entities/texture_chunk/texture_chunk.tscn" id="6_h2jn1"]
 [ext_resource type="Texture2D" uid="uid://bdsapitqile22" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_oclhf"]
 [ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
 [ext_resource type="Texture2D" uid="uid://c4kndl5xinsdm" path="res://assets/world_map/FD_Forrest_C_01.png" id="7_sqa4f"]
@@ -36,150 +35,104 @@ script = ExtResource("1_wtcfe")
 player = NodePath("Player")
 
 [node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(3896, 2847)
+position = Vector2(2316.7432, 3328.9995)
 speed = 512
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1089403205]
+[node name="Forests" type="Node2D" parent="." unique_id=748847657]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Forests" unique_id=1089403205]
 position = Vector2(1339, 2123)
 texture = ExtResource("3_iab0w")
 centered = false
 
-[node name="TextureChunk" parent="Sprite2D2" unique_id=179023645 instance=ExtResource("6_h2jn1")]
-
-[node name="VisibleOnScreenNotifier2D" parent="Sprite2D2/TextureChunk" index="0" unique_id=2144018069]
-position = Vector2(1023.9512, 851.14966)
-rect = Rect2(-638.9512, -640.14966, 1448, 852)
-
-[node name="FdForrestA01" type="Sprite2D" parent="." unique_id=883601948]
+[node name="FdForrestA01" type="Sprite2D" parent="Forests" unique_id=883601948]
 position = Vector2(3518, 1501)
 texture = ExtResource("3_f6gjy")
 centered = false
 offset = Vector2(0, -10.74)
 
-[node name="TextureChunk" parent="FdForrestA01" unique_id=1640475733 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestB01" type="Sprite2D" parent="." unique_id=1949059289]
+[node name="FdForrestB01" type="Sprite2D" parent="Forests" unique_id=1949059289]
 position = Vector2(3750, 2809)
 texture = ExtResource("6_oclhf")
 
-[node name="TextureChunk" parent="FdForrestB01" unique_id=1612253034 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestC01" type="Sprite2D" parent="." unique_id=797968493]
+[node name="FdForrestC01" type="Sprite2D" parent="Forests" unique_id=797968493]
 position = Vector2(5519, 2835)
 texture = ExtResource("7_sqa4f")
 
-[node name="TextureChunk" parent="FdForrestC01" unique_id=557486691 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestD01" type="Sprite2D" parent="." unique_id=62272632]
+[node name="FdForrestD01" type="Sprite2D" parent="Forests" unique_id=62272632]
 position = Vector2(4600, 3509)
 texture = ExtResource("8_20bwc")
 
-[node name="TextureChunk" parent="FdForrestD01" unique_id=1575103436 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestE01" type="Sprite2D" parent="." unique_id=1018243676]
+[node name="FdForrestE01" type="Sprite2D" parent="Forests" unique_id=1018243676]
 position = Vector2(6028, 1834)
 texture = ExtResource("9_yh2qj")
 
-[node name="TextureChunk" parent="FdForrestE01" unique_id=6215099 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestF01" type="Sprite2D" parent="." unique_id=153900390]
+[node name="FdForrestF01" type="Sprite2D" parent="Forests" unique_id=153900390]
 position = Vector2(6022, 3672)
 texture = ExtResource("10_vged4")
 
-[node name="TextureChunk" parent="FdForrestF01" unique_id=2007410412 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestG01" type="Sprite2D" parent="." unique_id=638810833]
+[node name="FdForrestG01" type="Sprite2D" parent="Forests" unique_id=638810833]
 position = Vector2(4547, 4290)
 texture = ExtResource("11_u4gi4")
 
-[node name="TextureChunk" parent="FdForrestG01" unique_id=675785274 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestH01" type="Sprite2D" parent="." unique_id=80850260]
+[node name="FdForrestH01" type="Sprite2D" parent="Forests" unique_id=80850260]
 position = Vector2(3320, 2015)
 texture = ExtResource("12_dvq2k")
 
-[node name="TextureChunk" parent="FdForrestH01" unique_id=1400420658 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestI01" type="Sprite2D" parent="." unique_id=706071599]
+[node name="FdForrestI01" type="Sprite2D" parent="Forests" unique_id=706071599]
 position = Vector2(4620, 1389)
 texture = ExtResource("13_s50uu")
 
-[node name="TextureChunk" parent="FdForrestI01" unique_id=430319005 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestJ01" type="Sprite2D" parent="." unique_id=588288678]
+[node name="FdForrestJ01" type="Sprite2D" parent="Forests" unique_id=588288678]
 position = Vector2(6922, 2739)
 texture = ExtResource("14_dy3nw")
 
-[node name="TextureChunk" parent="FdForrestJ01" unique_id=1420773558 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestL01" type="Sprite2D" parent="." unique_id=934937391]
+[node name="FdForrestL01" type="Sprite2D" parent="Forests" unique_id=934937391]
 position = Vector2(3165, 3653)
 texture = ExtResource("15_uj5r8")
 
-[node name="TextureChunk" parent="FdForrestL01" unique_id=1654268336 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestM01" type="Sprite2D" parent="." unique_id=850934487]
+[node name="FdForrestM01" type="Sprite2D" parent="Forests" unique_id=850934487]
 position = Vector2(5658, 900)
 texture = ExtResource("16_omhea")
 
-[node name="TextureChunk" parent="FdForrestM01" unique_id=1626487358 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestN01" type="Sprite2D" parent="." unique_id=1194722433]
+[node name="FdForrestN01" type="Sprite2D" parent="Forests" unique_id=1194722433]
 position = Vector2(6785, 1491)
 texture = ExtResource("17_63fg0")
 
-[node name="TextureChunk" parent="FdForrestN01" unique_id=786962015 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestO01" type="Sprite2D" parent="." unique_id=10012619]
+[node name="FdForrestO01" type="Sprite2D" parent="Forests" unique_id=10012619]
 position = Vector2(7936, 2364)
 texture = ExtResource("18_vged4")
 
-[node name="TextureChunk" parent="FdForrestO01" unique_id=75679323 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestP01" type="Sprite2D" parent="." unique_id=527008329]
+[node name="FdForrestP01" type="Sprite2D" parent="Forests" unique_id=527008329]
 position = Vector2(7859, 3455)
 texture = ExtResource("19_u4gi4")
 
-[node name="TextureChunk" parent="FdForrestP01" unique_id=428934208 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestQ01" type="Sprite2D" parent="." unique_id=1031602293]
+[node name="FdForrestQ01" type="Sprite2D" parent="Forests" unique_id=1031602293]
 position = Vector2(5367, 4851)
 texture = ExtResource("20_dvq2k")
 
-[node name="TextureChunk" parent="FdForrestQ01" unique_id=1406817802 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestU01" type="Sprite2D" parent="." unique_id=434252243]
+[node name="FdForrestU01" type="Sprite2D" parent="Forests" unique_id=434252243]
 position = Vector2(3283, 1253)
 texture = ExtResource("24_omhea")
 
-[node name="TextureChunk" parent="FdForrestU01" unique_id=72146544 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestS01" type="Sprite2D" parent="." unique_id=758597162]
+[node name="FdForrestS01" type="Sprite2D" parent="Forests" unique_id=758597162]
 position = Vector2(1139, 3095)
 texture = ExtResource("22_uj5r8")
 
-[node name="TextureChunk" parent="FdForrestS01" unique_id=1104033930 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestT01" type="Sprite2D" parent="." unique_id=2128380051]
+[node name="FdForrestT01" type="Sprite2D" parent="Forests" unique_id=2128380051]
 position = Vector2(1881, 2072)
 texture = ExtResource("23_omhea")
 
-[node name="TextureChunk" parent="FdForrestT01" unique_id=502095217 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestR01" type="Sprite2D" parent="." unique_id=965247525]
+[node name="FdForrestR01" type="Sprite2D" parent="Forests" unique_id=965247525]
 position = Vector2(2931, 4248)
 texture = ExtResource("21_s50uu")
 
-[node name="TextureChunk" parent="FdForrestR01" unique_id=2124352037 instance=ExtResource("6_h2jn1")]
-
-[node name="FdForrestV01" type="Sprite2D" parent="." unique_id=2146154772]
+[node name="FdForrestV01" type="Sprite2D" parent="Forests" unique_id=2146154772]
 position = Vector2(4545, 454)
 texture = ExtResource("25_63fg0")
-
-[node name="TextureChunk" parent="FdForrestV01" unique_id=1169241481 instance=ExtResource("6_h2jn1")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2093413404]
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_63fg0")
 
-[editable path="Sprite2D2/TextureChunk"]
+[node name="Npcs" type="Node2D" parent="." unique_id=150393216]
