@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://c53o05x7ehgqn"]
+
+[ext_resource type="FontFile" uid="uid://cl23y8eejm8ku" path="res://assets/fonts/Nirmala UI Semilight.ttf" id="1_7esjt"]
+
+[resource]
+font = ExtResource("1_7esjt")
+font_size = 27

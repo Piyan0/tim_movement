@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dqvc2kyhvjdcy"]
+
+[ext_resource type="FontFile" uid="uid://dyymkxa8sbspd" path="res://assets/fonts/Oswald-SemiBold.ttf" id="1_pys1f"]
+
+[resource]
+font = ExtResource("1_pys1f")
+font_size = 31

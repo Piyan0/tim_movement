@@ -1,7 +1,7 @@
 extends InteractPageSource
 
 func _hover_text():
-    if GlobalState.is_holding_item:
+    if Bootstrap.state.is_holding_item:
         return "Give"
     else:
         return "talk"

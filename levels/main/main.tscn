@@ -1,138 +1,140 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://bk1kcp2vpr4i8" path="res://assets/world_map/FD_Forrest_A_01.png" id="3_f6gjy"]
-[ext_resource type="Texture2D" uid="uid://bywjwr7rebltb" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_iab0w"]
-[ext_resource type="Texture2D" uid="uid://bdsapitqile22" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_oclhf"]
+[ext_resource type="Texture2D" uid="uid://du0mxwpysvtmx" path="res://assets/world_map/FD_Map_01.png" id="2_gonaa"]
+[ext_resource type="Texture2D" uid="uid://cpwk22lxu0d5t" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_gonaa"]
+[ext_resource type="Texture2D" uid="uid://b2827eqbceebr" path="res://assets/world_map/FD_Forrest_A_01.png" id="5_hn1gb"]
+[ext_resource type="Texture2D" uid="uid://b2ch7dj6vx21g" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_3lhr6"]
 [ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
-[ext_resource type="Texture2D" uid="uid://c4kndl5xinsdm" path="res://assets/world_map/FD_Forrest_C_01.png" id="7_sqa4f"]
-[ext_resource type="Texture2D" uid="uid://cmr5vjg822en6" path="res://assets/world_map/FD_Forrest_D_01.png" id="8_20bwc"]
-[ext_resource type="Texture2D" uid="uid://by8sdnqk02bmi" path="res://assets/world_map/FD_Forrest_E_01.png" id="9_yh2qj"]
-[ext_resource type="Texture2D" uid="uid://bpfvq88r8nc" path="res://assets/world_map/FD_Forrest_F_01.png" id="10_vged4"]
-[ext_resource type="Texture2D" uid="uid://xdk7g7p66flj" path="res://assets/world_map/FD_Forrest_G_01.png" id="11_u4gi4"]
-[ext_resource type="Texture2D" uid="uid://ct4fr3ciy6xk5" path="res://assets/world_map/FD_Forrest_H_01.png" id="12_dvq2k"]
-[ext_resource type="Texture2D" uid="uid://5fcfvrh82cla" path="res://assets/world_map/FD_Forrest_I_01.png" id="13_s50uu"]
-[ext_resource type="Texture2D" uid="uid://kjymom43k0b" path="res://assets/world_map/FD_Forrest_J_01.png" id="14_dy3nw"]
-[ext_resource type="Texture2D" uid="uid://cqiyl1qbvbj71" path="res://assets/world_map/FD_Forrest_L_01.png" id="15_uj5r8"]
-[ext_resource type="Texture2D" uid="uid://cvu5xptxtg58o" path="res://assets/world_map/FD_Forrest_M_01.png" id="16_omhea"]
-[ext_resource type="Texture2D" uid="uid://boho6rhu4g6j4" path="res://assets/world_map/FD_Forrest_N_01.png" id="17_63fg0"]
-[ext_resource type="Texture2D" uid="uid://ba57fp47yvr8b" path="res://assets/world_map/FD_Forrest_O_01.png" id="18_vged4"]
-[ext_resource type="Texture2D" uid="uid://dtm2wn1bbcc3c" path="res://assets/world_map/FD_Forrest_P_01.png" id="19_u4gi4"]
-[ext_resource type="Texture2D" uid="uid://cbfvxrobskuhb" path="res://assets/world_map/FD_Forrest_Q_01.png" id="20_dvq2k"]
-[ext_resource type="Texture2D" uid="uid://cap2buk50um4t" path="res://assets/world_map/FD_Forrest_R_01.png" id="21_s50uu"]
-[ext_resource type="Texture2D" uid="uid://c5oearmfmq4a" path="res://assets/world_map/FD_Forrest_S_01.png" id="22_uj5r8"]
-[ext_resource type="Texture2D" uid="uid://cgmftu6pslmqn" path="res://assets/world_map/FD_Forrest_T_01.png" id="23_omhea"]
-[ext_resource type="Texture2D" uid="uid://s5gq4wttl4en" path="res://assets/world_map/FD_Forrest_U_01.png" id="24_omhea"]
-[ext_resource type="Texture2D" uid="uid://cyxafr08qy47u" path="res://assets/world_map/FD_Forrest_V_01.png" id="25_63fg0"]
+[ext_resource type="Texture2D" uid="uid://det4ir63i76x6" path="res://assets/world_map/FD_Forrest_D_01.png" id="7_yh2qj"]
+[ext_resource type="Texture2D" uid="uid://b05t3qtg4xinv" path="res://assets/world_map/FD_Forrest_E_01.png" id="8_vged4"]
+[ext_resource type="Texture2D" uid="uid://dsk2ghubpkoqg" path="res://assets/world_map/FD_Forrest_F_01.png" id="9_u4gi4"]
+[ext_resource type="Texture2D" uid="uid://dauc8ogc8ggib" path="res://assets/world_map/FD_Forrest_G_01.png" id="10_dvq2k"]
+[ext_resource type="Texture2D" uid="uid://04dqsm3nq2wi" path="res://assets/world_map/FD_Forrest_H_01.png" id="11_s50uu"]
+[ext_resource type="Texture2D" uid="uid://db5nd534gub7o" path="res://assets/world_map/FD_Forrest_I_01.png" id="12_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://cwi7tia24aruj" path="res://assets/world_map/FD_Forrest_L_01.png" id="13_uj5r8"]
+[ext_resource type="Texture2D" uid="uid://de8t5sdaaaoqo" path="res://assets/world_map/FD_Forrest_M_01.png" id="14_omhea"]
+[ext_resource type="Texture2D" uid="uid://bhfs8ruhgur28" path="res://assets/world_map/FD_Forrest_T_01.png" id="15_63fg0"]
+[ext_resource type="Texture2D" uid="uid://qx7s1mpoiku" path="res://assets/world_map/FD_Forrest_J_01.png" id="16_3lhr6"]
+[ext_resource type="Texture2D" uid="uid://dm3ewnqkp435p" path="res://assets/world_map/FD_Forrest_C_01.png" id="17_yh2qj"]
+[ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="18_s50uu"]
+[ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="19_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://b3m7mvjskh0aa" path="res://assets/characters/npcs/FD_Characters_Bonnie_hover_BIG_01.png" id="20_s50uu"]
+[ext_resource type="Texture2D" uid="uid://cf63c3ccnm3gw" path="res://assets/characters/npcs/FD_Characters_Bonnie_idle_BIG_01.png" id="20_uj5r8"]
+[ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="21_omhea"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_63fg0"]
-vertices = PackedVector2Array(9207.289, 2735.711, 5107.578, 5550.1563, 137.28125, 2630.7266, 4410.203, -44.320313)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(118, 2631, 4410, -56, 9226, 2735, 5108, 5562)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_yh2qj"]
+vertices = PackedVector2Array(7726.1875, 3069.0469, 4367.289, 4649.6484, 1023.4375, 3021.2266, 943.6328, 1760.5703, 4345.5625, 155.25781)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(902, 1736, 4352, 108, 7799, 3079, 4367, 4694, 985, 3047)])
+agent_radius = 40.0
+
+[sub_resource type="Resource" id="Resource_63fg0"]
+script = ExtResource("19_dy3nw")
+source = ExtResource("21_omhea")
+use_for_preview = true
+idle_graphic = ExtResource("20_uj5r8")
+hover_graphic = ExtResource("20_s50uu")
+offset = Vector2(-89.09, -160)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
+y_sort_enabled = true
 script = ExtResource("1_wtcfe")
 player = NodePath("Player")
 
-[node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(2316.7432, 3328.9995)
-speed = 512
-
-[node name="Forests" type="Node2D" parent="." unique_id=748847657]
-
-[node name="Sprite2D2" type="Sprite2D" parent="Forests" unique_id=1089403205]
-position = Vector2(1339, 2123)
-texture = ExtResource("3_iab0w")
-centered = false
-
-[node name="FdForrestA01" type="Sprite2D" parent="Forests" unique_id=883601948]
-position = Vector2(3518, 1501)
-texture = ExtResource("3_f6gjy")
-centered = false
-offset = Vector2(0, -10.74)
-
-[node name="FdForrestB01" type="Sprite2D" parent="Forests" unique_id=1949059289]
-position = Vector2(3750, 2809)
-texture = ExtResource("6_oclhf")
-
-[node name="FdForrestC01" type="Sprite2D" parent="Forests" unique_id=797968493]
-position = Vector2(5519, 2835)
-texture = ExtResource("7_sqa4f")
-
-[node name="FdForrestD01" type="Sprite2D" parent="Forests" unique_id=62272632]
-position = Vector2(4600, 3509)
-texture = ExtResource("8_20bwc")
-
-[node name="FdForrestE01" type="Sprite2D" parent="Forests" unique_id=1018243676]
-position = Vector2(6028, 1834)
-texture = ExtResource("9_yh2qj")
-
-[node name="FdForrestF01" type="Sprite2D" parent="Forests" unique_id=153900390]
-position = Vector2(6022, 3672)
-texture = ExtResource("10_vged4")
-
-[node name="FdForrestG01" type="Sprite2D" parent="Forests" unique_id=638810833]
-position = Vector2(4547, 4290)
-texture = ExtResource("11_u4gi4")
-
-[node name="FdForrestH01" type="Sprite2D" parent="Forests" unique_id=80850260]
-position = Vector2(3320, 2015)
-texture = ExtResource("12_dvq2k")
-
-[node name="FdForrestI01" type="Sprite2D" parent="Forests" unique_id=706071599]
-position = Vector2(4620, 1389)
-texture = ExtResource("13_s50uu")
-
-[node name="FdForrestJ01" type="Sprite2D" parent="Forests" unique_id=588288678]
-position = Vector2(6922, 2739)
-texture = ExtResource("14_dy3nw")
-
-[node name="FdForrestL01" type="Sprite2D" parent="Forests" unique_id=934937391]
-position = Vector2(3165, 3653)
-texture = ExtResource("15_uj5r8")
-
-[node name="FdForrestM01" type="Sprite2D" parent="Forests" unique_id=850934487]
-position = Vector2(5658, 900)
-texture = ExtResource("16_omhea")
-
-[node name="FdForrestN01" type="Sprite2D" parent="Forests" unique_id=1194722433]
-position = Vector2(6785, 1491)
-texture = ExtResource("17_63fg0")
-
-[node name="FdForrestO01" type="Sprite2D" parent="Forests" unique_id=10012619]
-position = Vector2(7936, 2364)
-texture = ExtResource("18_vged4")
-
-[node name="FdForrestP01" type="Sprite2D" parent="Forests" unique_id=527008329]
-position = Vector2(7859, 3455)
-texture = ExtResource("19_u4gi4")
-
-[node name="FdForrestQ01" type="Sprite2D" parent="Forests" unique_id=1031602293]
-position = Vector2(5367, 4851)
-texture = ExtResource("20_dvq2k")
-
-[node name="FdForrestU01" type="Sprite2D" parent="Forests" unique_id=434252243]
-position = Vector2(3283, 1253)
-texture = ExtResource("24_omhea")
-
-[node name="FdForrestS01" type="Sprite2D" parent="Forests" unique_id=758597162]
-position = Vector2(1139, 3095)
-texture = ExtResource("22_uj5r8")
-
-[node name="FdForrestT01" type="Sprite2D" parent="Forests" unique_id=2128380051]
-position = Vector2(1881, 2072)
-texture = ExtResource("23_omhea")
-
-[node name="FdForrestR01" type="Sprite2D" parent="Forests" unique_id=965247525]
-position = Vector2(2931, 4248)
-texture = ExtResource("21_s50uu")
-
-[node name="FdForrestV01" type="Sprite2D" parent="Forests" unique_id=2146154772]
-position = Vector2(4545, 454)
-texture = ExtResource("25_63fg0")
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2093413404]
+[node name="FdMap01" type="Sprite2D" parent="." unique_id=1900634851]
 visible = false
-navigation_polygon = SubResource("NavigationPolygon_63fg0")
+texture = ExtResource("2_gonaa")
+centered = false
+region_rect = Rect2(859.87805, 1201.4069, 931.1538, 653.6233)
 
 [node name="Npcs" type="Node2D" parent="." unique_id=150393216]
+
+[node name="forests" type="Node2D" parent="." unique_id=313822919]
+
+[node name="FdForrestK01" type="Sprite2D" parent="forests" unique_id=1580680001]
+position = Vector2(2310, 2595)
+texture = ExtResource("3_gonaa")
+
+[node name="FdForrestA01" type="Sprite2D" parent="forests" unique_id=310789615]
+position = Vector2(4376, 2038)
+texture = ExtResource("5_hn1gb")
+
+[node name="FdForrestB01" type="Sprite2D" parent="forests" unique_id=402659284]
+position = Vector2(3549, 2657)
+texture = ExtResource("6_3lhr6")
+
+[node name="FdForrestD01" type="Sprite2D" parent="forests" unique_id=79584163]
+position = Vector2(4349, 3317)
+texture = ExtResource("7_yh2qj")
+
+[node name="FdForrestE01" type="Sprite2D" parent="forests" unique_id=517900943]
+position = Vector2(5700, 1732)
+texture = ExtResource("8_vged4")
+
+[node name="FdForrestF01" type="Sprite2D" parent="forests" unique_id=2079487351]
+position = Vector2(5694, 3474)
+texture = ExtResource("9_u4gi4")
+
+[node name="FdForrestG01" type="Sprite2D" parent="forests" unique_id=1950186324]
+position = Vector2(4301, 4056)
+texture = ExtResource("10_dvq2k")
+
+[node name="FdForrestH01" type="Sprite2D" parent="forests" unique_id=2087299865]
+position = Vector2(3137, 1905)
+texture = ExtResource("11_s50uu")
+
+[node name="FdForrestI01" type="Sprite2D" parent="forests" unique_id=213157073]
+position = Vector2(4367, 1313)
+texture = ExtResource("12_dy3nw")
+
+[node name="FdForrestL01" type="Sprite2D" parent="forests" unique_id=102776445]
+position = Vector2(2991, 3450)
+texture = ExtResource("13_uj5r8")
+
+[node name="FdForrestM01" type="Sprite2D" parent="forests" unique_id=1746912517]
+position = Vector2(5345, 848)
+texture = ExtResource("14_omhea")
+
+[node name="FdForrestT01" type="Sprite2D" parent="forests" unique_id=300638452]
+position = Vector2(1773, 1960)
+texture = ExtResource("15_63fg0")
+
+[node name="FdForrestJ01" type="Sprite2D" parent="forests" unique_id=851589673]
+position = Vector2(6541, 2591)
+texture = ExtResource("16_3lhr6")
+
+[node name="FdForrestC01" type="Sprite2D" parent="forests" unique_id=2126507889]
+position = Vector2(5218, 2678)
+texture = ExtResource("17_yh2qj")
+
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." unique_id=1381908389]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_yh2qj")
+
+[node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
+position = Vector2(5211.142, 1938.4508)
+speed = 512
+
+[node name="Bonnie" parent="." unique_id=508760350 instance=ExtResource("18_s50uu")]
+position = Vector2(5625, 1998)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0")])
+
+[node name="Sprite2D" parent="Bonnie" index="0" unique_id=542249545]
+texture = ExtResource("20_uj5r8")
+offset = Vector2(-89.09, -160)
+
+[node name="Label" parent="Bonnie/Control" parent_id_path=PackedInt32Array(508760350, 134591522) index="0" unique_id=18356781]
+offset_left = -61.0
+offset_top = -160.0
+offset_right = 82.0
+offset_bottom = -130.0
+
+[node name="NinePatchRect" parent="Bonnie" index="2" unique_id=809710394]
+offset_left = -32.127197
+offset_top = -130.86816
+offset_right = 48.372803
+offset_bottom = 12.131836
+
+[editable path="Bonnie"]

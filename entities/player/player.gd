@@ -5,14 +5,16 @@ extends CharacterBody2D
 @export var lb_hint: Label
 @export var spr_character: AnimatedSprite2D
 @export var nav_agent: NavigationAgent2D
+static var instance: Player
 var is_moving = false 
 
-
 func _ready() -> void:
+    instance = self
     var input_handler = InputHandler.new(self)
     
     input_handler.can_process = func():
-        return true
+        var cond = [!Bootstrap.state.is_showing_overlay, !Bootstrap.state.is_interact]
+        return cond.all(func(v): return v)
 
     input_handler.handler = func(e: InputEvent):
         if e is InputEventMouseButton:
@@ -29,6 +31,16 @@ func _physics_process(delta: float) -> void:
     if is_moving:
         var target_reached = _move(delta)
         is_moving = !target_reached
+
+
+func move_to_pos(pos, offset_from_target = 10):
+    nav_agent.target_desired_distance = offset_from_target
+    is_moving = true
+    nav_agent.target_position = pos
+    nav_agent.target_reached.connect(func():
+        nav_agent.target_desired_distance = 10
+    , CONNECT_DEFERRED)
+    await nav_agent.target_reached
 
 
 func _handle_direction_changed(dir: Dictionary, walk_mode = true):

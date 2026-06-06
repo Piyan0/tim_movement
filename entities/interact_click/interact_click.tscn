@@ -37,6 +37,7 @@ offset_right = 71.5
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "label"
 label_settings = SubResource("LabelSettings_ldxf0")
 horizontal_alignment = 1
 

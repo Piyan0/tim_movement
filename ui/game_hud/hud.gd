@@ -16,6 +16,7 @@ var dialogue_batch = [
     ]
     
 func _ready():
+    return
     modulate = Color.TRANSPARENT
     lb_content.text = ""
     lb_name.text = ""

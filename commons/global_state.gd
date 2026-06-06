@@ -1,3 +1,4 @@
+class_name GlobalState
 extends Node
 
 enum GameState {
@@ -8,3 +9,5 @@ enum GameState {
 
 var current_state = GameState.FREE
 var is_holding_item = false
+var is_interact = false
+var is_showing_overlay = false

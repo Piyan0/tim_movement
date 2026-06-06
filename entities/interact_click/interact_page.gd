@@ -1,11 +1,21 @@
+@tool
 class_name InteractPage
 extends Resource
 
+signal prop_changed(name, value)
+
 @export var source: GDScript
 @export var use_for_preview = false
-@export var idle_graphic: Texture2D
+@export var idle_graphic: Texture2D:
+    set(value):
+        idle_graphic = value
+        prop_changed.emit("graphic", value)
 @export var hover_graphic: Texture2D
-@export var offset: Vector2
+
+@export var offset: Vector2:
+    set(value):
+        offset = value
+        prop_changed.emit("offset",value)
 @export var tags: Array[String]
 
 var hover_text:

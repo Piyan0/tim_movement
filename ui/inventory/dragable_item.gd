@@ -11,8 +11,8 @@ signal item_released(item_id, release_pos)
 
 func _ready() -> void:
     Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-    GlobalState.is_holding_item = true
-    GlobalState.current_state = GlobalState.GameState.DRAG_ITEM
+    Bootstrap.State.is_holding_item = true
+    Bootstrap.state.current_state = GlobalState.GameState.DRAG_ITEM
 
 
 func _process(delta: float) -> void:
@@ -39,8 +39,8 @@ func vanish():
     var t = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EaseType.EASE_IN)
     t.tween_property(tr_item, "scale", Vector2(0, 0), 0.2)
     await t.finished
-    GlobalState.is_holding_item = false
-    GlobalState.current_state = GlobalState.GameState.FREE
+    Bootstrap.state.is_holding_item = false
+    Bootstrap.state.current_state = GlobalState.GameState.FREE
     Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
     item_released.emit(item_name, drop_pos)
 

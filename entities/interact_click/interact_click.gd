@@ -12,16 +12,28 @@ extends Node2D
 
 static var interact_count = 0
 
+var pre_interact = func(pos): pass
 var _active_page: InteractPage
 var _is_mouse_inside = false
 
 
 func _ready() -> void:
     if Engine.is_editor_hint():
+        for page: InteractPage in interact_pages:
+            if page.use_for_preview:
+                page.prop_changed.connect(func(p_name, value):
+                    match  p_name:
+                        "graphic":
+                            spr_graphic.texture = value
+                        "offset":
+                            spr_graphic.offset = value
+                )
+
         for page in interact_pages:
             if page.use_for_preview:
                 _update_page(page)
-            return
+        
+        return
 
     add_to_group("interact_click")
     lb_hover.text = ""
@@ -31,8 +43,12 @@ func _ready() -> void:
             return
         lb_hover.text = _active_page.hover_text
         spr_graphic.texture = _active_page.hover_graphic
-         
     )
+
+    # since this is smaller project, I just assign the logic here for player to reach the interact point.
+    pre_interact = func(pos):
+        await Player.instance.move_to_pos(pos, 120)
+
 
     click_area.mouse_exited.connect(func():
         _is_mouse_inside = false
@@ -51,7 +67,10 @@ func _input(event: InputEvent) -> void:
                 
                 _focus_state()
                 interact_count += 1
+                Bootstrap.state.is_interact = true
+                await pre_interact.call(global_position)
                 await _active_page.interact()
+                Bootstrap.state.is_interact = false
                 if !_is_mouse_inside:
                     _reset_state()
                 interact_count -= 1
@@ -68,6 +87,7 @@ func handle_item_drop(item_id, drop_position):
 
 func get_click_rect():
     return Rect2(click_area.global_position, click_area.size)
+
 
 func refresh_page(tag_list):
     for page in interact_pages:
@@ -93,7 +113,6 @@ func _update_page(page: InteractPage):
 
 func _can_interact():
     var conditions = [
-        GlobalState.current_state == GlobalState.GameState.FREE,
         interact_count == 0,
         get_click_rect().has_point(get_global_mouse_position())
     ]
