@@ -1,4 +1,5 @@
 class_name DialogueBase
+extends Node
 
 signal batch_finished()
 signal line_finished()
@@ -13,9 +14,17 @@ var _t: Tween
 var _just_changed= false
 var _current_dialogue= ""
 
+
+func _init(parent) -> void:
+    parent.add_child.call_deferred(self)
+
+
 func input(event: InputEvent):
-    if event.is_action_pressed("ui_accept"):
-        # print(1)
+    if (
+        event is InputEventMouseButton && event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT ||
+        event is InputEventScreenTouch && event.is_pressed() ||
+        event.is_action_pressed("ui_accept")
+    ):
         if _is_running_dialogue:
             _skip(_current_dialogue)
             return
