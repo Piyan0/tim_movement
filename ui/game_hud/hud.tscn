@@ -14,8 +14,8 @@ size = Vector2(1280, 720)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g8xwt"]
 shader = ExtResource("1_qvtb7")
 shader_parameter/size = 25.0
-shader_parameter/color1 = Color(1, 1, 1, 1)
-shader_parameter/color2 = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/color1 = Color(0.3854925, 0.38549247, 0.38549247, 1)
+shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4xp1"]
 
@@ -58,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_g8xwt")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1929702255]
+[node name="BottomContainer" type="HBoxContainer" parent="." unique_id=1929702255]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -73,11 +73,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 12
 
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=1033717713]
+[node name="Control" type="Control" parent="BottomContainer" unique_id=1033717713]
 custom_minimum_size = Vector2(164, 164)
 layout_mode = 2
+size_flags_vertical = 8
 
-[node name="PortraitFrame" type="NinePatchRect" parent="HBoxContainer/Control" unique_id=249396675]
+[node name="PortraitFrame" type="NinePatchRect" parent="BottomContainer/Control" unique_id=249396675]
 custom_minimum_size = Vector2(164, 164)
 layout_mode = 1
 anchors_preset = 12
@@ -94,7 +95,7 @@ patch_margin_top = 21
 patch_margin_right = 20
 patch_margin_bottom = 21
 
-[node name="Portrait" type="TextureRect" parent="HBoxContainer/Control" unique_id=1603332846]
+[node name="Portrait" type="TextureRect" parent="BottomContainer/Control" unique_id=1603332846]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,12 +105,12 @@ grow_vertical = 2
 texture = ExtResource("4_x4xp1")
 expand_mode = 1
 
-[node name="MarginContainer" type="PanelContainer" parent="HBoxContainer" unique_id=37811598]
+[node name="MarginContainer" type="PanelContainer" parent="BottomContainer" unique_id=37811598]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x4xp1")
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="HBoxContainer/MarginContainer" unique_id=690824536]
+[node name="NinePatchRect2" type="NinePatchRect" parent="BottomContainer/MarginContainer" unique_id=690824536]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("3_g8xwt")
@@ -118,35 +119,35 @@ patch_margin_top = 21
 patch_margin_right = 20
 patch_margin_bottom = 21
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer" unique_id=851498701]
+[node name="MarginContainer" type="MarginContainer" parent="BottomContainer/MarginContainer" unique_id=851498701]
 layout_mode = 2
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/MarginContainer/MarginContainer" unique_id=777306867]
+[node name="VBoxContainer2" type="VBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer" unique_id=777306867]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=511033288]
+[node name="HBoxContainer2" type="HBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=511033288]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 23
 
-[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1883875282]
+[node name="Label2" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1883875282]
 layout_mode = 2
 text = "<"
 label_settings = ExtResource("4_8jpm2")
 
-[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=755704914]
+[node name="Label" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=755704914]
 layout_mode = 2
 text = "SHANE"
 label_settings = ExtResource("4_8jpm2")
 
-[node name="Label3" type="Label" parent="HBoxContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1839427483]
+[node name="Label3" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1839427483]
 layout_mode = 2
 text = ">"
 label_settings = ExtResource("4_8jpm2")
 
-[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=549632234]
+[node name="Label" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=549632234]
 custom_minimum_size = Vector2(0, 77)
 layout_mode = 2
 text = "line1
@@ -155,21 +156,21 @@ label_settings = ExtResource("5_mx14h")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=2038056020]
+[node name="PanelContainer" type="PanelContainer" parent="BottomContainer" unique_id=2038056020]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g8xwt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer" unique_id=56858130]
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomContainer/PanelContainer" unique_id=56858130]
 custom_minimum_size = Vector2(0, 164)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="HoverableButton" parent="HBoxContainer/PanelContainer/VBoxContainer" unique_id=676343973 instance=ExtResource("6_g8xwt")]
+[node name="HoverableButton" parent="BottomContainer/PanelContainer/VBoxContainer" unique_id=676343973 instance=ExtResource("6_g8xwt")]
 layout_mode = 2
 size_flags_vertical = 8
 title = "INVENTORY"
 
-[node name="HoverableButton2" parent="HBoxContainer/PanelContainer/VBoxContainer" unique_id=635937756 instance=ExtResource("6_g8xwt")]
+[node name="HoverableButton2" parent="BottomContainer/PanelContainer/VBoxContainer" unique_id=635937756 instance=ExtResource("6_g8xwt")]
 layout_mode = 2
 size_flags_vertical = 10
 title = "WORLD MAP"

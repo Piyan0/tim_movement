@@ -21,26 +21,25 @@ var cb = func(): print("the button is pressed.")
 
 func _ready() -> void:
     button.mouse_entered.connect(func():
-        return
         idle_frame.hide()
         hover_frame.show()
     )
     
     button.mouse_exited.connect(func():
-        return
         idle_frame.show()
         hover_frame.hide()
     )
+    
 
-    button.button_down.connect(func():
+func _gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton:
+        if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+            cb.call()
+    
+    elif event is InputEventScreenTouch && event.is_pressed():
         idle_frame.hide()
         hover_frame.show()
-    )
-    
-    button.button_up.connect(func():
         cb.call()
+        await get_tree().create_timer(100).timeout
         idle_frame.show()
         hover_frame.hide()
-    )
-    
-    
