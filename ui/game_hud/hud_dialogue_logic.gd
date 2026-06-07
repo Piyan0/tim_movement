@@ -36,13 +36,13 @@ func _ready() -> void:
         await _base_dlg.batch_finished
     )
     
-    # await get_tree().create_timer(1).timeout
-    # var x = [
-    #     DialogueWithPortrait.new("Anjay", "Mabar"),
-    #     DialogueWithPortrait.new("Anjay", "Anjay mabar keren euy...", "shane.png"),
-    # ] 
+    await get_tree().create_timer(1).timeout
+    var x = [
+        DialogueWithPortrait.new("Anjay", "Mabar"),
+        DialogueWithPortrait.new("Anjay", "Anjay mabar keren euy...", "shane.png"),
+    ] 
  
-    # _base_dlg.dialogue_batch = x
+    _base_dlg.dialogue_batch = x
 
 func reset_content():
     _deco.map(func(value):
