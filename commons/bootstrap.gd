@@ -9,5 +9,4 @@ func _enter_tree():
     
 
 func _add_hud():
-    var hud = load("uid://dfb46lbo028lg").instantiate()
-    GlobalCanvas.add_child(hud)
+    return

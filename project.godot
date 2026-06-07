@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tim"
-run/main_scene="uid://3p8vrrypgi1t"
+run/main_scene="uid://bxikvddg4fkyy"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -56,3 +56,4 @@ rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
