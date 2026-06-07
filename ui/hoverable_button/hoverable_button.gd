@@ -36,10 +36,13 @@ func _gui_input(event: InputEvent) -> void:
         if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
             cb.call()
     
-    elif event is InputEventScreenTouch && event.is_pressed():
-        idle_frame.hide()
-        hover_frame.show()
-        cb.call()
-        await get_tree().create_timer(100).timeout
-        idle_frame.show()
-        hover_frame.hide()
+    elif event is InputEventScreenTouch:
+        if event.is_pressed():
+            idle_frame.hide()
+            hover_frame.show()
+        else:
+            cb.call()
+            idle_frame.show()
+            hover_frame.hide()
+    
+        
