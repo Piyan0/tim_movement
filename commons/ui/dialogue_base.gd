@@ -8,16 +8,20 @@ signal _input_next()
 var speed= 20
 var dialogue_batch: Array= []: set= _set_dialogue_batch
 var on_progress= func(dialogue, visible_character, just_changed): pass
-
+var click_target: Control
 var _is_running_dialogue= false
 var _t: Tween
 var _just_changed= false
 var _current_dialogue= ""
 
 
-func _init(parent) -> void:
+func _init(parent, click_target = null) -> void:
+    if click_target == null:
+        click_target = parent
+    
     parent.add_child.call_deferred(self)
-
+    click_target.gui_input.connect(input)
+    
 
 func input(event: InputEvent):
     if (

@@ -6,13 +6,14 @@ extends Node
 @export var _lb_name: Label
 @export var _deco: Array[Label]
 @export var _lb_content: Label
+@export var _click_target: Control
 
 
 var _base_dlg: DialogueBase
 
 func _ready() -> void:
     reset_content()
-    _base_dlg = DialogueBase.new(self)
+    _base_dlg = DialogueBase.new(owner)
     _base_dlg.speed = _dlg_speed
     _base_dlg.on_progress = func(dialogue: DialogueWithPortrait, vis_chars, just_changed):
         if just_changed:
@@ -51,10 +52,6 @@ func reset_content():
     _tr_portrait.hide()
     _lb_content.text = ""
     _lb_name.text = ""
-
-
-func _input(event: InputEvent) -> void:
-    _base_dlg.input(event)
 
 
 class DialogueWithPortrait:

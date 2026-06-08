@@ -1,3 +1,8 @@
-use interact skip counter rather than using state.
-movement click bug.
+implementasi world map
+implementasi inventory map
+implementasi main menu
+buat map nya
+implementasi semua event progression.
 
+
+@ hentikan fungsi next dialoague kalo clicknya berada pada element button lain.

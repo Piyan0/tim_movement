@@ -7,9 +7,8 @@
 [ext_resource type="LabelSettings" uid="uid://dqvc2kyhvjdcy" path="res://assets/ui/style/label_name.tres" id="4_8jpm2"]
 [ext_resource type="Texture2D" uid="uid://8flx0yjn7ifl" path="res://assets/images/portraits/shane.png" id="4_x4xp1"]
 [ext_resource type="LabelSettings" uid="uid://c53o05x7ehgqn" path="res://assets/ui/style/label_dialogue.tres" id="5_mx14h"]
-[ext_resource type="PackedScene" uid="uid://buajies2jtys6" path="res://ui/hoverable_button/hoverable_button.tscn" id="6_g8xwt"]
+[ext_resource type="PackedScene" uid="uid://buajies2jtys6" path="res://ui/hoverable_button/black/hoverable_button.tscn" id="6_g8xwt"]
 [ext_resource type="Script" uid="uid://dejfrbq4d4fdv" path="res://ui/game_hud/hud_dialogue_logic.gd" id="8_8jpm2"]
-[ext_resource type="Script" uid="uid://dbl0hbal7s4wv" path="res://ui/game_hud/hud_button_logic.gd" id="9_mx14h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g8xwt"]
 shader = ExtResource("1_qvtb7")
@@ -21,7 +20,7 @@ shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8xwt"]
 
-[node name="HUD" type="Control" unique_id=251633660]
+[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("_buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,6 +28,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3ys00")
+_buttons = [NodePath("HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton2")]
+
+[node name="HUDDialogueLogic" type="Node" parent="." unique_id=1285769413 node_paths=PackedStringArray("_tr_portrait", "_lb_name", "_deco", "_lb_content", "_click_target")]
+script = ExtResource("8_8jpm2")
+_tr_portrait = NodePath("../BottomContainer/Control/Portrait")
+_lb_name = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label")
+_deco = [NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label2"), NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label3")]
+_lb_content = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/Label")
+_click_target = NodePath("")
 
 [node name="Control" type="ColorRect" parent="." unique_id=1188583734]
 material = SubResource("ShaderMaterial_g8xwt")
@@ -38,6 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=758433168]
 visible = false
@@ -184,13 +193,3 @@ offset_right = -41.0
 offset_bottom = 103.0
 grow_horizontal = 0
 title = "MENU"
-
-[node name="HUDDialogueLogic" type="Node" parent="." unique_id=1285769413 node_paths=PackedStringArray("_tr_portrait", "_lb_name", "_deco", "_lb_content")]
-script = ExtResource("8_8jpm2")
-_tr_portrait = NodePath("../BottomContainer/Control/Portrait")
-_lb_name = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label")
-_deco = [NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label2"), NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label3")]
-_lb_content = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/Label")
-
-[node name="HUDButtonLogic" type="Node" parent="." unique_id=1699864181]
-script = ExtResource("9_mx14h")

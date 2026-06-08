@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://egmm5itqnfih"]
+
+[ext_resource type="Script" uid="uid://s3xsfa2rgolw" path="res://ui/main_menu/main_menu.gd" id="1_i5wg5"]
+[ext_resource type="Texture2D" uid="uid://dvhe5njqphije" path="res://assets/ui/main_menu/FD_UI_StartScreen_Clean_01.png" id="1_uhj5c"]
+[ext_resource type="PackedScene" uid="uid://dgnqke0amr8wb" path="res://ui/hoverable_button/pink/hoverable_button_pink.tscn" id="2_mu8pm"]
+[ext_resource type="Texture2D" uid="uid://n2wh2wd7w0kc" path="res://assets/ui/main_menu/FD_UI_MenuScreen_Clean_01.png" id="2_omy8q"]
+
+[node name="MainMenu" type="Control" unique_id=973046342 node_paths=PackedStringArray("_btn_start", "_buttons", "_hero", "_options_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i5wg5")
+_btn_start = NodePath("HoverableButton")
+_buttons = [NodePath("Control/MainMenuOptions/HoverableButton"), NodePath("Control/MainMenuOptions/HoverableButton2"), NodePath("Control/MainMenuOptions/HoverableButton3"), NodePath("Control/MainMenuOptions/HoverableButton4")]
+_hero = NodePath("Control/Hero")
+_options_container = NodePath("Control")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=789335860]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_uhj5c")
+
+[node name="HoverableButton" parent="." unique_id=676343973 instance=ExtResource("2_mu8pm")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = 50.0
+offset_right = 66.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+title = "START"
+
+[node name="Control" type="Control" parent="." unique_id=284047148]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hero" type="TextureRect" parent="Control" unique_id=883127912]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_omy8q")
+
+[node name="MainMenuOptions" type="VBoxContainer" parent="Control" unique_id=1318385376]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -177.0
+offset_right = 105.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="HoverableButton" parent="Control/MainMenuOptions" unique_id=920351053 instance=ExtResource("2_mu8pm")]
+layout_mode = 2
+title = "NEW GAME"
+
+[node name="HoverableButton2" parent="Control/MainMenuOptions" unique_id=962278324 instance=ExtResource("2_mu8pm")]
+layout_mode = 2
+title = "CONTINUE"
+
+[node name="HoverableButton3" parent="Control/MainMenuOptions" unique_id=1149856633 instance=ExtResource("2_mu8pm")]
+layout_mode = 2
+title = "LOAD"
+
+[node name="HoverableButton4" parent="Control/MainMenuOptions" unique_id=895130527 instance=ExtResource("2_mu8pm")]
+layout_mode = 2
+title = "CLOSE GAME"
