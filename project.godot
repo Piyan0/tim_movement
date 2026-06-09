@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tim"
-run/main_scene="uid://bxikvddg4fkyy"
+run/main_scene="uid://dxd41a5vnfasq"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkkle4jo6uc1q"
-path="res://.godot/imported/Candle.png-3bcd4d96341f4d4d0163687589c4d252.ctex"
+uid="uid://b6kd145x8lw6f"
+path="res://.godot/imported/FD_Item_HumanSkull_BIG_01.png-71e70feae135eda13e3238aace1eb528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/Candle.png"
-dest_files=["res://.godot/imported/Candle.png-3bcd4d96341f4d4d0163687589c4d252.ctex"]
+source_file="res://assets/items/FD_Item_HumanSkull_BIG_01.png"
+dest_files=["res://.godot/imported/FD_Item_HumanSkull_BIG_01.png-71e70feae135eda13e3238aace1eb528.ctex"]
 
 [params]
 

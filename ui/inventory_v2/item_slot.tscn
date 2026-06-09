@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c51and35ymab2"]
+
+[ext_resource type="Texture2D" uid="uid://dhm4yqddqb2oe" path="res://ui/inventory_v2/item_slot_frame.png" id="1_drxnn"]
+[ext_resource type="Script" uid="uid://bgj3d6f30o5xf" path="res://ui/inventory_v2/item_slot.gd" id="1_iq3no"]
+[ext_resource type="Texture2D" uid="uid://1lpxvxlv8lkh" path="res://assets/items/FD_Item_Axe_BIG_01.png" id="2_iq3no"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1no85"]
+
+[node name="ItemSlot" type="PanelContainer" unique_id=84334891]
+offset_left = 753.0
+offset_top = 192.0
+offset_right = 840.0
+offset_bottom = 279.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1no85")
+script = ExtResource("1_iq3no")
+
+[node name="Item" type="TextureRect" parent="." unique_id=1432371075]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_drxnn")
+
+[node name="Item2" type="TextureRect" parent="." unique_id=952117438]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_iq3no")
+stretch_mode = 2
