@@ -1,8 +1,9 @@
-implementasi world map
-implementasi inventory map
-implementasi main menu
-buat map nya
-implementasi semua event progression.
-
+implement world map.
+implement inventory menu.
+implement main menu.
+buat map nya.
+implement save system dengan n - slot. 
+implement semua event progression.
+preview inventory UI.
 
 @ hentikan fungsi next dialoague kalo clicknya berada pada element button lain.
