@@ -5,5 +5,5 @@ buat map nya.
 implement save system dengan n - slot. 
 implement semua event progression.
 preview inventory UI.
-
+test
 @ hentikan fungsi next dialoague kalo clicknya berada pada element button lain.
