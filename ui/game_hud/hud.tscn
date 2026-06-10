@@ -30,13 +30,12 @@ grow_vertical = 2
 script = ExtResource("1_3ys00")
 _buttons = [NodePath("HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton2")]
 
-[node name="HUDDialogueLogic" type="Node" parent="." unique_id=1285769413 node_paths=PackedStringArray("_tr_portrait", "_lb_name", "_deco", "_lb_content", "_click_target")]
+[node name="HUDDialogueLogic" type="Node" parent="." unique_id=1285769413 node_paths=PackedStringArray("_tr_portrait", "_lb_name", "_deco", "_lb_content")]
 script = ExtResource("8_8jpm2")
 _tr_portrait = NodePath("../BottomContainer/Control/Portrait")
 _lb_name = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label")
 _deco = [NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label2"), NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2/Label3")]
 _lb_content = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/Label")
-_click_target = NodePath("")
 
 [node name="Control" type="ColorRect" parent="." unique_id=1188583734]
 material = SubResource("ShaderMaterial_g8xwt")

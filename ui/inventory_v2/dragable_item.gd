@@ -10,7 +10,7 @@ func _process(delta):
     
 func _gui_input(event: InputEvent):
     if event is InputEventMouseButton:
-        if event.button_index = MOUSE_BUTTON_LEFT && event.is_pressed():
+        if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
             _drag = true
             _drag_pos = event.position
     
@@ -20,7 +20,7 @@ func _gui_input(event: InputEvent):
 
 func _input(event: InputEvent):
     if event is InputEventMouseButton:
-        if event.button_index = MOUSE_BUTTON_LEFT && !event.is_pressed():
+        if event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
             _drag = false
 
     
