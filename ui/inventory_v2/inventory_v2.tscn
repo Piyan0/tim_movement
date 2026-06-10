@@ -82,20 +82,14 @@ theme_override_constants/margin_bottom = 14
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2" unique_id=995143124]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=657985124]
+[node name="ItemSlot" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=84334891 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=820908946]
+[node name="ItemSlot2" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1450858403 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
 
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1526747797]
+[node name="ItemSlot3" parent="VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1392659234 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
 
 [node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer" unique_id=307174392]
 layout_mode = 2
@@ -152,10 +146,3 @@ texture = ExtResource("4_1no85")
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("4_1no85")
-
-[node name="ItemSlot" parent="." unique_id=84334891 instance=ExtResource("5_f8eej")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 87.0
-offset_bottom = 87.0

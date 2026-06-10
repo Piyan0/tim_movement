@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bs0fevfkhn7d5"]
+
+[ext_resource type="Script" uid="uid://b4ihsxx1w3cak" path="res://ui/inventory_v2/dragable_item.gd" id="1_ttppi"]
+[ext_resource type="Texture2D" uid="uid://1lpxvxlv8lkh" path="res://assets/items/FD_Item_Axe_BIG_01.png" id="2_muh2v"]
+
+[node name="DragableItem" type="Control" unique_id=1889986684 node_paths=PackedStringArray("_tr_item")]
+custom_minimum_size = Vector2(87, 87)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 87.0
+offset_bottom = 87.0
+script = ExtResource("1_ttppi")
+_tr_item = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1326056007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -36.5
+offset_right = 36.5
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_muh2v")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=189528731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+border_width = 3.0

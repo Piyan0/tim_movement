@@ -6,13 +6,15 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1no85"]
 
-[node name="ItemSlot" type="PanelContainer" unique_id=84334891]
-offset_left = 753.0
-offset_top = 192.0
-offset_right = 840.0
-offset_bottom = 279.0
+[node name="ItemSlot" type="PanelContainer" unique_id=84334891 node_paths=PackedStringArray("_tr_item")]
+offset_right = 87.0
+offset_bottom = 87.0
+pivot_offset = Vector2(44, 44)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1no85")
 script = ExtResource("1_iq3no")
+icon = ExtResource("2_iq3no")
+item_id = "<item_id>"
+_tr_item = NodePath("Item2")
 
 [node name="Item" type="TextureRect" parent="." unique_id=1432371075]
 layout_mode = 2

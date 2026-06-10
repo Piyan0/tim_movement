@@ -1,7 +1,8 @@
-class_name DragableItem
+# class_name DragableItem
 extends Control
 
 signal item_released(item_id, release_pos)
+signal item_dragged(item_id, pos)
 
 @export var click_rect: Control
 @export var tr_item: TextureRect
