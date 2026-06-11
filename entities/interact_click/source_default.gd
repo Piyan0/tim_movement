@@ -9,10 +9,14 @@ func _hover_text():
 
 func _interact():
     var x = InteractActions.new()
-    var text = []
-    text.append("Lilian/lilian/ It's a good day right...")
-    text.append("Shane/ shane / See you later")
-    await x.text(text)
+    var shane = "Shane shane.png %s"
+    var lilian = "Lilian lilian.png %s"
+
+    var arr = []
+    arr.append( shane % "Yo what up." )
+    arr.append( lilian % "All's fine boss!" )
+
+    await x.text(arr)
 
 
 func _item_dropped(item_id):

@@ -1,5 +1,5 @@
 extends Node
-
+class_name HUDDialogue
 
 @export var _dlg_speed = 30
 @export var _tr_portrait: TextureRect
@@ -17,9 +17,9 @@ func _ready() -> void:
     _base_dlg.speed = _dlg_speed
     _base_dlg.on_progress = func(dialogue: DialogueWithPortrait, vis_chars, just_changed):
         if just_changed:
-            if dialogue.portrait_id != "":
+            if dialogue.portrait != null:
                 _tr_portrait.show()
-                _tr_portrait.texture = Bootstrap.portraits.get_asset(dialogue.portrait_id)
+                _tr_portrait.texture = dialogue.portrait
             else:
                 _tr_portrait.hide()
 
@@ -37,13 +37,14 @@ func _ready() -> void:
         await _base_dlg.batch_finished
     )
     
-    await get_tree().create_timer(1).timeout
-    var x = [
-        DialogueWithPortrait.new("Anjay", "Mabar"),
-        DialogueWithPortrait.new("Anjay", "Anjay mabar keren euy...", "shane.png"),
-    ] 
- 
-    _base_dlg.dialogue_batch = x
+
+func start_dialogue(batches: Array):
+    var prn = get_parent() as Control
+    prn.mouse_filter = Control.MOUSE_FILTER_STOP
+    _base_dlg.dialogue_batch = batches
+    await _base_dlg.batch_finished
+    prn.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 
 func reset_content():
     _deco.map(func(value):
@@ -56,8 +57,8 @@ func reset_content():
 
 class DialogueWithPortrait:
     extends DialogueBase.DialogueNormal
-    var portrait_id: String
+    var portrait: Texture2D
 
-    func _init(speaker, msg, portrait_id = ""):
+    func _init(speaker, msg, portrait):
         super._init(speaker, msg)
-        self.portrait_id = portrait_id
+        self.portrait = portrait

@@ -20,14 +20,16 @@ shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8xwt"]
 
-[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("_buttons")]
+[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("dialogue", "_buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_3ys00")
+dialogue = NodePath("HUDDialogueLogic")
 _buttons = [NodePath("HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton2")]
 
 [node name="HUDDialogueLogic" type="Node" parent="." unique_id=1285769413 node_paths=PackedStringArray("_tr_portrait", "_lb_name", "_deco", "_lb_content")]
@@ -38,6 +40,7 @@ _deco = [NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContai
 _lb_content = NodePath("../BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/Label")
 
 [node name="Control" type="ColorRect" parent="." unique_id=1188583734]
+visible = false
 material = SubResource("ShaderMaterial_g8xwt")
 layout_mode = 1
 anchors_preset = 15
@@ -80,6 +83,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(164, 164)
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="PortraitFrame" type="NinePatchRect" parent="BottomContainer/Control" unique_id=249396675]
 custom_minimum_size = Vector2(164, 164)
@@ -105,12 +109,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_x4xp1")
 expand_mode = 1
 
 [node name="MarginContainer" type="PanelContainer" parent="BottomContainer" unique_id=37811598]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x4xp1")
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="BottomContainer/MarginContainer" unique_id=690824536]
@@ -124,15 +130,18 @@ patch_margin_bottom = 21
 
 [node name="MarginContainer" type="MarginContainer" parent="BottomContainer/MarginContainer" unique_id=851498701]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer" unique_id=777306867]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=511033288]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/separation = 23
 
 [node name="Label2" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1883875282]
