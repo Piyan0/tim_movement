@@ -28,7 +28,9 @@ func _process(delta):
 
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseMotion || event is InputEventScreenDrag:
-        _drag_pos = event.position
+        var canvas_transform = get_viewport().canvas_transform
+        var pos = canvas_transform.affine_inverse() * event.position
+        _drag_pos = pos
 
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():

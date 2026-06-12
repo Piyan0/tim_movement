@@ -9,7 +9,7 @@ func text(arr = ["Shane shane.png owh is that right"]):
         var portrait_id = split[1]
         var content = split.slice(2)
         content = " ".join(content)
-        printt(name, portrait_id, content)
+        # printt(name, portrait_id, content)
         var batch_el = HUDDialogue.DialogueWithPortrait.new(
             name,
             content,

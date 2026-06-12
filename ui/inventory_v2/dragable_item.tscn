@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1lpxvxlv8lkh" path="res://assets/items/FD_Item_Axe_BIG_01.png" id="2_muh2v"]
 
 [node name="DragableItem" type="Control" unique_id=1889986684 node_paths=PackedStringArray("_tr_item")]
+z_index = 2000
 custom_minimum_size = Vector2(87, 87)
 layout_mode = 3
 anchors_preset = 0

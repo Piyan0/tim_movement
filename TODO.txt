@@ -5,8 +5,9 @@ buat map nya.
 implement save system dengan n - slot. 
 implement semua event progression.
 preview inventory UI.
-move player away when interact if player is too close.
 player bisa ngeklik dimanapun termasuk UI(Menu, World Map, Inventory) saat dia ingin click and move
-dialogue gak bisa di next ketika interact.
 
+
+@ move player away when interact if player is too close.
+@ dialogue gak bisa di next ketika interact.
 @ hentikan fungsi next dialoague kalo clicknya berada pada element button lain.

@@ -54,6 +54,11 @@ func _move_to_click_pos(click_pos):
     nav_agent.target_position = valid_click_pos
 
 
+func set_facing_to_pos(pos):
+    var dir = _get_direction_from_route(global_position, pos)
+    _handle_direction_changed(dir, false)
+
+    
 func _handle_direction_changed(dir: Dictionary, walk_mode = true):
     if walk_mode:
         match dir.y:

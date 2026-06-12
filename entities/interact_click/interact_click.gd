@@ -2,8 +2,7 @@
 extends Node2D
 
 @export var interact_pages: Array[InteractPage]
-
-
+@export var _interact_distance = 120
 @export_category("Node References")
 @export var spr_graphic: Sprite2D
 @export var click_area: Control
@@ -47,9 +46,13 @@ func _ready() -> void:
 
     # since this is smaller project, I just assign the logic here for player to reach the interact point.
     pre_interact = func(pos):
-        await Player.instance.move_to_pos(pos, 120)
-
-
+        var player = Player.instance
+        var distance = player.global_position.distance_to(global_position)
+        if distance > _interact_distance:
+            await Player.instance.move_to_pos(pos, 120)
+        else:
+            Player.instance.set_facing_to_pos(global_position)
+       
     click_area.mouse_exited.connect(func():
         _is_mouse_inside = false
         if interact_count > 0:
@@ -64,7 +67,7 @@ func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
                 if !_can_interact(): return
-                
+                get_viewport().set_input_as_handled()
                 _focus_state()
                 interact_count += 1
                 Bootstrap.state.is_interact = true
