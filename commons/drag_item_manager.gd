@@ -9,7 +9,7 @@ func drag_item(ins: DragableItem):
     ins.item_dragged.connect(func(id, pos):
         print("Dragging at pos:", pos)    
     )
-    Bootstrap.get_tree().current_scene.add_child(ins)
+    Bootstrap.canvas.add_child(ins)
 
 
 # func add_drag_item(item_name, texture, pos):

@@ -11,3 +11,4 @@ var current_state = GameState.FREE
 var is_holding_item = false
 var is_interact = false
 var is_showing_overlay = false
+var is_hovering_button = false

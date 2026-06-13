@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://du0mxwpysvtmx" path="res://assets/world_map/FD_Map_01.png" id="2_gonaa"]
+[ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="2_uj5r8"]
 [ext_resource type="Texture2D" uid="uid://cpwk22lxu0d5t" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_gonaa"]
 [ext_resource type="Texture2D" uid="uid://b2827eqbceebr" path="res://assets/world_map/FD_Forrest_A_01.png" id="5_hn1gb"]
 [ext_resource type="Texture2D" uid="uid://b2ch7dj6vx21g" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_3lhr6"]
@@ -23,6 +24,12 @@
 [ext_resource type="Texture2D" uid="uid://cf63c3ccnm3gw" path="res://assets/characters/npcs/FD_Characters_Bonnie_idle_BIG_01.png" id="20_uj5r8"]
 [ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="21_omhea"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omhea"]
+shader = ExtResource("2_uj5r8")
+shader_parameter/size = 25.0
+shader_parameter/color1 = Color(0.3854925, 0.38549247, 0.38549247, 1)
+shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yh2qj"]
 vertices = PackedVector2Array(7726.1875, 3069.0469, 4367.289, 4649.6484, 1023.4375, 3021.2266, 943.6328, 1760.5703, 4345.5625, 155.25781)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
@@ -42,6 +49,13 @@ metadata/_custom_type_script = "uid://b04vc5drymud0"
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
 player = NodePath("Player")
+
+[node name="Control" type="ColorRect" parent="." unique_id=876497405]
+material = SubResource("ShaderMaterial_omhea")
+custom_minimum_size = Vector2(300, 300)
+offset_right = 8419.0
+offset_bottom = 4727.0
+mouse_filter = 1
 
 [node name="FdMap01" type="Sprite2D" parent="." unique_id=1900634851]
 visible = false
@@ -125,7 +139,10 @@ interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0")])
 texture = ExtResource("20_uj5r8")
 offset = Vector2(-89.09, -160)
 
-[node name="Label" parent="Bonnie/Control" parent_id_path=PackedInt32Array(508760350, 134591522) index="0" unique_id=18356781]
+[node name="Control" parent="Bonnie" index="1" unique_id=134591522]
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="Bonnie/Control" index="0" unique_id=18356781]
 offset_left = -61.0
 offset_top = -160.0
 offset_right = 82.0
@@ -136,5 +153,6 @@ offset_left = -32.127197
 offset_top = -130.86816
 offset_right = 48.372803
 offset_bottom = 12.131836
+metadata/_edit_use_anchors_ = true
 
 [editable path="Bonnie"]

@@ -8,7 +8,7 @@ enum InputMode{
 
 var mode = InputMode.INPUT
 var handler = func(input_event: InputEvent): pass
-var can_process = func(): return true
+var can_process = func() -> Array[bool]: return []
 var _handler_list = []
 
 
@@ -25,7 +25,7 @@ func add(action, cb):
 
 
 func _process_input(input_event: InputEvent):
-    if !can_process.call(): return
+    if !can_process.call().all(func(value): return value): return
 
     for handler in _handler_list:
         if input_event.is_action(handler.action) and input_event.is_pressed():

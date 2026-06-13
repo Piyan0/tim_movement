@@ -6,6 +6,7 @@ extends Control
 @export_category("Buttons")
 @export var _buttons: Array[HoverableButton]
 
+var _inventory = null
 
 func _ready() -> void:
     # button menu
@@ -15,9 +16,19 @@ func _ready() -> void:
     # button inventory
     _buttons[1].cb = func():
         # print("button inventory")
+        if _inventory != null:
+            _inventory.queue_free()
+            return
+
+        Bootstrap.state.is_showing_overlay = true
         var inventory = InventoryV2.spawn() as Control
+        _inventory = inventory
         _inventory_place.add_child(inventory)
         inventory.set_offsets_preset(PRESET_CENTER_BOTTOM)
+        inventory.tree_exited.connect(func():
+            Bootstrap.state.is_showing_overlay = false
+            _inventory = null
+        )
 
     # buttonworld map
     _buttons[2].cb = func():

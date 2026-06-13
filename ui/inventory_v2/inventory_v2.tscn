@@ -8,7 +8,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlbc2"]
 
-[node name="InventoryV2" type="VBoxContainer" unique_id=1354510956]
+[node name="InventoryV2" type="VBoxContainer" unique_id=1354510956 node_paths=PackedStringArray("_items_slot")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -17,6 +17,7 @@ offset_right = 228.5
 offset_bottom = 234.0
 grow_horizontal = 2
 script = ExtResource("1_f8eej")
+_items_slot = [NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot2"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot3")]
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1663591753]
 layout_mode = 2

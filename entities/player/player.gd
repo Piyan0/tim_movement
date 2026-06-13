@@ -6,19 +6,22 @@ extends CharacterBody2D
 @export var spr_character: AnimatedSprite2D
 @export var nav_agent: NavigationAgent2D
 static var instance: Player
-var is_moving = false 
+var is_moving = false
 
 func _ready() -> void:
     instance = self
     var input_handler = InputHandler.new(self)
-    
+
     input_handler.can_process = func():
-        var cond = [!Bootstrap.state.is_showing_overlay, !Bootstrap.state.is_interact]
-        return cond.all(func(v): return v)
+        return [
+            !Bootstrap.state.is_showing_overlay,
+            !Bootstrap.state.is_interact,
+            !Bootstrap.state.is_hovering_button,
+        ]
 
     input_handler.handler = func(e: InputEvent):
         var click_pos = get_global_mouse_position()
-        
+
         if e is InputEventMouseButton:
             if e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
                 if !is_moving:
@@ -58,7 +61,7 @@ func set_facing_to_pos(pos):
     var dir = _get_direction_from_route(global_position, pos)
     _handle_direction_changed(dir, false)
 
-    
+
 func _handle_direction_changed(dir: Dictionary, walk_mode = true):
     if walk_mode:
         match dir.y:

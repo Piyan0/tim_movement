@@ -14,7 +14,7 @@ static var interact_count = 0
 var pre_interact = func(pos): pass
 var _active_page: InteractPage
 var _is_mouse_inside = false
-
+var _input: InputHandler
 
 func _ready() -> void:
     if Engine.is_editor_hint():
@@ -61,22 +61,27 @@ func _ready() -> void:
         spr_graphic.texture = _active_page.idle_graphic
     )
 
+    _input = InputHandler.new(self)
+
+    _input.can_process = func():
+        return [!Bootstrap.state.is_showing_overlay]
+
+    _input.handler = func(event: InputEvent):
+        if event is InputEventMouseButton:
+            if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
+                    if !_can_interact(): return
+                    get_viewport().set_input_as_handled()
+                    _focus_state()
+                    interact_count += 1
+                    Bootstrap.state.is_interact = true
+                    await pre_interact.call(global_position)
+                    await _active_page.interact()
+                    Bootstrap.state.is_interact = false
+                    if !_is_mouse_inside:
+                        _reset_state()
+                    interact_count -= 1
 
 
-func _input(event: InputEvent) -> void:
-    if event is InputEventMouseButton:
-        if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-                if !_can_interact(): return
-                get_viewport().set_input_as_handled()
-                _focus_state()
-                interact_count += 1
-                Bootstrap.state.is_interact = true
-                await pre_interact.call(global_position)
-                await _active_page.interact()
-                Bootstrap.state.is_interact = false
-                if !_is_mouse_inside:
-                    _reset_state()
-                interact_count -= 1
 
 
 func handle_item_drop(item_id, drop_position):

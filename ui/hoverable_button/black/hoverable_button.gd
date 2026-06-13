@@ -22,6 +22,7 @@ var cb = func(): print("the button is pressed.")
 
 func _ready() -> void:
 	button.mouse_entered.connect(func():
+		Bootstrap.state.is_hovering_button = true
 		idle_frame.hide()
 		hover_frame.show()
 	)
@@ -29,6 +30,7 @@ func _ready() -> void:
 	button.mouse_exited.connect(func():
 		idle_frame.show()
 		hover_frame.hide()
+		Bootstrap.state.is_hovering_button = false
 	)
 	
 
