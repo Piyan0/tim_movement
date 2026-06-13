@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgnqke0amr8wb" path="res://ui/hoverable_button/pink/hoverable_button_pink.tscn" id="2_mu8pm"]
 [ext_resource type="Texture2D" uid="uid://n2wh2wd7w0kc" path="res://assets/ui/main_menu/FD_UI_MenuScreen_Clean_01.png" id="2_omy8q"]
 
-[node name="MainMenu" type="Control" unique_id=973046342 node_paths=PackedStringArray("_btn_start", "_buttons", "_hero", "_options_container")]
+[node name="MainMenu" type="Control" unique_id=973046342 node_paths=PackedStringArray("_btn_start", "_buttons", "_hero", "_options_container", "_ph_load_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,7 @@ _btn_start = NodePath("HoverableButton")
 _buttons = [NodePath("Control/MainMenuOptions/HoverableButton"), NodePath("Control/MainMenuOptions/HoverableButton2"), NodePath("Control/MainMenuOptions/HoverableButton3"), NodePath("Control/MainMenuOptions/HoverableButton4")]
 _hero = NodePath("Control/Hero")
 _options_container = NodePath("Control")
+_ph_load_menu = NodePath("LoadMenu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=789335860]
 layout_mode = 1
@@ -91,3 +92,6 @@ title = "LOAD"
 [node name="HoverableButton4" parent="Control/MainMenuOptions" unique_id=895130527 instance=ExtResource("2_mu8pm")]
 layout_mode = 2
 title = "CLOSE GAME"
+
+[node name="LoadMenu" parent="." unique_id=318026328 instance_placeholder="res://ui/main_menu/load_menu/load_menu.tscn"]
+layout_mode = 1
