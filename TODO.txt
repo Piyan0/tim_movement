@@ -1,11 +1,14 @@
 implement world map.
-implement inventory menu.
-implement main menu.
 buat map nya.
-implement save system dengan n - slot. 
 implement semua event progression.
+buat semua item yang ada di inventory.
+buat load and save.
+implement main menu.
+implement save system dengan n - slot. 
 
-
+@ implement inventory menu.
+@ player masih bisa jalan ketika interact dari drop item.
+@ hide inventory ketika di drop di tempat yang benar.
 @ preview inventory UI.
 @ player bisa ngeklik dimanapun termasuk UI(Menu, World Map, Inventory) saat dia ingin click and move
 @ implement fungsi untuk tutup inventory.

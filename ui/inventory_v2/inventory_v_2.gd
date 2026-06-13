@@ -16,10 +16,11 @@ func _ready() -> void:
             t.tween_property(self, "modulate:a", 0.0, _item_picked_tween_dur)
         )
         slot.item_dropped.connect(func():
-            mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_ENABLED
-            var t = create_tween().set_parallel().set_trans(Tween.TRANS_BACK)
-            t.tween_property(self, "modulate:a", 1, _item_picked_tween_dur)
-            t.tween_property(self, "position:y", position.y + (-_item_picked_drop), _item_picked_tween_dur)
+            queue_free()
+            # mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_ENABLED
+            # var t = create_tween().set_parallel().set_trans(Tween.TRANS_BACK)
+            # t.tween_property(self, "modulate:a", 1, _item_picked_tween_dur)
+            # t.tween_property(self, "position:y", position.y + (-_item_picked_drop), _item_picked_tween_dur)
         )
 
 static func spawn():

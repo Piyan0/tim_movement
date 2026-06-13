@@ -30,6 +30,7 @@ func _gui_input(event: InputEvent) -> void:
             , CONNECT_ONE_SHOT)
             _tr_item.hide()
 
+
     elif event is InputEventScreenTouch:
         if event.is_pressed():
             item_picked.emit()

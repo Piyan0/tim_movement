@@ -46,3 +46,4 @@ offset_top = 38.0
 offset_right = 68.5
 offset_bottom = 181.0
 border_color = Color(1, 1, 1, 1)
+editor_only = false

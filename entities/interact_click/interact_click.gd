@@ -65,32 +65,23 @@ func _ready() -> void:
 
     _input.can_process = func():
         return [!Bootstrap.state.is_showing_overlay]
+    
 
     _input.handler = func(event: InputEvent):
         if event is InputEventMouseButton:
             if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-                    if !_can_interact(): return
-                    get_viewport().set_input_as_handled()
-                    _focus_state()
-                    interact_count += 1
-                    Bootstrap.state.is_interact = true
-                    await pre_interact.call(global_position)
-                    await _active_page.interact()
-                    Bootstrap.state.is_interact = false
-                    if !_is_mouse_inside:
-                        _reset_state()
-                    interact_count -= 1
-
-
+                _interact(func():
+                    await _active_page.interact()    
+                )
 
 
 func handle_item_drop(item_id, drop_position):
+    if !_can_interact(): return
     if !get_click_rect().has_point(drop_position):
         return
-    interact_count += 1    
-    await _active_page.item_dropped(item_id)
-    _reset_state()
-    interact_count -= 1
+    _interact(func():
+        await _active_page.item_dropped(item_id)    
+    )
 
 
 func get_click_rect():
@@ -103,6 +94,21 @@ func refresh_page(tag_list):
             _active_page = page
             _update_page(page)
             return
+
+
+func _interact(interact_cb):
+    if !_can_interact(): return
+    get_viewport().set_input_as_handled()
+    _focus_state()
+    interact_count += 1
+    Bootstrap.state.is_interact = true
+    await pre_interact.call(global_position)
+    await interact_cb.call()
+    Bootstrap.state.is_interact = false
+    if !_is_mouse_inside:
+        _reset_state()
+    interact_count -= 1
+
 
 func _reset_state():
     lb_hover.text = ""

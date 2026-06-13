@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _process(delta):
     position = lerp(global_position, _grab_pos(), 0.2)
-    item_dragged.emit(item_id, global_position)
+    item_dragged.emit(item_id, get_viewport().canvas_transform.affine_inverse()*global_position)
 
 
 func _input(event: InputEvent) -> void:
@@ -35,14 +35,14 @@ func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
             _drag = false
-            var args = [item_id ,global_position]
+            var args = [item_id ,(get_viewport().canvas_transform.affine_inverse()*global_position)+(size/2)]
             item_dropped.emit(args[0], args[1])
             queue_free()
 
     if event is InputEventScreenTouch:
         if !event.is_pressed():
             _drag = false
-            var args = [item_id ,global_position]
+            var args = [item_id ,(get_viewport().canvas_transform.affine_inverse()*global_position)+(size/2)]
             item_dropped.emit(args[0], args[1])
             queue_free()
     

@@ -12,3 +12,5 @@ var is_holding_item = false
 var is_interact = false
 var is_showing_overlay = false
 var is_hovering_button = false
+
+var item_being_dragged = null
