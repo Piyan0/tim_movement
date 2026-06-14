@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://bbfv1a6s0ooko"]
 
 [ext_resource type="Script" uid="uid://uek2nwl50446" path="res://entities/interact_click/interact_click.gd" id="1_7j33t"]
-[ext_resource type="FontFile" uid="uid://cl23y8eejm8ku" path="res://assets/fonts/Nirmala UI Semilight.ttf" id="2_n2amf"]
+[ext_resource type="FontFile" uid="uid://dyymkxa8sbspd" path="res://assets/fonts/Oswald-SemiBold.ttf" id="2_n2amf"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_n2amf"]
+[sub_resource type="LabelSettings" id="LabelSettings_ldxf0"]
 font = ExtResource("2_n2amf")
-font_size = 27
-outline_size = 12
-outline_color = Color(0, 0, 0, 1)
+font_size = 31
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="InteractClick" type="Node2D" unique_id=508760350 node_paths=PackedStringArray("spr_graphic", "click_area", "lb_hover")]
 script = ExtResource("1_7j33t")
@@ -37,8 +36,9 @@ offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "label"
-label_settings = SubResource("LabelSettings_n2amf")
+label_settings = SubResource("LabelSettings_ldxf0")
 horizontal_alignment = 1
+uppercase = true
 
 [node name="NinePatchRect" type="ReferenceRect" parent="." unique_id=809710394]
 offset_left = -12.0

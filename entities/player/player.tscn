@@ -109,7 +109,8 @@ offset = Vector2(-89, -162)
 offset = Vector2(0, -54)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1894556992]
-path_desired_distance = 5.0
+path_desired_distance = 10.0
+target_desired_distance = 20.0
 debug_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=840145772]

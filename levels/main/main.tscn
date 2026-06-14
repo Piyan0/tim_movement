@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du0mxwpysvtmx" path="res://assets/world_map/FD_Map_01.png" id="2_gonaa"]
 [ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="2_uj5r8"]
 [ext_resource type="Texture2D" uid="uid://cpwk22lxu0d5t" path="res://assets/world_map/FD_Forrest_K_01.png" id="3_gonaa"]
+[ext_resource type="Script" uid="uid://8tscuyqv0q57" path="res://levels/main/player_click_area.gd" id="3_omhea"]
 [ext_resource type="Texture2D" uid="uid://b2827eqbceebr" path="res://assets/world_map/FD_Forrest_A_01.png" id="5_hn1gb"]
 [ext_resource type="Texture2D" uid="uid://b2ch7dj6vx21g" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_3lhr6"]
 [ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
@@ -45,17 +46,24 @@ hover_graphic = ExtResource("20_s50uu")
 offset = Vector2(-89.09, -160)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
-[node name="Node2D" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
+[node name="Main" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
 player = NodePath("Player")
 
 [node name="Control" type="ColorRect" parent="." unique_id=876497405]
+visible = false
 material = SubResource("ShaderMaterial_omhea")
 custom_minimum_size = Vector2(300, 300)
 offset_right = 8419.0
 offset_bottom = 4727.0
 mouse_filter = 1
+
+[node name="PlayerClickArea" type="ReferenceRect" parent="." unique_id=606853029]
+offset_right = 9053.0
+offset_bottom = 4871.0
+border_width = 6.0
+script = ExtResource("3_omhea")
 
 [node name="FdMap01" type="Sprite2D" parent="." unique_id=1900634851]
 visible = false

@@ -10,6 +10,6 @@ func drag_item(ins: DragableItem):
     )
     ins.item_dragged.connect(func(id, pos):
         Bootstrap.state.item_being_dragged = id
-        print("Dragging at pos:", pos)    
+        # print("Dragging at pos:", pos)    
     )
     Bootstrap.canvas.add_child(ins)

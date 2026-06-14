@@ -9,11 +9,11 @@ extends Node2D
 @export var lb_hover: Label
 @export_category("")
 
-var interact_count = 0
 
 var pre_interact = func(pos): pass
+
+var _is_interact = false
 var _active_page: InteractPage
-var _is_mouse_inside = false
 var _input: InputHandler
 
 func _ready() -> void:
@@ -36,43 +36,49 @@ func _ready() -> void:
 
     add_to_group("interact_click")
     lb_hover.text = ""
-    click_area.mouse_entered.connect(func():     
-        _is_mouse_inside = true
-        if interact_count > 0:
-            return
-        lb_hover.text = _active_page.hover_text
-        spr_graphic.texture = _active_page.hover_graphic
-    )
-
+   
     # since this is smaller project, I just assign the logic here for player to reach the interact point.
     pre_interact = func(pos):
         var player = Player.instance
         var distance = player.global_position.distance_to(global_position)
         if distance > _interact_distance:
-            await Player.instance.move_to_pos(pos, 120)
+            await Player.instance.move_to_pos(pos, _interact_distance)
         else:
             Player.instance.set_facing_to_pos(global_position)
        
-    click_area.mouse_exited.connect(func():
-        _is_mouse_inside = false
-        if interact_count > 0:
-            return
-        lb_hover.text = ""
-        spr_graphic.texture = _active_page.idle_graphic
-    )
 
     _input = InputHandler.new(self)
 
-    _input.can_process = func():
-        return [!Bootstrap.state.is_showing_overlay]
-    
-
     _input.handler = func(event: InputEvent):
+        if event is InputEventMouseMotion || event is InputEventScreenDrag:
+            if _is_interact: return
+            if get_click_rect().has_point(event.position):
+                lb_hover.text = _active_page.hover_text
+                spr_graphic.texture = _active_page.hover_graphic
+            else:
+                lb_hover.text = ""
+                spr_graphic.texture = _active_page.idle_graphic
+    
+    click_area.gui_input.connect(func(event: InputEvent):
         if event is InputEventMouseButton:
             if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-                _interact(func():
-                    await _active_page.interact()    
-                )
+                if get_click_rect().has_point(click_area.get_global_transform_with_canvas().origin + event.position):
+                    _interact(func():
+                        await _active_page.interact()    
+                    )
+
+        if event is InputEventScreenTouch:
+            if event.pressed:
+                if get_click_rect().has_point(click_area.get_global_transform_with_canvas().origin + event.position):
+                    lb_hover.text = _active_page.hover_text
+                    spr_graphic.texture = _active_page.hover_graphic
+                    await get_tree().create_timer(0.1).timeout
+                    lb_hover.text = ""
+                    await _interact(func():
+                        await _active_page.interact()    
+                    )
+                    spr_graphic.texture = _active_page.idle_graphic
+    )
 
 
 func handle_item_drop(item_id, drop_position):
@@ -85,7 +91,7 @@ func handle_item_drop(item_id, drop_position):
 
 
 func get_click_rect():
-    return Rect2(click_area.global_position, click_area.size)
+    return Rect2(click_area.get_global_transform_with_canvas().origin, click_area.size)
 
 
 func refresh_page(tag_list):
@@ -98,16 +104,14 @@ func refresh_page(tag_list):
 
 func _interact(interact_cb):
     if !_can_interact(): return
+    lb_hover.text = ""
+    _is_interact = true
     get_viewport().set_input_as_handled()
-    _focus_state()
-    interact_count += 1
     Bootstrap.state.is_interact = true
     await pre_interact.call(global_position)
     await interact_cb.call()
     Bootstrap.state.is_interact = false
-    if !_is_mouse_inside:
-        _reset_state()
-    interact_count -= 1
+    _is_interact = false
 
 
 func _reset_state():
@@ -126,9 +130,5 @@ func _update_page(page: InteractPage):
 
 
 func _can_interact():
-    var conditions = [
-        interact_count == 0,
-        get_click_rect().has_point(get_global_mouse_position())
-    ]
-
+    var conditions = [!_is_interact]
     return conditions.all(func(cond): return cond == true) 

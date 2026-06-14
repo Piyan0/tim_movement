@@ -28,21 +28,19 @@ func _process(delta):
 
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseMotion || event is InputEventScreenDrag:
-        # var canvas_transform = get_viewport().canvas_transform
-        # var pos = canvas_transform.affine_inverse() * event.position
         _drag_pos = event.position
 
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
             _drag = false
-            var args = [item_id ,(get_viewport().canvas_transform.affine_inverse()*global_position)+(size/2)]
+            var args = [item_id ,global_position+(size/2)]
             item_dropped.emit(args[0], args[1])
             queue_free()
 
     if event is InputEventScreenTouch:
         if !event.is_pressed():
             _drag = false
-            var args = [item_id ,(get_viewport().canvas_transform.affine_inverse()*global_position)+(size/2)]
+            var args = [item_id ,global_position+(size/2)]
             item_dropped.emit(args[0], args[1])
             queue_free()
     

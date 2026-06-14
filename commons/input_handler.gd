@@ -8,7 +8,7 @@ enum InputMode{
 
 var mode = InputMode.INPUT
 var handler = func(input_event: InputEvent): pass
-var can_process = func() -> Array[bool]: return []
+var can_process = func() -> Array[bool]: return [true]
 var _handler_list = []
 
 

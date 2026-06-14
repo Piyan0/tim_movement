@@ -19,21 +19,6 @@ func _ready() -> void:
             !Bootstrap.state.is_hovering_button,
         ]
 
-    input_handler.handler = func(e: InputEvent):
-        var click_pos = get_global_mouse_position()
-
-        if e is InputEventMouseButton:
-            if e.pressed && e.button_index == MOUSE_BUTTON_LEFT:
-                if !is_moving:
-                    is_moving = true
-                    _move_to_click_pos(click_pos)
-
-        if e is InputEventScreenTouch:
-            if e.pressed:
-                if !is_moving:
-                    is_moving = true
-                    _move_to_click_pos(click_pos)
-
 
 func _physics_process(delta: float) -> void:
     if is_moving:
@@ -42,8 +27,8 @@ func _physics_process(delta: float) -> void:
 
 
 func move_to_pos(pos, offset_from_target = 10):
-    nav_agent.target_desired_distance = offset_from_target
     is_moving = true
+    nav_agent.target_desired_distance = offset_from_target
     nav_agent.target_position = pos
     nav_agent.target_reached.connect(func():
         nav_agent.target_desired_distance = 10
@@ -51,7 +36,10 @@ func move_to_pos(pos, offset_from_target = 10):
     await nav_agent.target_reached
 
 
-func _move_to_click_pos(click_pos):
+func move_to_click_pos(click_pos):
+    if is_moving:
+        return
+    is_moving = true
     var map_rid = get_world_2d().navigation_map
     var valid_click_pos = NavigationServer2D.map_get_closest_point(map_rid, click_pos)
     nav_agent.target_position = valid_click_pos
