@@ -72,7 +72,7 @@ func _ready() -> void:
                 if get_click_rect().has_point(click_area.get_global_transform_with_canvas().origin + event.position):
                     lb_hover.text = _active_page.hover_text
                     spr_graphic.texture = _active_page.hover_graphic
-                    await get_tree().create_timer(0.5).timeout
+                    await get_tree().create_timer(0.2).timeout
                     lb_hover.text = ""
                     await _interact(func():
                         await _active_page.interact()    
