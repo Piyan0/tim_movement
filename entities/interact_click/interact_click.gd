@@ -70,6 +70,11 @@ func _ready() -> void:
         if event is InputEventScreenTouch:
             if event.pressed:
                 if get_click_rect().has_point(click_area.get_global_transform_with_canvas().origin + event.position):
+                    var x = func():
+                        await get_tree().create_timer(1).timeout
+                        print(1)
+                    x.call()
+                    print(2)
                     lb_hover.text = _active_page.hover_text
                     spr_graphic.texture = _active_page.hover_graphic
                     await get_tree().create_timer(0.2).timeout
