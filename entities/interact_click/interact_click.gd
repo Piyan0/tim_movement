@@ -77,7 +77,7 @@ func _ready() -> void:
                     print(2)
                     lb_hover.text = _active_page.hover_text
                     spr_graphic.texture = _active_page.hover_graphic
-                    await get_tree().create_timer(0.2).timeout
+                    await get_tree().create_timer(0.1).timeout
                     lb_hover.text = ""
                     await _interact(func():
                         await _active_page.interact()    

@@ -8,4 +8,3 @@ func _gui_input(event: InputEvent) -> void:
     elif event is InputEventScreenTouch:
         if event.pressed:
             Player.instance.move_to_click_pos(event.position)
-

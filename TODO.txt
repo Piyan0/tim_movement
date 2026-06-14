@@ -1,10 +1,10 @@
 implement world map.
 buat map nya.
 implement semua event progression.
-buat semua item yang ada di inventory.
 buat load and save.
-ubah ui load data dan save data.
+buat semua item yang ada di inventory.
 implement load pas lagi di game dengan posisi player.
+ubah ui load data dan save data.
 implement mini map.
 
 
