@@ -9,7 +9,7 @@ extends Node2D
 @export var lb_hover: Label
 @export_category("")
 
-static var interact_count = 0
+var interact_count = 0
 
 var pre_interact = func(pos): pass
 var _active_page: InteractPage

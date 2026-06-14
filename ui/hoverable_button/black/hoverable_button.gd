@@ -9,18 +9,17 @@ extends MarginContainer
 @onready var button: Button = $Button
 
 
-@export var title: String
-	# set(value):		
-	# 	title = value
-	# 	if label:
-	# 		label.text = value
+@export var title: String:
+	set(value):		
+		title = value
+		if label:
+			label.text = value
 	
 var cb = func(): print("the button is pressed.")
 
 
 func _ready() -> void:
 	label.text = title
-	print(title)
 	button.mouse_entered.connect(func():
 		Bootstrap.state.is_hovering_button = true
 		idle_frame.hide()

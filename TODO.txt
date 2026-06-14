@@ -4,8 +4,15 @@ implement semua event progression.
 buat semua item yang ada di inventory.
 buat load and save.
 implement main menu.
-implement save system dengan n - slot. 
+ubah ui load data dan save data.
+implement load pas lagi di game dengan posisi player.
+hud masih kelihatan pas ada di tittle screen.
+player masih bisa klik saat main menu.
+implement mini map.
+implement fade.
 
+
+@ implement save system dengan n - slot. 
 @ implement inventory menu.
 @ player masih bisa jalan ketika interact dari drop item.
 @ hide inventory ketika di drop di tempat yang benar.

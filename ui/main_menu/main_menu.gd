@@ -1,3 +1,4 @@
+class_name MainMenu
 extends Control
 
 
@@ -17,15 +18,12 @@ func _ready() -> void:
     
     # new game options.
     _buttons[0].cb = func():
-        modulate.a = 0        
-        var x = ResourceLoader.load_threaded_request("res://levels/main/main.tscn")
-        while true:
-            if ResourceLoader.load_threaded_get_status("res://levels/main/main.tscn") == ResourceLoader.THREAD_LOAD_LOADED:
-                break
-            await get_tree().process_frame
-
-        get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get("res://levels/main/main.tscn"))
-        print(1)       
+        await Bootstrap.fade.fade_in()
+        var x = load("res://levels/main/main.tscn")
+        await get_tree().process_frame
+        await get_tree().process_frame
+        get_tree().change_scene_to_packed(x)
+        Bootstrap.fade.fade_out()
 
     # continue options.
     _buttons[1].cb = func():

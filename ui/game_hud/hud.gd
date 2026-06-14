@@ -1,6 +1,7 @@
 class_name HUD
 extends Control
 
+@export var _ph_pause_menu: Node
 @export var dialogue: HUDDialogue
 @export var _inventory_place: Control
 @export_category("Buttons")
@@ -11,7 +12,8 @@ var _inventory = null
 func _ready() -> void:
     # button menu
     _buttons[0].cb = func():
-        print("button menu")
+        _ph_pause_menu = _ph_pause_menu as InstancePlaceholder
+        var ins = _ph_pause_menu.create_instance()        
 
     # button inventory
     _buttons[1].cb = func():

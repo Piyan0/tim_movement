@@ -20,7 +20,7 @@ shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8xwt"]
 
-[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("dialogue", "_inventory_place", "_buttons")]
+[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("_ph_pause_menu", "dialogue", "_inventory_place", "_buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,6 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_3ys00")
+_ph_pause_menu = NodePath("PauseMenu")
 dialogue = NodePath("HUDDialogueLogic")
 _inventory_place = NodePath("InventoryPos")
 _buttons = [NodePath("HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton2")]
@@ -214,3 +215,6 @@ offset_top = -247.0
 offset_bottom = -247.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="PauseMenu" parent="." unique_id=319822962 instance_placeholder="res://ui/pause_menu/pause_menu.tscn"]
+layout_mode = 1

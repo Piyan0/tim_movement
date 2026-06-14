@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bpi4qkomcbrmb"]
+
+[ext_resource type="Script" uid="uid://bo08sr3hjh8xd" path="res://ui/fade/fade.gd" id="1_5tw43"]
+
+[node name="Fade" type="Control" unique_id=75797410 node_paths=PackedStringArray("_fade_overlay")]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_behavior_recursive = 1
+script = ExtResource("1_5tw43")
+_fade_overlay = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=145479798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
