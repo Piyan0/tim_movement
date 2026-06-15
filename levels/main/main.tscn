@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://8tscuyqv0q57" path="res://levels/main/player_click_area.gd" id="3_omhea"]
 [ext_resource type="Texture2D" uid="uid://b2827eqbceebr" path="res://assets/world_map/FD_Forrest_A_01.png" id="5_hn1gb"]
 [ext_resource type="Texture2D" uid="uid://b2ch7dj6vx21g" path="res://assets/world_map/FD_Forrest_B_01.png" id="6_3lhr6"]
-[ext_resource type="PackedScene" uid="uid://bnuvvd8e3uy4a" path="res://entities/player/player.tscn" id="7_oclhf"]
 [ext_resource type="Texture2D" uid="uid://det4ir63i76x6" path="res://assets/world_map/FD_Forrest_D_01.png" id="7_yh2qj"]
 [ext_resource type="Texture2D" uid="uid://b05t3qtg4xinv" path="res://assets/world_map/FD_Forrest_E_01.png" id="8_vged4"]
 [ext_resource type="Texture2D" uid="uid://dsk2ghubpkoqg" path="res://assets/world_map/FD_Forrest_F_01.png" id="9_u4gi4"]
@@ -49,7 +48,7 @@ metadata/_custom_type_script = "uid://b04vc5drymud0"
 [node name="Main" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
-player = NodePath("Player")
+player = NodePath("")
 
 [node name="Control" type="ColorRect" parent="." unique_id=876497405]
 visible = false
@@ -134,10 +133,6 @@ texture = ExtResource("17_yh2qj")
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." unique_id=1381908389]
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_yh2qj")
-
-[node name="Player" parent="." unique_id=1426917964 instance=ExtResource("7_oclhf")]
-position = Vector2(5211.142, 1938.4508)
-speed = 512
 
 [node name="Bonnie" parent="." unique_id=508760350 instance=ExtResource("18_s50uu")]
 position = Vector2(5625, 1998)

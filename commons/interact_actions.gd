@@ -18,12 +18,13 @@ func text(arr = ["Shane shane.png owh is that right"]):
         batches.append(batch_el)
     
     await Bootstrap.hud.dialogue.start_dialogue(batches)
-    # var ins = load("uid://bxikvddg4fkyy").instantiate()
-    # ins.dialogue_batch = arr.map(func(value):
-    #     var split = value.split("/")
-    #     var line = Dialogue.DialogueLine.new(split[0].strip_edges(), split[2].strip_edges())
-    #     line.avatar_path = split[1].replace(".", "/").strip_edges()
-    #     return line
-    # )
-    # GlobalCanvas.add_child(ins)
-    # await ins.finished
+
+
+func goto(map_path, player_pos):
+    await Bootstrap.fade.fade_in()
+    var ins = load("res://levels/level_screen.tscn").instantiate()
+    ins.map_path = map_path
+    ins.player_position = player_pos
+    await Bootstrap.get_tree().process_frame
+    await Bootstrap.get_tree().process_frame
+    Bootstrap.get_tree().change_scene_to_node(ins)

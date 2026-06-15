@@ -18,13 +18,13 @@ func _ready() -> void:
     
     # new game options.
     _buttons[0].cb = func():
-        await Bootstrap.fade.fade_in()
-        var x = load("res://levels/main/main.tscn")
-        await get_tree().process_frame
-        await get_tree().process_frame
-        get_tree().change_scene_to_packed(x)
-        Bootstrap.fade.fade_out()
+        var x = InteractActions.new()
+        await x.goto(
+            "res://levels/main/main.tscn",
+            Vector2(5200, 1900)
+        )
 
+       
     # continue options.
     _buttons[1].cb = func():
         print("continue")

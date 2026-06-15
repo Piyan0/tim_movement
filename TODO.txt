@@ -3,9 +3,9 @@ buat map nya.
 implement semua event progression.
 buat load and save.
 buat semua item yang ada di inventory.
-implement load pas lagi di game dengan posisi player.
-ubah ui load data dan save data.
 implement mini map.
+ubah ui load data dan save data.
+implement load pas lagi di game dengan posisi player.
 
 
 @ implement interact hint, TALK, GIVE, ETC.

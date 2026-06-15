@@ -8,12 +8,16 @@ func _ready() -> void:
     _button[0].cb = func():
         queue_free()
 
-    # load button
+    # save button
     _button[1].cb = func():
+        pass
+
+    # load button
+    _button[2].cb = func():
         pass
     
     # tittle screen button
-    _button[2].cb = func():
+    _button[3].cb = func():
         await Bootstrap.fade.fade_in()
         queue_free()
         var title_screen = load("res://ui/main_menu/main_menu.tscn")

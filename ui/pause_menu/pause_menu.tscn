@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jbgdu")
-_button = [NodePath("VBoxContainer/HoverableButton"), NodePath("VBoxContainer/HoverableButton2"), NodePath("VBoxContainer/HoverableButton3")]
+_button = [NodePath("VBoxContainer/HoverableButton"), NodePath("VBoxContainer/HoverableButton4"), NodePath("VBoxContainer/HoverableButton2"), NodePath("VBoxContainer/HoverableButton3")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1815664889]
 layout_mode = 1
@@ -40,6 +40,10 @@ theme_override_constants/separation = 12
 [node name="HoverableButton" parent="VBoxContainer" unique_id=676343973 instance=ExtResource("1_mnjdh")]
 layout_mode = 2
 title = "RESUME"
+
+[node name="HoverableButton4" parent="VBoxContainer" unique_id=1941311524 instance=ExtResource("1_mnjdh")]
+layout_mode = 2
+title = "SAVE"
 
 [node name="HoverableButton2" parent="VBoxContainer" unique_id=1166356013 instance=ExtResource("1_mnjdh")]
 layout_mode = 2

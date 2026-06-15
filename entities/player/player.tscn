@@ -95,6 +95,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1764112329 node_paths=PackedStringArray("spr_character", "nav_agent")]
 script = ExtResource("1_4flbx")
+speed = 512
 spr_character = NodePath("AnimatedSprite2D")
 nav_agent = NodePath("NavigationAgent2D")
 
