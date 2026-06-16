@@ -4,3 +4,5 @@
 
 [node name="LevelScreen" type="Node2D" unique_id=1268064144]
 script = ExtResource("1_xkwhe")
+map_path = "res://levels/main/main.tscn"
+player_position = Vector2(5200, 2000)

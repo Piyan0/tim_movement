@@ -13,7 +13,7 @@ func _init(psave_dir = save_dir):
         
 
 func load_data():
-    var path = _get_save_path()
+    var path = get_save_path()
     var file = FileAccess.open(path, FileAccess.READ)
     var str_data = file.get_as_text()
     file.close()
@@ -24,7 +24,7 @@ func load_data():
 
 
 func save():
-    var path = _get_save_path()
+    var path = get_save_path()
     var file = FileAccess.open(path, FileAccess.WRITE)
     var save_data = get_save_data.call()
     save_data["fields"] = fields
@@ -33,8 +33,8 @@ func save():
 
 
 func is_saved():
-    return FileAccess.file_exists(_get_save_path())
+    return FileAccess.file_exists(get_save_path())
 
     
-func _get_save_path():
+func get_save_path():
     return save_dir.path_join("save.json")

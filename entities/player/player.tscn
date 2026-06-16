@@ -93,11 +93,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1764112329 node_paths=PackedStringArray("spr_character", "nav_agent")]
+[node name="Player" type="CharacterBody2D" unique_id=1764112329 node_paths=PackedStringArray("spr_character", "nav_agent", "camera")]
 script = ExtResource("1_4flbx")
 speed = 512
 spr_character = NodePath("AnimatedSprite2D")
 nav_agent = NodePath("NavigationAgent2D")
+camera = NodePath("Camera2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=739383068]
 sprite_frames = SubResource("SpriteFrames_symyc")

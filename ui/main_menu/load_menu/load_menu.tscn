@@ -1,9 +1,24 @@
 [gd_scene format=3 uid="uid://cjax7gw3nldbc"]
 
 [ext_resource type="Script" uid="uid://63yvrq38o5ie" path="res://ui/main_menu/load_menu/load_menu.gd" id="1_q5pcu"]
+[ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="2_fsjbm"]
 [ext_resource type="PackedScene" uid="uid://buajies2jtys6" path="res://ui/hoverable_button/black/hoverable_button.tscn" id="2_nktss"]
+[ext_resource type="Texture2D" uid="uid://dfmy81ewhyps2" path="res://assets/ui/frame_black_normal.png" id="2_xwxul"]
+[ext_resource type="PackedScene" uid="uid://c1xhd2oyn2vlx" path="res://ui/main_menu/load_menu/slot.tscn" id="3_xwxul"]
 
-[node name="LoadMenu" type="Control" unique_id=318026328 node_paths=PackedStringArray("slot_list")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwwcw"]
+shader = ExtResource("2_fsjbm")
+shader_parameter/size = 25.0
+shader_parameter/color1 = Color(0.3854925, 0.38549247, 0.38549247, 1)
+shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwwcw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phldm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqh5h"]
+
+[node name="LoadMenu" type="Control" unique_id=318026328 node_paths=PackedStringArray("_btn_back", "_slot_list")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,38 +26,111 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q5pcu")
-slot_list = [NodePath("VBoxContainer/0"), NodePath("VBoxContainer/1"), NodePath("VBoxContainer/2"), NodePath("VBoxContainer/3"), NodePath("VBoxContainer/-1")]
+_btn_back = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer3/Control/HoverableButton")
+_slot_list = [NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/Slot #1"), NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/Slot #2"), NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/Slot #3"), NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/Slot #4"), NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/Slot #5")]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=227231921]
+[node name="Control" type="ColorRect" parent="." unique_id=1466797008]
+visible = false
+material = SubResource("ShaderMaterial_jwwcw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1045767526]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -169.5
-offset_top = -146.0
-offset_right = 169.5
-offset_bottom = 146.0
+offset_left = -22.0
+offset_top = -21.5
+offset_right = 22.0
+offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jwwcw")
 
-[node name="0" parent="VBoxContainer" unique_id=676343973 instance=ExtResource("2_nktss")]
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer" unique_id=313876320]
 layout_mode = 2
-title = "Slot 0"
+texture = ExtResource("2_xwxul")
+patch_margin_left = 22
+patch_margin_top = 21
+patch_margin_right = 22
+patch_margin_bottom = 22
 
-[node name="1" parent="VBoxContainer" unique_id=893594801 instance=ExtResource("2_nktss")]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=400240830]
 layout_mode = 2
-title = "Slot 1"
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
 
-[node name="2" parent="VBoxContainer" unique_id=556921498 instance=ExtResource("2_nktss")]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer" unique_id=1737032143]
 layout_mode = 2
-title = "Slot 2"
+theme_override_styles/panel = SubResource("StyleBoxEmpty_phldm")
 
-[node name="3" parent="VBoxContainer" unique_id=400121520 instance=ExtResource("2_nktss")]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/PanelContainer" unique_id=1403662538]
 layout_mode = 2
-title = "Slot 3"
+theme_override_constants/separation = 34
 
-[node name="-1" parent="VBoxContainer" unique_id=680440096 instance=ExtResource("2_nktss")]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=851323264]
 layout_mode = 2
-title = "Back"
+theme_override_constants/separation = 24
+
+[node name="Slot #1" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1559414800 instance=ExtResource("3_xwxul")]
+layout_mode = 2
+slot_id = 0
+
+[node name="Slot #2" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=708821847 instance=ExtResource("3_xwxul")]
+layout_mode = 2
+slot_id = 1
+
+[node name="Slot #3" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=229767438 instance=ExtResource("3_xwxul")]
+layout_mode = 2
+slot_id = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=338103204]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Slot #4" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=936091785 instance=ExtResource("3_xwxul")]
+layout_mode = 2
+slot_id = 3
+
+[node name="Slot #5" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=330233467 instance=ExtResource("3_xwxul")]
+layout_mode = 2
+slot_id = 4
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1093541864]
+custom_minimum_size = Vector2(256, 144)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rqh5h")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer3" unique_id=2114418725]
+layout_mode = 2
+border_color = Color(1, 1, 1, 1)
+border_width = 2.0
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer3" unique_id=1284990474]
+layout_mode = 2
+
+[node name="HoverableButton" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer3/Control" unique_id=676343973 instance=ExtResource("2_nktss")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -35.0
+offset_right = 56.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+title = "BACK"

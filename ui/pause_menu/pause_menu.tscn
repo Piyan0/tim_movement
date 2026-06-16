@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8frhhgfsox1m" path="res://ui/pause_menu/pause_menu.gd" id="1_jbgdu"]
 [ext_resource type="PackedScene" uid="uid://buajies2jtys6" path="res://ui/hoverable_button/black/hoverable_button.tscn" id="1_mnjdh"]
 
-[node name="PauseMenu" type="Control" unique_id=319822962 node_paths=PackedStringArray("_button")]
+[node name="PauseMenu" type="Control" unique_id=319822962 node_paths=PackedStringArray("_button", "_ph_slot_select")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jbgdu")
 _button = [NodePath("VBoxContainer/HoverableButton"), NodePath("VBoxContainer/HoverableButton4"), NodePath("VBoxContainer/HoverableButton2"), NodePath("VBoxContainer/HoverableButton3")]
+_ph_slot_select = NodePath("LoadMenu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1815664889]
 layout_mode = 1
@@ -52,3 +53,6 @@ title = "LOAD"
 [node name="HoverableButton3" parent="VBoxContainer" unique_id=1643290998 instance=ExtResource("1_mnjdh")]
 layout_mode = 2
 title = "TITLE SCREEN"
+
+[node name="LoadMenu" parent="." unique_id=318026328 instance_placeholder="res://ui/main_menu/load_menu/load_menu.tscn"]
+layout_mode = 1

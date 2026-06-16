@@ -29,19 +29,25 @@ func _ready() -> void:
     _buttons[1].cb = func():
         print("continue")
 
+
     # load options.
     _buttons[2].cb = func():
         _ph_load_menu = _ph_load_menu as InstancePlaceholder
         var ins = _ph_load_menu.create_instance() as LoadMenu
-        ins.slot_clicked.connect(func(slot):
-            print(slot)
-            if slot == -1:
-                ins.queue_free()    
+        # print(Env.SAVE_COLLECTIONS)
+        ins.from_save_collections(Env.SAVE_COLLECTIONS)
+        ins.slot_clicked.connect((func(slot_id, has_data):
+            if has_data:
+                Bootstrap.slot_save_manager.load_data(slot_id)
+            ), CONNECT_ONE_SHOT
         )
 
     # quit options.
     _buttons[3].cb = func():
-        get_tree().quit()
+        if OS.has_feature("web"):
+            JavaScriptBridge.eval("window.close()")
+        else:
+            get_tree().quit()
 
 
 func _hide_options():

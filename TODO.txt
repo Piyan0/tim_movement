@@ -1,13 +1,15 @@
 implement world map.
 buat map nya.
 implement semua event progression.
-buat load and save.
 buat semua item yang ada di inventory.
 implement mini map.
-ubah ui load data dan save data.
-implement load pas lagi di game dengan posisi player.
+implement load inventory from db. 
 
 
+@ implement save system untuk interact_click.
+@ buat load and save.
+@ implement load pas lagi di game dengan posisi player.
+@ ubah ui load data dan save data.
 @ implement interact hint, TALK, GIVE, ETC.
 @ implement main menu.
 @ hud masih kelihatan pas ada di tittle screen.

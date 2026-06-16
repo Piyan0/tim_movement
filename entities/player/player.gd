@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var lb_hint: Label
 @export var spr_character: AnimatedSprite2D
 @export var nav_agent: NavigationAgent2D
+@export var camera: Camera2D
 static var instance: Player
 var is_moving = false
 

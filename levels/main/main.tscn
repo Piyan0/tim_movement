@@ -45,10 +45,33 @@ hover_graphic = ExtResource("20_s50uu")
 offset = Vector2(-89.09, -160)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
-[node name="Main" type="Node2D" unique_id=351564680 node_paths=PackedStringArray("player")]
+[sub_resource type="GDScript" id="GDScript_uj5r8"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    var shane = \"Shane shane.png %s\"
+    var lilian = \"Lilian lilian.png %s\"
+    var arr = []
+    arr.append( shane % \"Okay cool.\" )
+    actions.remove_tag(\"test\")
+    await actions.text(arr)
+
+func _item_dropped(item_id):
+    pass
+    
+func _hover_text():
+    return super()
+"
+
+[sub_resource type="Resource" id="Resource_omhea"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_uj5r8")
+tags = Array[String](["test"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[node name="Main" type="Node2D" unique_id=351564680]
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
-player = NodePath("")
 
 [node name="Control" type="ColorRect" parent="." unique_id=876497405]
 visible = false
@@ -136,7 +159,7 @@ navigation_polygon = SubResource("NavigationPolygon_yh2qj")
 
 [node name="Bonnie" parent="." unique_id=508760350 instance=ExtResource("18_s50uu")]
 position = Vector2(5625, 1998)
-interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0")])
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0"), SubResource("Resource_omhea")])
 
 [node name="Sprite2D" parent="Bonnie" index="0" unique_id=542249545]
 texture = ExtResource("20_uj5r8")

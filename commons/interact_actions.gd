@@ -1,5 +1,6 @@
 class_name InteractActions
 
+
 func text(arr = ["Shane shane.png owh is that right"]):
     var batches: Array[HUDDialogue.DialogueWithPortrait]
 
@@ -28,3 +29,23 @@ func goto(map_path, player_pos):
     await Bootstrap.get_tree().process_frame
     await Bootstrap.get_tree().process_frame
     Bootstrap.get_tree().change_scene_to_node(ins)
+
+
+func load_data(data: Dictionary):
+    Bootstrap.state = GlobalState.new()
+    await goto("res://levels/main/main.tscn", str_to_var(data.player_pos))
+    
+
+# TODO add mutiple tags
+func add_tag(tag):
+    if tag in Bootstrap.tags:
+        return
+    Bootstrap.tags.append(tag)
+    Bootstrap.get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
+
+
+
+func remove_tag(tag):
+    Bootstrap.tags.erase(tag)
+    Bootstrap.get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
+

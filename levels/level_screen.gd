@@ -1,8 +1,8 @@
 class_name LevelScreen
 extends Node2D
 
-var map_path: String
-var player_position: Vector2
+@export_file_path var map_path: String
+@export var player_position: Vector2
 
 
 func _ready() -> void:

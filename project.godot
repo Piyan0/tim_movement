@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Env="*uid://fm15ndyabh8e"
 DebugConsole="*uid://cptj8gk2xleig"
 GlobalCanvas="*uid://r1r6pjrclgvj"
 Bootstrap="*uid://b13fk2pmhgy2n"

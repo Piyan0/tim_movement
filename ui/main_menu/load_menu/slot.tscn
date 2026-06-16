@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://c1xhd2oyn2vlx"]
+
+[ext_resource type="Script" uid="uid://cu0svdc0rn617" path="res://ui/main_menu/load_menu/slot.gd" id="1_8onhh"]
+[ext_resource type="LabelSettings" uid="uid://c53o05x7ehgqn" path="res://assets/ui/style/label_dialogue.tres" id="1_ipkgp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqh5h"]
+
+[node name="Slot" type="PanelContainer" unique_id=708821847 node_paths=PackedStringArray("_lb_slot", "_tr_preview")]
+custom_minimum_size = Vector2(256, 144)
+offset_right = 256.0
+offset_bottom = 193.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rqh5h")
+script = ExtResource("1_8onhh")
+_lb_slot = NodePath("VBoxContainer/Label")
+_tr_preview = NodePath("VBoxContainer/ReferenceRect/TextureRect")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1514536958]
+layout_mode = 2
+mouse_behavior_recursive = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="VBoxContainer" unique_id=1771095352]
+custom_minimum_size = Vector2(256, 144)
+layout_mode = 2
+mouse_filter = 1
+border_color = Color(1, 1, 1, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/ReferenceRect" unique_id=27362230]
+custom_minimum_size = Vector2(256, 44)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.5882353)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/ReferenceRect" unique_id=625413131]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -18.5
+offset_right = 40.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+text = "empty"
+label_settings = ExtResource("1_ipkgp")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ReferenceRect" unique_id=163901597]
+show_behind_parent = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1550691203]
+layout_mode = 2
+mouse_filter = 1
+text = "SLOT 1"
+label_settings = ExtResource("1_ipkgp")
+horizontal_alignment = 1

@@ -100,6 +100,9 @@ func get_click_rect():
 
 
 func refresh_page(tag_list):
+    var interact_pages = interact_pages.duplicate()
+    interact_pages.reverse()
+
     for page in interact_pages:
         if page.is_active(tag_list):
             _active_page = page
