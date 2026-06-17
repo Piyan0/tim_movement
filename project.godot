@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="tim"
-run/main_scene="uid://egmm5itqnfih"
+run/main_scene="uid://mipiwewsfv4q"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://bqhwdcppqsgco"
 
 [autoload]
 

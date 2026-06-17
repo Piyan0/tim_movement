@@ -23,7 +23,8 @@ func _ready() -> void:
             return
 
         Bootstrap.state.is_showing_overlay = true
-        var inventory = InventoryV2.spawn() as Control
+        var inventory = InventoryV2.spawn() as InventoryV2
+        inventory.from_data(Bootstrap.items)
         _inventory = inventory
         _inventory_place.add_child(inventory)
         inventory.set_offsets_preset(PRESET_CENTER_BOTTOM)

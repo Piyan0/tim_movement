@@ -1,11 +1,12 @@
-implement world map.
-buat map nya.
-implement semua event progression.
 implement mini map.
-implement load inventory from db. 
-implement continue mechanism.
+implement semua event progression.
+buat map nya.
 
 
+@ implement continue mechanism.
+@ implement load inventory from db. 
+@ music loop.
+@ klik saat awal new game bug.
 @ implement action untuk play suara dan bgm.
 @ buat semua item yang ada di inventory.
 @ add music system.

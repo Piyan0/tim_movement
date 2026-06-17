@@ -1,6 +1,5 @@
 extends Node
 
-
 var portraits: AssetLoader = AssetLoader.new()
 var state: GlobalState
 var drag_item_manager: DragItemManager
@@ -13,9 +12,17 @@ var audio_db = AudioDatabase.new()
 var audio_manager: AudioManager
 
 var tags: Array[String] = []
+# item_id, item_type = normal / crystal
+var items: Array[Dictionary] = [
+    {
+        type = "normal",
+        id = "book_of_spell"
+    },
+    ]
 
 
 func _enter_tree():
+    fresh()
     
     audio_manager = AudioManager.new()
     audio_manager.name = "AudioManager"
@@ -40,6 +47,14 @@ func _enter_tree():
     )
 
 
+func fresh():
+    state = GlobalState.new()
+    items.clear()
+    tags.clear()
+    if hud:
+        hud.queue_free()
+        hud = HUD.spawn()
+
 func _create_canvas():
     var canvas = CanvasLayer.new()
     canvas.name = "GlobalCanvas"
@@ -51,12 +66,11 @@ signal save_image_created()
 func _create_save_slot():
     var sv = SlotSaveSystem.new()
 
-    sv.on_data_loaded.connect(func(data):
-        if hud:
-            hud.queue_free()
-            hud = HUD.spawn()
-        
+    sv.on_data_loaded.connect(func(data: Dictionary):
+        fresh()
         tags.assign(data.tags)
+        items.assign(data.items)
+        
         var actions = InteractActions.new()
         # TODO change this into data.scene
         var map_path = "res://levels/main/main.tscn"
@@ -65,7 +79,6 @@ func _create_save_slot():
             get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
             Player.instance.global_position = str_to_var(data.player_pos)
             await fade.fade_out()
-
         else:
             await actions.goto(map_path, str_to_var(data.player_pos))
     )
@@ -74,6 +87,7 @@ func _create_save_slot():
         return {
             "player_pos" : var_to_str(Player.instance.global_position) if Player.instance else "Vector2(0,0)",
             "tags": tags,
+            "items": items,
         }
 
     sv.on_data_saved.connect(func(slot, save_path):

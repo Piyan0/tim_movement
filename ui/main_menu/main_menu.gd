@@ -20,6 +20,7 @@ func _ready() -> void:
     
     # new game options.
     _buttons[0].cb = func():
+        Bootstrap.fresh()
         var x = InteractActions.new()
         await x.goto(
             "res://levels/main/main.tscn",
@@ -29,7 +30,10 @@ func _ready() -> void:
        
     # continue options.
     _buttons[1].cb = func():
-        print("continue")
+        var continue_slot = Env.CONTINUE_SLOT
+        print(continue_slot)
+        if continue_slot != -1:
+            Bootstrap.slot_save_manager.load_data(continue_slot)
 
 
     # load options.
@@ -40,6 +44,8 @@ func _ready() -> void:
         ins.from_save_collections(Env.SAVE_COLLECTIONS)
         ins.slot_clicked.connect((func(slot_id, has_data):
             if has_data:
+                # TODO this is bad, env should be read only but, I gues I'll deal with it later
+                Env.CONTINUE_SLOT = slot_id
                 Bootstrap.slot_save_manager.load_data(slot_id)
             ), CONNECT_ONE_SHOT
         )

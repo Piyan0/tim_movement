@@ -20,10 +20,15 @@ var CONTINUE_SLOT:
     get():
         if FileAccess.file_exists(CONTINUE_SLOT_PATH):
             var file = FileAccess.open(CONTINUE_SLOT_PATH, FileAccess.READ)
+            var slot_id = int(file.get_as_text())
             file.close()
-            return int(file.get_as_text())
+            return slot_id
         else:
             var file = FileAccess.open(CONTINUE_SLOT_PATH, FileAccess.WRITE)
             file.store_string("-1")
             file.close()
             return -1
+    set(value):
+        var file = FileAccess.open(CONTINUE_SLOT_PATH, FileAccess.WRITE)
+        file.store_string(str(value))
+        file.close()

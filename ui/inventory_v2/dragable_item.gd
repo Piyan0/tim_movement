@@ -5,8 +5,8 @@ signal item_dropped(id, pos)
 signal item_dragged(id, pos)
 
 
-@export var _tr_item: TextureRect
 @export var item_id: String = "<item_id>"
+@export var _tr_item: TextureRect
 
 var icon:
     set(value):

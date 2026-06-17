@@ -31,11 +31,6 @@ func goto(map_path, player_pos):
     Bootstrap.get_tree().change_scene_to_node(ins)
 
 
-func load_data(data: Dictionary):
-    Bootstrap.state = GlobalState.new()
-    await goto("res://levels/main/main.tscn", str_to_var(data.player_pos))
-    
-
 # TODO add mutiple tags
 func add_tag(tag):
     if tag in Bootstrap.tags:
@@ -58,3 +53,19 @@ func play_bgm(bgm_id: String):
 func play_sfx(sfx_id: String):
     var audio = load(Bootstrap.audio_db.get_item(sfx_id).path)
     Bootstrap.audio_manager.play_sfx(audio)
+
+
+func add_item(id, type):
+    Bootstrap.items.push_back({
+        id = id,
+        type = type,
+    })
+
+
+func remove_item(id):
+    var to_remove = {}
+    for value in Bootstrap.items:
+        if value.id == id:
+            to_remove = value
+            break
+    Bootstrap.items.erase(to_remove)

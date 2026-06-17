@@ -25,6 +25,7 @@ func _ready() -> void:
         slot_select = _select_slot()
         slot_select.slot_clicked.connect(func(slot_id, has_data):
             if has_data:
+                Env.CONTINUE_SLOT = slot_id
                 var data = Bootstrap.slot_save_manager.load_data(slot_id)
         )
     

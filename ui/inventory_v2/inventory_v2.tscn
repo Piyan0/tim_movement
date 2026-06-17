@@ -3,12 +3,11 @@
 [ext_resource type="Script" uid="uid://bw5jbsw27n15m" path="res://ui/inventory_v2/inventory_v_2.gd" id="1_f8eej"]
 [ext_resource type="Texture2D" uid="uid://db2u8vpclgclq" path="res://assets/ui/frame_black.png" id="2_1no85"]
 [ext_resource type="LabelSettings" uid="uid://dqvc2kyhvjdcy" path="res://assets/ui/style/label_name.tres" id="3_f8eej"]
-[ext_resource type="Texture2D" uid="uid://dhm4yqddqb2oe" path="res://ui/inventory_v2/item_slot_frame.png" id="4_1no85"]
 [ext_resource type="PackedScene" uid="uid://c51and35ymab2" path="res://ui/inventory_v2/item_slot.tscn" id="5_f8eej"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlbc2"]
 
-[node name="InventoryV2" type="VBoxContainer" unique_id=1354510956 node_paths=PackedStringArray("_items_slot")]
+[node name="InventoryV2" type="VBoxContainer" unique_id=1354510956 node_paths=PackedStringArray("_normal_items_slot", "_crystal_items_slot")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -17,7 +16,8 @@ offset_right = 228.5
 offset_bottom = 234.0
 grow_horizontal = 2
 script = ExtResource("1_f8eej")
-_items_slot = [NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot2"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot3")]
+_normal_items_slot = [NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot1"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot2"), NodePath("PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot3")]
+_crystal_items_slot = [NodePath("PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot1"), NodePath("PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot2"), NodePath("PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer/ItemSlot3")]
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1663591753]
 layout_mode = 2
@@ -62,7 +62,7 @@ theme_override_constants/margin_bottom = 14
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2" unique_id=995143124]
 layout_mode = 2
 
-[node name="ItemSlot" parent="PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=84334891 instance=ExtResource("5_f8eej")]
+[node name="ItemSlot1" parent="PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=84334891 instance=ExtResource("5_f8eej")]
 layout_mode = 2
 
 [node name="ItemSlot2" parent="PanelContainer/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1450858403 instance=ExtResource("5_f8eej")]
@@ -112,17 +112,11 @@ theme_override_constants/margin_bottom = 14
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2/HBoxContainer/MarginContainer2" unique_id=43842484]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=16737346]
+[node name="ItemSlot1" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=2075660481 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
 
-[node name="TextureRect2" type="TextureRect" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=584382824]
+[node name="ItemSlot2" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=2140369953 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
 
-[node name="TextureRect3" type="TextureRect" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=173034160]
+[node name="ItemSlot3" parent="PanelContainer2/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1143098089 instance=ExtResource("5_f8eej")]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_1no85")
