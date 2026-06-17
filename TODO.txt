@@ -1,6 +1,7 @@
 implement mini map.
-implement semua event progression.
 buat map nya.
+implement semua event progression.
+implement naration.
 
 
 @ implement continue mechanism.

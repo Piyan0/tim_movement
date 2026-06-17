@@ -3,7 +3,7 @@ extends Node
 
 var _bgm_player: AudioStreamPlayer
 var _sfx_player: AudioStreamPlayer
-var bgm_fade_dur = 1
+var bgm_fade_dur = 0.5
 var _current_bgm = null
 
 func _ready():
@@ -25,7 +25,7 @@ func play_sfx(sfx, custom_db = 0):
 func play_bgm(bgm: AudioStream, custom_db = 0):
     if _current_bgm != null:
         var t = create_tween()
-        t.tween_property(_bgm_player, "volume_db", -80, bgm_fade_dur)
+        t.tween_property(_bgm_player, "volume_db", -18, bgm_fade_dur)
         await t.finished
         _bgm_player.stream = bgm
         # t.tween_property(_bgm_player, "volume_db", custom_db, bgm_fade_dur)
