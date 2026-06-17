@@ -1,9 +1,9 @@
 implement mini map.
-buat map nya.
 implement semua event progression.
 implement naration.
 
 
+@ buat map nya.
 @ implement continue mechanism.
 @ implement load inventory from db. 
 @ music loop.
