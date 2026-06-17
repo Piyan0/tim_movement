@@ -1,0 +1,6 @@
+@@ audio database @@
+	(magic) 
+	(solved) 
+	(unsolved) 
+	(menu) 
+	(world_bgm) 

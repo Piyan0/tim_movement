@@ -13,6 +13,7 @@ script = ExtResource("1_7j33t")
 spr_graphic = NodePath("Sprite2D")
 click_area = NodePath("NinePatchRect")
 lb_hover = NodePath("Control/Label")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=542249545]
 centered = false
@@ -20,7 +21,6 @@ centered = false
 [node name="Control" type="Control" parent="." unique_id=134591522]
 layout_mode = 3
 anchors_preset = 0
-metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Control" unique_id=18356781]
 layout_mode = 1

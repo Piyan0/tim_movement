@@ -7,6 +7,7 @@ func _hover_text():
 
 func _interact():
     actions.add_tag("test")
+    actions.play_sfx("solved")
     await super()
 
 

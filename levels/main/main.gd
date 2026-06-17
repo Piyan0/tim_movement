@@ -6,4 +6,6 @@ extends Node2D
 
 
 func _ready() -> void:
+	var actions = InteractActions.new()
+	actions.play_bgm("world_bgm")
 	get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)

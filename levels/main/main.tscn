@@ -42,7 +42,7 @@ source = ExtResource("21_omhea")
 use_for_preview = true
 idle_graphic = ExtResource("20_uj5r8")
 hover_graphic = ExtResource("20_s50uu")
-offset = Vector2(-89.09, -160)
+offset = Vector2(-88.785, -160)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [sub_resource type="GDScript" id="GDScript_uj5r8"]
@@ -163,7 +163,7 @@ interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0"), 
 
 [node name="Sprite2D" parent="Bonnie" index="0" unique_id=542249545]
 texture = ExtResource("20_uj5r8")
-offset = Vector2(-89.09, -160)
+offset = Vector2(-88.785, -160)
 
 [node name="Control" parent="Bonnie" index="1" unique_id=134591522]
 metadata/_edit_use_anchors_ = true

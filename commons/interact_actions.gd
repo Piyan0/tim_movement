@@ -49,3 +49,12 @@ func remove_tag(tag):
     Bootstrap.tags.erase(tag)
     Bootstrap.get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
 
+
+func play_bgm(bgm_id: String):
+    var audio = load(Bootstrap.audio_db.get_item(bgm_id).path)
+    Bootstrap.audio_manager.play_bgm(audio)
+
+
+func play_sfx(sfx_id: String):
+    var audio = load(Bootstrap.audio_db.get_item(sfx_id).path)
+    Bootstrap.audio_manager.play_sfx(audio)

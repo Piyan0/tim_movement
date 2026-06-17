@@ -11,6 +11,8 @@ extends Control
 
 
 func _ready() -> void:
+    var actions = InteractActions.new()
+    actions.play_bgm("menu")
     _hide_options()
 
     _btn_start.cb = func():

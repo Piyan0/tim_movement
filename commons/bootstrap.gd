@@ -8,9 +8,19 @@ var canvas: CanvasLayer
 var hud: HUD
 var slot_save_manager: SlotSaveSystem
 var fade: Fade
+var items_db = ItemsDatabase.new()
+var audio_db = AudioDatabase.new()
+var audio_manager: AudioManager
+
 var tags: Array[String] = []
 
+
 func _enter_tree():
+    
+    audio_manager = AudioManager.new()
+    audio_manager.name = "AudioManager"
+    add_child(audio_manager)
+
     drag_item_manager = DragItemManager.new()
     canvas = _create_canvas()
   
@@ -32,6 +42,7 @@ func _enter_tree():
 
 func _create_canvas():
     var canvas = CanvasLayer.new()
+    canvas.name = "GlobalCanvas"
     add_child(canvas)
     return canvas
     
@@ -45,14 +56,16 @@ func _create_save_slot():
             hud.queue_free()
             hud = HUD.spawn()
         
-        tags = data.tags
+        tags.assign(data.tags)
         var actions = InteractActions.new()
         # TODO change this into data.scene
         var map_path = "res://levels/main/main.tscn"
         if get_tree().current_scene.scene_file_path == map_path:
             await fade.fade_in()
+            get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
             Player.instance.global_position = str_to_var(data.player_pos)
             await fade.fade_out()
+
         else:
             await actions.goto(map_path, str_to_var(data.player_pos))
     )

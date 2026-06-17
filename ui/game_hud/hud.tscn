@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b58ddt1fspc5f" path="res://ui/game_hud/hud.gd" id="1_3ys00"]
 [ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="1_qvtb7"]
-[ext_resource type="Texture2D" uid="uid://u74jehoauj5r" path="res://ignore/Screenshot 2026-06-06 224740.png" id="2_g8xwt"]
 [ext_resource type="Texture2D" uid="uid://db2u8vpclgclq" path="res://assets/ui/frame_black.png" id="3_g8xwt"]
 [ext_resource type="LabelSettings" uid="uid://dqvc2kyhvjdcy" path="res://assets/ui/style/label_name.tres" id="4_8jpm2"]
 [ext_resource type="Texture2D" uid="uid://8flx0yjn7ifl" path="res://assets/images/portraits/shane.png" id="4_x4xp1"]
@@ -51,20 +50,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=758433168]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -165.0
-offset_right = -6.0
-offset_bottom = -165.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_g8xwt")
 
 [node name="BottomContainer" type="HBoxContainer" parent="." unique_id=1929702255]
 layout_mode = 1

@@ -1,0 +1,11 @@
+@@ items database @@
+	(axe) 
+	(book_of_spell) 
+	(bottle_of_mead) 
+	(golden_chalice) 
+	(golden_ring) 
+	(human_skull) 
+	(medicine_potion) 
+	(royal_crystal) 
+	(sword) 
+	(travel_bag) 
