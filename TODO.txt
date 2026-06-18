@@ -1,8 +1,10 @@
-implement mini map.
-implement semua event progression.
-implement naration.
+implement all event progression.
+implement naration intro.
+erase tooltip when hovering on mini map close button.
 
 
+@ fix map scaling issue.
+@ implement mini map.
 @ buat map nya.
 @ implement continue mechanism.
 @ implement load inventory from db. 

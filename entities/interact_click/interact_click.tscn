@@ -3,26 +3,31 @@
 [ext_resource type="Script" uid="uid://uek2nwl50446" path="res://entities/interact_click/interact_click.gd" id="1_7j33t"]
 [ext_resource type="FontFile" uid="uid://dyymkxa8sbspd" path="res://assets/fonts/Oswald-SemiBold.ttf" id="2_n2amf"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ldxf0"]
+[sub_resource type="LabelSettings" id="LabelSettings_n2amf"]
 font = ExtResource("2_n2amf")
 font_size = 31
+font_color = Color(0.8706847, 0.79269665, 0.16884473, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
 shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
 
 [node name="InteractClick" type="Node2D" unique_id=508760350 node_paths=PackedStringArray("spr_graphic", "click_area", "lb_hover")]
 script = ExtResource("1_7j33t")
 spr_graphic = NodePath("Sprite2D")
 click_area = NodePath("NinePatchRect")
-lb_hover = NodePath("Control/Label")
+lb_hover = NodePath("HintContainer/Label")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=542249545]
 centered = false
 
-[node name="Control" type="Control" parent="." unique_id=134591522]
+[node name="HintContainer" type="Control" parent="." unique_id=134591522]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Control" unique_id=18356781]
+[node name="Label" type="Label" parent="HintContainer" unique_id=18356781]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,9 +41,8 @@ offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "label"
-label_settings = SubResource("LabelSettings_ldxf0")
+label_settings = SubResource("LabelSettings_n2amf")
 horizontal_alignment = 1
-uppercase = true
 
 [node name="NinePatchRect" type="ReferenceRect" parent="." unique_id=809710394]
 offset_left = -12.0
@@ -46,4 +50,3 @@ offset_top = 38.0
 offset_right = 68.5
 offset_bottom = 181.0
 border_color = Color(1, 1, 1, 1)
-editor_only = false

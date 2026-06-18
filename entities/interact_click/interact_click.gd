@@ -17,6 +17,8 @@ var _active_page: InteractPage
 var _input: InputHandler
 
 func _ready() -> void:
+    if interact_pages.is_empty():
+        return
     if Engine.is_editor_hint():
         for page: InteractPage in interact_pages:
             if page.use_for_preview:
@@ -53,6 +55,7 @@ func _ready() -> void:
         if event is InputEventMouseMotion || event is InputEventScreenDrag:
             if _is_interact: return
             if get_click_rect().has_point(event.position):
+                if Bootstrap.state.is_interact: return
                 lb_hover.text = _active_page.hover_text
                 spr_graphic.texture = _active_page.hover_graphic
             else:
@@ -72,9 +75,7 @@ func _ready() -> void:
                 if get_click_rect().has_point(click_area.get_global_transform_with_canvas().origin + event.position):
                     var x = func():
                         await get_tree().create_timer(1).timeout
-                        print(1)
                     x.call()
-                    print(2)
                     lb_hover.text = _active_page.hover_text
                     spr_graphic.texture = _active_page.hover_graphic
                     await get_tree().create_timer(0.1).timeout
@@ -112,6 +113,7 @@ func refresh_page(tag_list):
 
 func _interact(interact_cb):
     if !_can_interact(): return
+    Bootstrap.state.is_interact = true
     lb_hover.text = ""
     _is_interact = true
     get_viewport().set_input_as_handled()
@@ -120,6 +122,7 @@ func _interact(interact_cb):
     await interact_cb.call()
     Bootstrap.state.is_interact = false
     _is_interact = false
+    Bootstrap.state.is_interact = false
 
 
 func _reset_state():
@@ -138,5 +141,5 @@ func _update_page(page: InteractPage):
 
 
 func _can_interact():
-    var conditions = [!_is_interact]
+    var conditions = [!_is_interact, !Bootstrap.state.is_interact]
     return conditions.all(func(cond): return cond == true) 

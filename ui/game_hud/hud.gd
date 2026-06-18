@@ -1,10 +1,11 @@
 class_name HUD
 extends Control
 
-@export var _ph_pause_menu: Node
 @export var dialogue: HUDDialogue
+
+@export var _ph_pause_menu: Node
+@export var _ph_mini_map: Node 
 @export var _inventory_place: Control
-@export_category("Buttons")
 @export var _buttons: Array[HoverableButton]
 
 var _inventory = null
@@ -35,8 +36,10 @@ func _ready() -> void:
 
     # buttonworld map
     _buttons[2].cb = func():
-        print("button map")
-
+        _ph_mini_map = _ph_mini_map as InstancePlaceholder
+        var ins = _ph_mini_map.create_instance()
+        var mini_map_scale = 0.0791
+        ins.marker_pos = Player.instance.global_position * mini_map_scale
 
 static func spawn():
     var ins = load("uid://bxikvddg4fkyy").instantiate()

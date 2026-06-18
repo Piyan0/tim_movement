@@ -6,9 +6,6 @@ func _hover_text():
 
 
 func _interact():
-    actions.remove_item("book_of_spell")
-    actions.add_tag("test")
-    actions.play_sfx("solved")
     await super()
 
 

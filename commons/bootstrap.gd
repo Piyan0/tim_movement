@@ -15,8 +15,8 @@ var tags: Array[String] = []
 # item_id, item_type = normal / crystal
 var items: Array[Dictionary] = [
     {
-        type = "normal",
-        id = "book_of_spell"
+        type = "crystal",
+        id = "royal_crystal"
     },
     ]
 
@@ -45,6 +45,8 @@ func _enter_tree():
             if hud == null:
                 hud = HUD.spawn()
     )
+    
+    DebugConsole.add_console_command("add_item", (func(item): InteractActions.new().add_item(item)), TYPE_STRING)
 
 
 func fresh():

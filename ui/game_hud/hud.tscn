@@ -19,7 +19,7 @@ shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8xwt"]
 
-[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("_ph_pause_menu", "dialogue", "_inventory_place", "_buttons")]
+[node name="HUD" type="Control" unique_id=251633660 node_paths=PackedStringArray("dialogue", "_ph_pause_menu", "_ph_mini_map", "_inventory_place", "_buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,8 +28,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_3ys00")
-_ph_pause_menu = NodePath("PauseMenu")
 dialogue = NodePath("HUDDialogueLogic")
+_ph_pause_menu = NodePath("PauseMenu")
+_ph_mini_map = NodePath("MiniMap")
 _inventory_place = NodePath("InventoryPos")
 _buttons = [NodePath("HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton"), NodePath("BottomContainer/PanelContainer/VBoxContainer/HoverableButton2")]
 
@@ -119,38 +120,47 @@ patch_margin_bottom = 21
 [node name="MarginContainer" type="MarginContainer" parent="BottomContainer/MarginContainer" unique_id=851498701]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer" unique_id=777306867]
 layout_mode = 2
 mouse_filter = 2
+theme_override_constants/separation = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=511033288]
+custom_minimum_size = Vector2(0, 53.65)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
-theme_override_constants/separation = 23
+theme_override_constants/separation = 12
 
 [node name="Label2" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1883875282]
 layout_mode = 2
+size_flags_vertical = 8
 text = "<"
 label_settings = ExtResource("4_8jpm2")
 
 [node name="Label" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=755704914]
 layout_mode = 2
+size_flags_vertical = 8
 text = "shane"
 label_settings = ExtResource("4_8jpm2")
 uppercase = true
 
 [node name="Label3" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1839427483]
 layout_mode = 2
+size_flags_vertical = 8
 text = ">"
 label_settings = ExtResource("4_8jpm2")
 
 [node name="Label" type="Label" parent="BottomContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=549632234]
-custom_minimum_size = Vector2(0, 77)
+modulate = Color(0.7539839, 0.75398386, 0.75398386, 1)
+custom_minimum_size = Vector2(0, 69)
 layout_mode = 2
+size_flags_vertical = 2
 text = "line1
 line2"
 label_settings = ExtResource("5_mx14h")
@@ -203,4 +213,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PauseMenu" parent="." unique_id=319822962 instance_placeholder="res://ui/pause_menu/pause_menu.tscn"]
+layout_mode = 1
+
+[node name="MiniMap" parent="." unique_id=1066272785 instance_placeholder="res://ui/mini_map/mini_map.tscn"]
 layout_mode = 1

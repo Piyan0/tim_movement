@@ -93,9 +93,11 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_right = 24
 
 [node name="Label" type="Label" parent="PanelContainer2/HBoxContainer/MarginContainer" unique_id=1938471105]
+custom_minimum_size = Vector2(108, 0)
 layout_mode = 2
-text = "CRYSTAL"
+text = "ITEMS"
 label_settings = ExtResource("3_f8eej")
+horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="PanelContainer2/HBoxContainer" unique_id=717121919]
 custom_minimum_size = Vector2(6, 0)
@@ -104,6 +106,7 @@ color = Color(0.21568628, 0.21568628, 0.21568628, 1)
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer2/HBoxContainer" unique_id=1273303865]
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 14
 theme_override_constants/margin_right = 10

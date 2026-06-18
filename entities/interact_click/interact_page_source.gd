@@ -2,6 +2,8 @@ class_name InteractPageSource
 
 
 var actions = InteractActions.new()
+var a: InteractActions:
+    get(): return actions
 
 func _hover_text():
     if Bootstrap.state.item_being_dragged:

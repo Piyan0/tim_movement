@@ -6,15 +6,15 @@ func text(arr = ["Shane shane.png owh is that right"]):
 
     for el in arr:
         var split = Array(el.split(" "))
-        var name = split[0]
+        var name = split[0].replace("_", " ")
         var portrait_id = split[1]
         var content = split.slice(2)
         content = " ".join(content)
         # printt(name, portrait_id, content)
         var batch_el = HUDDialogue.DialogueWithPortrait.new(
-            name,
+            "" if name == "-" else name,
             content,
-            Bootstrap.portraits.get_asset(portrait_id)
+            null if portrait_id == "-" else Bootstrap.portraits.get_asset(portrait_id)
         ) 
         batches.append(batch_el)
     
@@ -55,14 +55,14 @@ func play_sfx(sfx_id: String):
     Bootstrap.audio_manager.play_sfx(audio)
 
 
-func add_item(id, type):
+func add_item(id, type = "normal"):
     Bootstrap.items.push_back({
         id = id,
         type = type,
     })
 
 
-func remove_item(id):
+func remove_item(id = Bootstrap.state.current_item):
     var to_remove = {}
     for value in Bootstrap.items:
         if value.id == id:

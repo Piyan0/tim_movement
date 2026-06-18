@@ -13,7 +13,7 @@ var _items_slot: Array[ItemSlot]:
 
 const _item_picked_drop = 100 
 const _item_picked_tween_dur = 0.2 
-const TYPE_CRYSTAL = "crsytal"
+const TYPE_CRYSTAL = "crystal"
 const TYPE_NORMAL = "normal"
 
 

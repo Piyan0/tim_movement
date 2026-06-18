@@ -21,11 +21,12 @@ func _ready() -> void:
     # new game options.
     _buttons[0].cb = func():
         Bootstrap.fresh()
+        var starting_scene_file = FileAccess.open("res://.starting_scene", FileAccess.READ)
+        var scene = starting_scene_file.get_line()
+        var initial_player_pos = starting_scene_file.get_line()
+
         var x = InteractActions.new()
-        await x.goto(
-            "res://levels/main/main.tscn",
-            Vector2(5200, 1900)
-        )
+        await x.goto(scene, str_to_var(initial_player_pos))
 
        
     # continue options.

@@ -4,11 +4,31 @@
 [ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="2_uj5r8"]
 [ext_resource type="Script" uid="uid://8tscuyqv0q57" path="res://levels/main/player_click_area.gd" id="3_omhea"]
 [ext_resource type="Texture2D" uid="uid://bx2m0r6rkmh8o" path="res://assets/world_map/world_map.png" id="4_sqa4f"]
+[ext_resource type="Texture2D" uid="uid://v7euea2bgvyb" path="res://assets/characters/npcs/FD_Characters_Skoldrax_hover_BIG_01.png" id="9_20bwc"]
+[ext_resource type="Texture2D" uid="uid://ptu4h847bv57" path="res://assets/characters/npcs/FD_Characters_Skoldrax_idle_BIG_01.png" id="9_sqa4f"]
+[ext_resource type="Texture2D" uid="uid://cdwbgokumnpx5" path="res://assets/characters/npcs/FD_Characters_Lillian_hover_BIG_01.png" id="11_rw7ub"]
+[ext_resource type="Texture2D" uid="uid://b2va8yw84tcnh" path="res://assets/characters/npcs/FD_Characters_Lillian_idle_BIG_01.png" id="12_1fdnp"]
+[ext_resource type="Texture2D" uid="uid://cqri20lmbxby3" path="res://assets/characters/npcs/FD_Characters_Ulli_hover_BIG_01.png" id="13_eec3g"]
+[ext_resource type="Texture2D" uid="uid://c64q5chy2qf31" path="res://assets/characters/npcs/FD_Characters_Ulli_idle_BIG_01.png" id="14_hn1gb"]
+[ext_resource type="Texture2D" uid="uid://cvsnwm5vnkgm7" path="res://assets/characters/npcs/FD_Characters_Toby_hover_BIG_01.png" id="15_3lhr6"]
+[ext_resource type="Texture2D" uid="uid://b83uk0ye6qf6o" path="res://assets/characters/npcs/FD_Characters_Toby_idle_BIG_01.png" id="15_hn1gb"]
+[ext_resource type="Texture2D" uid="uid://cc7arcjbnlygu" path="res://assets/characters/npcs/FD_Characters_Lorx_hover_BIG_01.png" id="17_vged4"]
+[ext_resource type="Texture2D" uid="uid://b7y4g8grsa77p" path="res://assets/characters/npcs/FD_Characters_Lorx_idle_BIG_01.png" id="17_yh2qj"]
 [ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="18_s50uu"]
+[ext_resource type="Texture2D" uid="uid://fr2xmaoxjstv" path="res://assets/characters/npcs/FD_Characters_Necros_hover_BIG_01.png" id="19_dvq2k"]
 [ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="19_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://c460ft0fqyc4s" path="res://assets/characters/npcs/FD_Characters_Necros_idle_BIG_01.png" id="20_dy3nw"]
 [ext_resource type="Texture2D" uid="uid://b3m7mvjskh0aa" path="res://assets/characters/npcs/FD_Characters_Bonnie_hover_BIG_01.png" id="20_s50uu"]
 [ext_resource type="Texture2D" uid="uid://cf63c3ccnm3gw" path="res://assets/characters/npcs/FD_Characters_Bonnie_idle_BIG_01.png" id="20_uj5r8"]
-[ext_resource type="Script" uid="uid://blppc0qetpa7l" path="res://entities/interact_click/source_default.gd" id="21_omhea"]
+[ext_resource type="Texture2D" uid="uid://cmmxnjf2bbxjn" path="res://assets/characters/npcs/FD_Characters_Father_hover_BIG_01.png" id="21_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://4u8x3k4oa0s3" path="res://assets/characters/npcs/FD_Characters_Father_idle_BIG_01.png" id="21_s50uu"]
+[ext_resource type="Texture2D" uid="uid://dnatai3ruuuba" path="res://assets/characters/npcs/FD_Characters_Marsha_hover_BIG_01.png" id="23_uj5r8"]
+[ext_resource type="Texture2D" uid="uid://c7rvtjsss0l4a" path="res://assets/characters/npcs/FD_Characters_Victor_hover_BIG_01.png" id="24_63fg0"]
+[ext_resource type="Texture2D" uid="uid://b1akgkmakqk0k" path="res://assets/characters/npcs/FD_Characters_Victor_idle_BIG_01.png" id="25_h2jn1"]
+[ext_resource type="Texture2D" uid="uid://cueliie12cg5i" path="res://assets/characters/npcs/FD_Characters_Baltazar_hover_BIG_01.png" id="26_0fp8q"]
+[ext_resource type="Texture2D" uid="uid://bvdxiugil3bb5" path="res://assets/characters/npcs/FD_Characters_Baltazar_idle_BIG_01.png" id="27_lh0sg"]
+[ext_resource type="Texture2D" uid="uid://d27fxjearlxri" path="res://assets/characters/npcs/FD_Characters_Fiona_hover_BIG_01.png" id="28_en4or"]
+[ext_resource type="Texture2D" uid="uid://0ywqbu53reoe" path="res://assets/characters/npcs/FD_Characters_Fiona_idle_BIG_01.png" id="29_l3acv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_omhea"]
 shader = ExtResource("2_uj5r8")
@@ -17,47 +37,811 @@ shader_parameter/color1 = Color(0.3854925, 0.38549247, 0.38549247, 1)
 shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yh2qj"]
-vertices = PackedVector2Array(7726.1875, 3069.0469, 4367.289, 4649.6484, 1023.4375, 3021.2266, 943.6328, 1760.5703, 4345.5625, 155.25781)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(902, 1736, 4352, 108, 7799, 3079, 4367, 4694, 985, 3047)])
+vertices = PackedVector2Array(8160.3984, 2660.2266, 4348.367, 4880.492, 387.67188, 2488.3984, 4383.6875, 610.7969)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(303, 2484, 4385, 566, 8242, 2659, 4348, 4927)])
 agent_radius = 40.0
 
-[sub_resource type="Resource" id="Resource_63fg0"]
+[sub_resource type="GDScript" id="GDScript_q42nm"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    var text = [
+        \"Bonnie bonnie.png Hey! Aren’t you that young hero I’ve heard so much about?\",
+        \"Shane shane.png I am indeed. Why, miss? You’re not in trouble I hope?!\",
+        \"Bonnie bonnie.png Not at all. I’m just an admirer, that’s all. Here, this might help you fulfil your quest.\",
+    ]
+    actions.add_item(\"medicine_potion\")
+    actions.add_tag(\"bonnie_solved\")
+    await actions.text(text)
+    
+    a.play_sfx(\"solved\")
+    await a.text([
+        \"Info medicine_potion.png You have obtained a medicinal potion\"
+    ])
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await actions.text([
+        \"Bonnie bonnie.png That’s very kind of you, but I don’t need it.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_oclhf"]
 script = ExtResource("19_dy3nw")
-source = ExtResource("21_omhea")
+source = SubResource("GDScript_q42nm")
 use_for_preview = true
 idle_graphic = ExtResource("20_uj5r8")
 hover_graphic = ExtResource("20_s50uu")
-offset = Vector2(-88.785, -160)
+offset = Vector2(-89.597, -162.355)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_oclhf"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    var text = [
+        \"Bonnie bonnie.png Send me a postcard when you’ve completed your quest. Good luck!\"
+    ]
+    await actions.text(text)
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await actions.text([
+        \"Bonnie bonnie.png That’s very kind of you, but I don’t need it.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_sqa4f"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_oclhf")
+use_for_preview = true
+idle_graphic = ExtResource("20_uj5r8")
+hover_graphic = ExtResource("20_s50uu")
+offset = Vector2(-89.597, -162.355)
+tags = Array[String](["bonnie_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_20bwc"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Shane shane.png Are you alright, sir? You seem uncomfortable.\",
+        \"Skoldrax skoldrax.png That’s because I am in pain every hour of the day, young man. This old body is failing me.\",
+        \"Skoldrax skoldrax.png Anyone capable of relieving me of this pain will be richly rewarded! Mark my words!\",
+    ])
+
+func _item_dropped(item_id):
+    if item_id == \"medicine_potion\":
+        await actions.text([
+            \"Shane shane.png I’m told that this medicinal potion cures all ailments, sir. You might want to try it.\",
+            \"Skoldrax skoldrax.png Eureka! For the first time in years my pain is gone! Here, take this golden ring as a reward.\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info golden_ring.png You have obtained a golden ring\"
+        ])
+        actions.add_item(\"golden_ring\")
+        actions.remove_item(\"medicine_potion\")
+        actions.add_tag(\"skoldrax_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await actions.text([
+            \"Skoldrax skoldrax.png What would I want with that?\",
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_cpsu2"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_20bwc")
+use_for_preview = true
+idle_graphic = ExtResource("9_sqa4f")
+hover_graphic = ExtResource("9_20bwc")
+offset = Vector2(-93.5, -160.3)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_cpsu2"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Skoldrax skoldrax.png You have my eternal gratitude, young man!\"
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await actions.text([
+        \"Skoldrax skoldrax.png What would I want with that?\",
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_rw7ub"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_cpsu2")
+use_for_preview = true
+idle_graphic = ExtResource("9_sqa4f")
+hover_graphic = ExtResource("9_20bwc")
+offset = Vector2(-93.5, -160.3)
+tags = Array[String](["skoldrax_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_eec3g"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Lilian lilian.png Looking for a book, mister? They contain many obscure spells and secret incantations.\",
+        \"Shane shane.png Sounds useful. What do you want for that large volume?\",
+        \"Lilian lilian.png Bring me something special. A golden ring with a diamond for instance?\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"golden_ring\":
+        actions.remove_item(\"golden_ring\")
+        await actions.text([
+            \"Shane shane.png I’d love to trade one of your books for this golden ring. Sounds good, huh?\",
+            \"Lilian lilian.png Wow! It’s so beautiful! You’ve got yourself a deal, mister.\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info book_of_spell.png You have obtained a book of spells\",
+        ])
+        actions.add_tag(\"lilian_solved\")
+        actions.add_item(\"book_of_spell\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await actions.text([
+            \"Lilian lilian.png It looks very pretty, but I think I’ll pass.\"
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_hn1gb"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_eec3g")
+use_for_preview = true
+idle_graphic = ExtResource("12_1fdnp")
+hover_graphic = ExtResource("11_rw7ub")
+offset = Vector2(-90.85, -166.95)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_rw7ub"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Lilian lilian.png Thanks for the ring, mister! It’s just what I was looking for!\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await actions.text([
+        \"Lilian lilian.png It looks very pretty, but I think I’ll pass.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_1fdnp"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_rw7ub")
+use_for_preview = true
+idle_graphic = ExtResource("12_1fdnp")
+hover_graphic = ExtResource("11_rw7ub")
+offset = Vector2(-90.85, -166.95)
+tags = Array[String](["lilian_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_3lhr6"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Ulli_The_Unlikely ulli.png Salutations! Could you help the great Ulli to become an almighty sorcerer?\",
+        \"Shane shane.png I’m not too keen to be honest . . . but go on.\",
+        \"Ulli_The_Unlikely ulli.png You scoff, young hero?! Bring Ulli a book of spells and he shall prove himself!\",
+    ])
+    
+
+func _item_dropped(item_id):
+    if item_id == \"book_of_spell\":
+        await actions.text([
+            \"Ulli_The_Unlikely ulli.png Aha! This book will make Ulli all-powerful! Here is your reward, young hero.\",
+            \"Shane shane.png But that’s ... one of the three royal crystals! Thank you, Ulli!\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info royal_crystal.png You have obtained a royal crystal\",
+        ])
+        actions.add_item(\"royal_crystal\", \"crystal\")
+        actions.remove_item()
+        actions.add_tag(\"ulli_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await actions.text([
+            \"Ulli_The_Unlikely ulli.png Ulli has no use for this.\"
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_yh2qj"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_3lhr6")
+use_for_preview = true
+idle_graphic = ExtResource("14_hn1gb")
+hover_graphic = ExtResource("13_eec3g")
+offset = Vector2(-97.35, -163.6)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_hn1gb"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await actions.text([
+        \"Ulli_The_Unlikely ulli.png Ulli has yet to master the sacred spells. Be he will soon . . . I hope.\",
+    ])
+    
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await actions.text([
+        \"Ulli_The_Unlikely ulli.png Ulli has no use for this.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_eec3g"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_hn1gb")
+idle_graphic = ExtResource("14_hn1gb")
+hover_graphic = ExtResource("13_eec3g")
+offset = Vector2(-97.35, -163.6)
+tags = Array[String](["ulli_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_yh2qj"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Toby toby.png Hi there! You look like the sort of feller that could use a sturdy travel bag.\",
+        \"Shane shane.png That might prove useful. What do you want for it?\",
+        \"Toby toby.png Oh, nothing. I’m just glad to finally be rid of it.\",
+    ])
+    a.play_sfx(\"solved\")
+    await a.text([
+        \"Info travel_bag.png You have obtained a travel bag\"
+    ])
+    a.add_item(\"travel_bag\")
+    a.add_tag(\"toby_solved\")
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Toby toby.png No thanks. I’m good.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_3lhr6"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_yh2qj")
+use_for_preview = true
+idle_graphic = ExtResource("15_hn1gb")
+hover_graphic = ExtResource("15_3lhr6")
+offset = Vector2(-94.8, -165.2)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_vged4"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Toby toby.png Hope you have a great day!\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Toby toby.png No thanks. I’m good.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_vged4"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_vged4")
+use_for_preview = true
+idle_graphic = ExtResource("15_hn1gb")
+hover_graphic = ExtResource("15_3lhr6")
+offset = Vector2(-94.8, -165.2)
+tags = Array[String](["toby_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_u4gi4"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Little_Lorx little_lorx.png I wish I could go on an adventure like you. But I don’t own the proper equipment.\",
+        \"Shane shane.png Well, I could help you with that. What if I got you a nice travel bag, for instance?\",
+        \"Little_Lorx little_lorx.png A travel bag? That would be great! And I’d give you this bottle of mead in return.\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"travel_bag\":
+        a.remove_item()
+        await a.text([
+            \"Little_Lorx little_lorx.png Wow! Look at how sturdy that travel bag is! Now I can finally go on an adventure!\",
+            \"Little_Lorx little_lorx.png Wow! Here, take this bottle of mead. It’s fine stuff. And all yours!\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info bottle_of_mead.png You have obtained a bottle of mead\",
+        ])
+        a.add_item(\"bottle_of_mead\")
+        a.add_tag(\"lorx_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Little_Lorx little_lorx.png Not what I was looking for.\",
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_u4gi4"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_u4gi4")
+use_for_preview = true
+idle_graphic = ExtResource("17_yh2qj")
+hover_graphic = ExtResource("17_vged4")
+offset = Vector2(-95.1, -156.6)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_dvq2k"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Little_Lorx little_lorx.png I’ll start my adventure tomorrow. Or the day after that. I think.\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Little_Lorx little_lorx.png Not what I was looking for.\",
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_dvq2k"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_dvq2k")
+use_for_preview = true
+idle_graphic = ExtResource("17_yh2qj")
+hover_graphic = ExtResource("17_vged4")
+offset = Vector2(-95.1, -156.6)
+tags = Array[String](["lorx_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_s50uu"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Necros necros.png Fighting has made me tired. I am dying of thirst. Bring me something to drink!\",
+        \"Shane shane.png You didn’t say the magic word, you big bully.\",
+        \"Necros necros.png Get me a drink! Now! Or else I will keep this golden chalice all to myself!\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"bottle_of_mead\":
+        await a.text([
+            \"Shane shane.png Are you willing to trade this bottle of mead for that golden chalice?\",
+            \"Necros necros.png My thirst is so great, I’d even trade it for a thousand diamond chalices.\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text(([
+            \"Info golden_chalice.png You have obtained a golden chalice\"
+        ]))
+        a.remove_item()
+        a.add_item(\"golden_chalice\")
+        a.add_tag(\"necros_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Necros necros.png Get that thing out of my sight!\"
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_uj5r8"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_s50uu")
+use_for_preview = true
+idle_graphic = ExtResource("20_dy3nw")
+hover_graphic = ExtResource("19_dvq2k")
+offset = Vector2(-91.85, -163.15)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_dy3nw"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Necros necros.png I’m grateful for your help. Now clear off!\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Necros necros.png Get that thing out of my sight!\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_s50uu"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_dy3nw")
+use_for_preview = true
+idle_graphic = ExtResource("20_dy3nw")
+hover_graphic = ExtResource("19_dvq2k")
+offset = Vector2(-91.85, -163.15)
+tags = Array[String](["necros_solved"])
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [sub_resource type="GDScript" id="GDScript_uj5r8"]
 script/source = "extends InteractPageSource
 
 func _interact():
-    var shane = \"Shane shane.png %s\"
-    var lilian = \"Lilian lilian.png %s\"
-    var arr = []
-    arr.append( shane % \"Okay cool.\" )
-    actions.remove_tag(\"test\")
-    await actions.text(arr)
+    await a.text([
+        \"Father_Benjamin father.png Greetings, young man! Would you care to donate to our church?\",
+        \"Shane shane.png I’d be glad to, father. Is there anything in particular I could help you with?\",
+        \"Father_Benjamin father.png Food, money, gold . . . anything you can spare!\",
+    ])
+
 
 func _item_dropped(item_id):
-    pass
-    
-func _hover_text():
-    return super()
+    if item_id == \"golden_chalice\":
+        await a.text([
+            \"Shane shane.png Allow me to donate this golden chalice to your church, father.\",
+            \"Father_Benjamin father.png This is too much, young man. Thank you! Here, take this royal crystal in return.\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info royal_crystal.png You have obtained a royal crystal\",
+        ])
+        actions.add_item(\"royal_crystal\", \"crystal\")
+        actions.add_tag(\"father_solved\")
+        actions.remove_item()
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Father_Benjamin father.png I cannot accept that, my young friend.\",
+        ])
+
+        
+"
+
+[sub_resource type="Resource" id="Resource_dy3nw"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_uj5r8")
+use_for_preview = true
+idle_graphic = ExtResource("21_s50uu")
+hover_graphic = ExtResource("21_dy3nw")
+offset = Vector2(-87.25, -160.35)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_omhea"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Father_Benjamin father.png Come back to visit us anytime, young man.\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Father_Benjamin father.png I cannot accept that, my young friend.\",
+    ])
 "
 
 [sub_resource type="Resource" id="Resource_omhea"]
 script = ExtResource("19_dy3nw")
-source = SubResource("GDScript_uj5r8")
-tags = Array[String](["test"])
+source = SubResource("GDScript_omhea")
+use_for_preview = true
+idle_graphic = ExtResource("21_s50uu")
+hover_graphic = ExtResource("21_dy3nw")
+offset = Vector2(-87.25, -160.35)
+tags = Array[String](["father_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_omhea"]
+load_path = "res://.godot/imported/FD_Characters_Marsha_idle_BIG_01.png-95ba2a3553758bc50bb49748cac72eda.ctex"
+
+[sub_resource type="GDScript" id="GDScript_63fg0"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Marsha marsha.png Hey! You are not armed, are you?\",
+        \"Shane shane.png No, ma’am. I come in peace.\",
+        \"Marsha marsha.png Bad idea, son. These woods are dangerous. Here. Takes this sword. Better safe than sorry.\",
+    ])
+    a.play_sfx(\"solved\")
+    await a.text([
+        \"Info sword.png You have obtained a sword\",
+    ])
+    a.add_item(\"sword\")
+    a.add_tag(\"marsha_solved\")
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Marsha marsha.png I think you’ve mistaken me for someone else.\"
+    ])
+    
+"
+
+[sub_resource type="Resource" id="Resource_63fg0"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_63fg0")
+use_for_preview = true
+idle_graphic = SubResource("CompressedTexture2D_omhea")
+hover_graphic = ExtResource("23_uj5r8")
+offset = Vector2(-88.75, -158.6)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_h2jn1"]
+script/source = "extends InteractPageSource
+
+func _interact():
+   await a.text([
+        \"Marhsa marsha.png Don’t say I didn’t warn you.\"
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Marsha marsha.png I think you’ve mistaken me for someone else.\"
+    ])
+    
+"
+
+[sub_resource type="Resource" id="Resource_h2jn1"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_h2jn1")
+use_for_preview = true
+idle_graphic = SubResource("CompressedTexture2D_omhea")
+hover_graphic = ExtResource("23_uj5r8")
+offset = Vector2(-88.75, -158.6)
+tags = Array[String](["marsha_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_0fp8q"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Victor victor.png Greetings, young hero. I’ve got a spare axe. Something you’d be interested in?\",
+        \"Shane shane.png That should prove useful. What do you want for it?\",
+        \"Victor victor.png A weapon for a weapon, my friend. How about you bring me a fine sword?\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"sword\":
+        await a.text([
+            \"Shane shane.png Would you be interested in trading this sword for one of your spare axes?\",
+            \"Victor victor.png It’s a fine blade indeed! Yes, you’ve got a deal. Thank you, my friend!\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info axe.png You have obtained an axe\"
+        ])
+        a.add_tag(\"victor_solved\")
+        a.remove_item()
+        a.add_item(\"axe\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Victor victor.png Fine craftsmanship, but not what I was looking for.\"
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_0fp8q"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_0fp8q")
+use_for_preview = true
+idle_graphic = ExtResource("25_h2jn1")
+hover_graphic = ExtResource("24_63fg0")
+offset = Vector2(-92.35, -158.7)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_lh0sg"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Victor victor.png Best of luck, young hero!\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Victor victor.png Fine craftsmanship, but not what I was looking for.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_lh0sg"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_lh0sg")
+use_for_preview = true
+idle_graphic = ExtResource("25_h2jn1")
+hover_graphic = ExtResource("24_63fg0")
+offset = Vector2(-92.35, -158.7)
+tags = Array[String](["victor_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_en4or"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Baltazar baltazar.png I wish to crush my enemies! Could you fetch me a weapon, stranger?\",
+        \"Shane shane.png I’m not sure whether that’s such a good idea, sir.\",
+        \"Baltazar baltazar.png Bring me an axe and I’ll give you the skull of my last victim. Sounds good, huh?!\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"axe\":
+        await a.text([
+            \"Baltazar baltazar.png What a fine axe! That should prove useful. Please except this skull as a reward.\",
+            \"Shane shane.png Yuck! It still has hairs on it!\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info human_skull.png You have obtained a human skull\"
+        ])
+        a.remove_item()
+        a.add_item(\"human_skull\")
+        a.add_tag(\"baltazar_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Baltazar baltazar.png Nope. Not for me, thanks.\"
+        ])
+                
+"
+
+[sub_resource type="Resource" id="Resource_en4or"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_en4or")
+use_for_preview = true
+idle_graphic = ExtResource("27_lh0sg")
+hover_graphic = ExtResource("26_0fp8q")
+offset = Vector2(-83.65, -152.1)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_l3acv"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Baltazar baltazar.png This is the finest skull I’ve ever seen. Thank you, Shane!\",
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Baltazar baltazar.png Nope. Not for me, thanks.\"
+    ])
+        
+"
+
+[sub_resource type="Resource" id="Resource_l3acv"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_l3acv")
+use_for_preview = true
+idle_graphic = ExtResource("27_lh0sg")
+hover_graphic = ExtResource("26_0fp8q")
+offset = Vector2(-83.65, -152.1)
+tags = Array[String](["baltazar_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_dga76"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Fiona fiona.png Could you help me find a skull? I need it for my anatomy lessons.\",
+        \"Shane shane.png Please tell me you’re studying animals.\",
+        \"Fiona fiona.png Humans, I’m afraid. You get me a skull and I’ll reward you handsomely. Trust me.\",
+    ])
+
+
+func _item_dropped(item_id):
+    if item_id == \"human_skull\":
+        await a.text([
+            \"Fiona fiona.png What a beautiful skull! Here, take this. You’ve definitely earned it!\",
+            \"Shane shane.png A royal crystal?! Wow! I can’t thank you enough, Fiona!\",
+        ])
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Info royal_crystal.png You have obtained a royal crystal\"
+        ])
+        a.remove_item()
+        a.add_item(\"royal_crystal\", \"crystal\")
+        a.add_tag(\"fiona_solved\")
+    else:
+        a.play_sfx(\"unsolved\")
+        await a.text([
+            \"Fiona fiona.png Nope. Not for me, thanks.\"
+        ])
+"
+
+[sub_resource type="Resource" id="Resource_dga76"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_dga76")
+use_for_preview = true
+idle_graphic = ExtResource("29_l3acv")
+hover_graphic = ExtResource("28_en4or")
+offset = Vector2(-97.65, -164.3)
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_uk51s"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    await a.text([
+        \"Fiona fiona.png This is the finest skull I’ve ever seen. Thank you, Shane!\"
+    ])
+
+
+func _item_dropped(item_id):
+    a.play_sfx(\"unsolved\")
+    await a.text([
+        \"Fiona fiona.png Nope. Not for me, thanks.\"
+    ])
+"
+
+[sub_resource type="Resource" id="Resource_gb6n7"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_uk51s")
+use_for_preview = true
+idle_graphic = ExtResource("29_l3acv")
+hover_graphic = ExtResource("28_en4or")
+offset = Vector2(-97.65, -164.3)
+tags = Array[String](["fiona_solved"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_gb6n7"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    pass
+"
+
+[sub_resource type="Resource" id="Resource_uk51s"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_gb6n7")
+use_for_preview = true
+idle_graphic = ExtResource("28_en4or")
+hover_graphic = ExtResource("28_en4or")
+offset = Vector2(-99.2, -165.65)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [node name="Main" type="Node2D" unique_id=351564680]
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
+metadata/_edit_vertical_guides_ = [3824.0]
+metadata/_edit_horizontal_guides_ = [2790.0]
 
 [node name="Control" type="ColorRect" parent="." unique_id=876497405]
 visible = false
@@ -74,6 +858,7 @@ border_width = 6.0
 script = ExtResource("3_omhea")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=534642288]
+modulate = Color(0.30569223, 0.3056922, 0.30569223, 1)
 texture = ExtResource("4_sqa4f")
 centered = false
 
@@ -81,28 +866,279 @@ centered = false
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_yh2qj")
 
-[node name="Bonnie" parent="." unique_id=508760350 instance=ExtResource("18_s50uu")]
-position = Vector2(5625, 1998)
-interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0"), SubResource("Resource_omhea")])
+[node name="InteractClickGroup" type="Node2D" parent="." unique_id=337414484]
+y_sort_enabled = true
 
-[node name="Sprite2D" parent="Bonnie" index="0" unique_id=542249545]
+[node name="Bonnie" parent="InteractClickGroup" unique_id=508760350 instance=ExtResource("18_s50uu")]
+position = Vector2(6228, 1991)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_oclhf"), SubResource("Resource_sqa4f")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Bonnie" index="0" unique_id=542249545]
 texture = ExtResource("20_uj5r8")
-offset = Vector2(-88.785, -160)
+offset = Vector2(-89.597, -162.355)
 
-[node name="Control" parent="Bonnie" index="1" unique_id=134591522]
-metadata/_edit_use_anchors_ = true
+[node name="HintContainer" parent="InteractClickGroup/Bonnie" index="1" unique_id=134591522]
+offset_left = 6.0
+offset_top = -157.0
+offset_right = 6.0
+offset_bottom = -157.0
 
-[node name="Label" parent="Bonnie/Control" index="0" unique_id=18356781]
-offset_left = -61.0
-offset_top = -160.0
-offset_right = 82.0
-offset_bottom = -130.0
+[node name="NinePatchRect" parent="InteractClickGroup/Bonnie" index="2" unique_id=809710394]
+offset_left = -34.0
+offset_top = -137.0
+offset_right = 46.5
+offset_bottom = 6.0
 
-[node name="NinePatchRect" parent="Bonnie" index="2" unique_id=809710394]
-offset_left = -32.127197
-offset_top = -130.86816
-offset_right = 48.372803
-offset_bottom = 12.131836
-metadata/_edit_use_anchors_ = true
+[node name="Skoldrax" parent="InteractClickGroup" unique_id=1199634330 instance=ExtResource("18_s50uu")]
+position = Vector2(6109.3335, 2161.2876)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_cpsu2"), SubResource("Resource_rw7ub")])
 
-[editable path="Bonnie"]
+[node name="Sprite2D" parent="InteractClickGroup/Skoldrax" index="0" unique_id=542249545]
+texture = ExtResource("9_sqa4f")
+offset = Vector2(-93.5, -160.3)
+
+[node name="HintContainer" parent="InteractClickGroup/Skoldrax" index="1" unique_id=134591522]
+offset_left = -3.727539
+offset_top = -157.6582
+offset_right = -3.727539
+offset_bottom = -157.6582
+
+[node name="NinePatchRect" parent="InteractClickGroup/Skoldrax" index="2" unique_id=809710394]
+offset_left = -38.72754
+offset_top = -136.6582
+offset_right = 41.77246
+offset_bottom = 6.341797
+
+[node name="Lilian" parent="InteractClickGroup" unique_id=1085238624 instance=ExtResource("18_s50uu")]
+position = Vector2(6325, 1993)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_hn1gb"), SubResource("Resource_1fdnp")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Lilian" index="0" unique_id=542249545]
+texture = ExtResource("12_1fdnp")
+offset = Vector2(-90.85, -166.95)
+
+[node name="HintContainer" parent="InteractClickGroup/Lilian" index="1" unique_id=134591522]
+offset_left = 8.0
+offset_top = -169.0
+offset_right = 8.0
+offset_bottom = -169.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/Lilian" index="2" unique_id=809710394]
+offset_left = -36.0
+offset_top = -143.0
+offset_right = 44.5
+offset_bottom = 0.0
+
+[node name="Ulli" parent="InteractClickGroup" unique_id=1786745625 instance=ExtResource("18_s50uu")]
+position = Vector2(6342.7705, 2081.1174)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_yh2qj"), SubResource("Resource_eec3g")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Ulli" index="0" unique_id=542249545]
+texture = ExtResource("14_hn1gb")
+offset = Vector2(-97.35, -163.6)
+
+[node name="HintContainer" parent="InteractClickGroup/Ulli" index="1" unique_id=134591522]
+offset_left = -6.415039
+offset_top = -158.43896
+offset_right = -6.415039
+offset_bottom = -158.43896
+
+[node name="NinePatchRect" parent="InteractClickGroup/Ulli" index="2" unique_id=809710394]
+offset_left = -42.41504
+offset_top = -138.43896
+offset_right = 38.08496
+offset_bottom = 4.561035
+
+[node name="Toby" parent="InteractClickGroup" unique_id=1825899756 instance=ExtResource("18_s50uu")]
+position = Vector2(6145, 2050)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_3lhr6"), SubResource("Resource_vged4")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Toby" index="0" unique_id=542249545]
+texture = ExtResource("15_hn1gb")
+offset = Vector2(-94.8, -165.2)
+
+[node name="HintContainer" parent="InteractClickGroup/Toby" index="1" unique_id=134591522]
+offset_left = -2.6801758
+offset_top = -164.37036
+offset_right = -2.6801758
+offset_bottom = -164.37036
+
+[node name="NinePatchRect" parent="InteractClickGroup/Toby" index="2" unique_id=809710394]
+offset_left = -40.5708
+offset_top = -140.5625
+offset_right = 39.9292
+offset_bottom = 2.4375
+
+[node name="LittleLorx" parent="InteractClickGroup" unique_id=395805951 instance=ExtResource("18_s50uu")]
+position = Vector2(5981.907, 2043.5022)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_u4gi4"), SubResource("Resource_dvq2k")])
+
+[node name="Sprite2D" parent="InteractClickGroup/LittleLorx" index="0" unique_id=542249545]
+texture = ExtResource("17_yh2qj")
+offset = Vector2(-95.1, -156.6)
+
+[node name="HintContainer" parent="InteractClickGroup/LittleLorx" index="1" unique_id=134591522]
+offset_left = -4.0
+offset_top = -134.0
+offset_right = -4.0
+offset_bottom = -134.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/LittleLorx" index="2" unique_id=809710394]
+offset_left = -43.0
+offset_top = -122.0
+offset_right = 37.5
+offset_bottom = 21.0
+
+[node name="Necros" parent="InteractClickGroup" unique_id=788114617 instance=ExtResource("18_s50uu")]
+position = Vector2(6216, 2087)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_uj5r8"), SubResource("Resource_s50uu")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Necros" index="0" unique_id=542249545]
+texture = ExtResource("20_dy3nw")
+offset = Vector2(-91.85, -163.15)
+
+[node name="HintContainer" parent="InteractClickGroup/Necros" index="1" unique_id=134591522]
+offset_left = 1.7041016
+offset_top = -158.62012
+offset_right = 1.7041016
+offset_bottom = -158.62012
+
+[node name="NinePatchRect" parent="InteractClickGroup/Necros" index="2" unique_id=809710394]
+offset_left = -40.2959
+offset_top = -134.62012
+offset_right = 40.2041
+offset_bottom = 8.379883
+
+[node name="Father" parent="InteractClickGroup" unique_id=374844560 instance=ExtResource("18_s50uu")]
+position = Vector2(6222, 2180)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_dy3nw"), SubResource("Resource_omhea")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Father" index="0" unique_id=542249545]
+texture = ExtResource("21_s50uu")
+offset = Vector2(-87.25, -160.35)
+
+[node name="HintContainer" parent="InteractClickGroup/Father" index="1" unique_id=134591522]
+offset_left = 3.0
+offset_top = -159.0
+offset_right = 3.0
+offset_bottom = -159.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/Father" index="2" unique_id=809710394]
+offset_left = -34.0
+offset_top = -134.0
+offset_right = 46.5
+offset_bottom = 9.0
+
+[node name="Marsha" parent="InteractClickGroup" unique_id=1300340557 instance=ExtResource("18_s50uu")]
+position = Vector2(5900, 2149)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0"), SubResource("Resource_h2jn1")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Marsha" index="0" unique_id=542249545]
+texture = SubResource("CompressedTexture2D_omhea")
+offset = Vector2(-88.75, -158.6)
+
+[node name="HintContainer" parent="InteractClickGroup/Marsha" index="1" unique_id=134591522]
+offset_left = 8.0
+offset_top = -164.0
+offset_right = 8.0
+offset_bottom = -164.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/Marsha" index="2" unique_id=809710394]
+offset_left = -29.0
+offset_top = -135.0
+offset_right = 51.5
+offset_bottom = 8.0
+
+[node name="Victor" parent="InteractClickGroup" unique_id=2116833203 instance=ExtResource("18_s50uu")]
+position = Vector2(6013, 2230)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_0fp8q"), SubResource("Resource_lh0sg")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Victor" index="0" unique_id=542249545]
+texture = ExtResource("25_h2jn1")
+offset = Vector2(-92.35, -158.7)
+
+[node name="HintContainer" parent="InteractClickGroup/Victor" index="1" unique_id=134591522]
+offset_left = 0.6044922
+offset_top = -153.45898
+offset_right = 0.6044922
+offset_bottom = -153.45898
+
+[node name="NinePatchRect" parent="InteractClickGroup/Victor" index="2" unique_id=809710394]
+offset_left = -39.78076
+offset_top = -138.58911
+offset_right = 40.71924
+offset_bottom = 4.4108887
+
+[node name="Baltazar" parent="InteractClickGroup" unique_id=19081812 instance=ExtResource("18_s50uu")]
+position = Vector2(5760, 2091)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_en4or"), SubResource("Resource_l3acv")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Baltazar" index="0" unique_id=542249545]
+texture = ExtResource("27_lh0sg")
+offset = Vector2(-83.65, -152.1)
+
+[node name="HintContainer" parent="InteractClickGroup/Baltazar" index="1" unique_id=134591522]
+offset_left = 11.293457
+offset_top = -163.54822
+offset_right = 11.293457
+offset_bottom = -163.54822
+
+[node name="NinePatchRect" parent="InteractClickGroup/Baltazar" index="2" unique_id=809710394]
+offset_left = -32.0
+offset_top = -132.0
+offset_right = 48.5
+offset_bottom = 11.0
+
+[node name="Fiona" parent="InteractClickGroup" unique_id=1636087960 instance=ExtResource("18_s50uu")]
+position = Vector2(5808, 2256)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_dga76"), SubResource("Resource_gb6n7")])
+
+[node name="Sprite2D" parent="InteractClickGroup/Fiona" index="0" unique_id=542249545]
+texture = ExtResource("29_l3acv")
+offset = Vector2(-97.65, -164.3)
+
+[node name="HintContainer" parent="InteractClickGroup/Fiona" index="1" unique_id=134591522]
+offset_left = -2.0
+offset_top = -148.0
+offset_right = -2.0
+offset_bottom = -148.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/Fiona" index="2" unique_id=809710394]
+offset_left = -42.0
+offset_top = -133.0
+offset_right = 38.5
+offset_bottom = 10.0
+
+[node name="PrincessStatue" parent="InteractClickGroup" unique_id=416886487 instance=ExtResource("18_s50uu")]
+position = Vector2(5229, 2023)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_uk51s")])
+
+[node name="Sprite2D" parent="InteractClickGroup/PrincessStatue" index="0" unique_id=542249545]
+texture = ExtResource("28_en4or")
+offset = Vector2(-99.2, -165.65)
+
+[node name="HintContainer" parent="InteractClickGroup/PrincessStatue" index="1" unique_id=134591522]
+offset_left = -4.0
+offset_top = -158.0
+offset_right = -4.0
+offset_bottom = -158.0
+
+[node name="NinePatchRect" parent="InteractClickGroup/PrincessStatue" index="2" unique_id=809710394]
+offset_left = -45.0
+offset_top = -135.0
+offset_right = 35.5
+offset_bottom = 8.0
+
+[editable path="InteractClickGroup/Bonnie"]
+[editable path="InteractClickGroup/Skoldrax"]
+[editable path="InteractClickGroup/Lilian"]
+[editable path="InteractClickGroup/Ulli"]
+[editable path="InteractClickGroup/Toby"]
+[editable path="InteractClickGroup/LittleLorx"]
+[editable path="InteractClickGroup/Necros"]
+[editable path="InteractClickGroup/Father"]
+[editable path="InteractClickGroup/Marsha"]
+[editable path="InteractClickGroup/Victor"]
+[editable path="InteractClickGroup/Baltazar"]
+[editable path="InteractClickGroup/Fiona"]
+[editable path="InteractClickGroup/PrincessStatue"]

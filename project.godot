@@ -14,6 +14,7 @@ config/name="tim"
 run/main_scene="uid://mipiwewsfv4q"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+run/main_scene.release="uid://egmm5itqnfih"
 
 [audio]
 

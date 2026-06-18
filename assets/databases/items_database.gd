@@ -47,7 +47,7 @@ func _get_items():
             ui = "Sword",
         },
         travel_bag = {
-            path = "res://assets/items/FD_Item_Sword_BIG_01.png",
+            path = "res://assets/items/FD_Item_TravelBag_BIG_01.png",
             ui = "Travle Bag",
         }
     }

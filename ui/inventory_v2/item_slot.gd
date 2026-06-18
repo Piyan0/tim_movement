@@ -44,6 +44,7 @@ func _gui_input(event: InputEvent) -> void:
 func _pick_item(event):
     if is_empty: return
     
+    Bootstrap.state.current_item = item_id
     item_picked.emit()
     var dragable_item = DragableItem.spawn(global_position + event.position, item_id, icon)
     dragable_item.item_dropped.connect(func(id, pos):
@@ -51,4 +52,3 @@ func _pick_item(event):
         _tr_item.show()  
     , CONNECT_ONE_SHOT)
     _tr_item.hide()
-
