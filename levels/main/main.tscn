@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
-[ext_resource type="Shader" uid="uid://c31cufiojvdf0" path="res://assets/shaders/checkerboard_pattern.gdshader" id="2_uj5r8"]
 [ext_resource type="Script" uid="uid://8tscuyqv0q57" path="res://levels/main/player_click_area.gd" id="3_omhea"]
 [ext_resource type="Texture2D" uid="uid://bx2m0r6rkmh8o" path="res://assets/world_map/world_map.png" id="4_sqa4f"]
 [ext_resource type="Texture2D" uid="uid://v7euea2bgvyb" path="res://assets/characters/npcs/FD_Characters_Skoldrax_hover_BIG_01.png" id="9_20bwc"]
@@ -29,12 +28,20 @@
 [ext_resource type="Texture2D" uid="uid://bvdxiugil3bb5" path="res://assets/characters/npcs/FD_Characters_Baltazar_idle_BIG_01.png" id="27_lh0sg"]
 [ext_resource type="Texture2D" uid="uid://d27fxjearlxri" path="res://assets/characters/npcs/FD_Characters_Fiona_hover_BIG_01.png" id="28_en4or"]
 [ext_resource type="Texture2D" uid="uid://0ywqbu53reoe" path="res://assets/characters/npcs/FD_Characters_Fiona_idle_BIG_01.png" id="29_l3acv"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_omhea"]
-shader = ExtResource("2_uj5r8")
-shader_parameter/size = 25.0
-shader_parameter/color1 = Color(0.3854925, 0.38549247, 0.38549247, 1)
-shader_parameter/color2 = Color(0.2617191, 0.26171914, 0.2617191, 1)
+[ext_resource type="Texture2D" uid="uid://d2p20g1hm0k1j" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_A_01.png" id="30_afs1h"]
+[ext_resource type="Texture2D" uid="uid://btxex6grv4pat" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_B_01.png" id="31_s5c8a"]
+[ext_resource type="Texture2D" uid="uid://syg1b3elatur" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_C_01.png" id="32_dhc3m"]
+[ext_resource type="Texture2D" uid="uid://bxovmhhjv53dx" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_D_01.png" id="33_va5sf"]
+[ext_resource type="Texture2D" uid="uid://xtnowaw6hvb8" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_E_01.png" id="34_ofnbn"]
+[ext_resource type="Texture2D" uid="uid://bk6nntrsd72qf" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_F_01.png" id="35_qs1cs"]
+[ext_resource type="Texture2D" uid="uid://5fb3q1jbfap7" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_G_01.png" id="36_h4dku"]
+[ext_resource type="Texture2D" uid="uid://croi8iax465uy" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_H_01.png" id="37_755f4"]
+[ext_resource type="Texture2D" uid="uid://danxpaxayjyck" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_I_01.png" id="38_bho2t"]
+[ext_resource type="Texture2D" uid="uid://be2wcnc28qjgf" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_J_01.png" id="39_mdho0"]
+[ext_resource type="Texture2D" uid="uid://1hcujxlcj5j4" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_K_01.png" id="40_d3ic6"]
+[ext_resource type="Texture2D" uid="uid://dsgp8pdhxll5l" path="res://assets/world_map/FD_Others_Lillian_Books_01.png" id="40_dhc3m"]
+[ext_resource type="Texture2D" uid="uid://maokop7nu1ih" path="res://assets/world_map/FD_Others_Necros_CampFire_01.png" id="41_va5sf"]
+[ext_resource type="Texture2D" uid="uid://dagup2hai5ura" path="res://assets/world_map/FD_Others_Ulli_Cauldron_01.png" id="42_ofnbn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yh2qj"]
 vertices = PackedVector2Array(8160.3984, 2660.2266, 4348.367, 4880.492, 387.67188, 2488.3984, 4383.6875, 610.7969)
@@ -95,7 +102,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_sqa4f"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_oclhf")
-use_for_preview = true
 idle_graphic = ExtResource("20_uj5r8")
 hover_graphic = ExtResource("20_s50uu")
 offset = Vector2(-89.597, -162.355)
@@ -160,7 +166,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_rw7ub"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_cpsu2")
-use_for_preview = true
 idle_graphic = ExtResource("9_sqa4f")
 hover_graphic = ExtResource("9_20bwc")
 offset = Vector2(-93.5, -160.3)
@@ -226,7 +231,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_1fdnp"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_rw7ub")
-use_for_preview = true
 idle_graphic = ExtResource("12_1fdnp")
 hover_graphic = ExtResource("11_rw7ub")
 offset = Vector2(-90.85, -166.95)
@@ -350,7 +354,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_vged4"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_vged4")
-use_for_preview = true
 idle_graphic = ExtResource("15_hn1gb")
 hover_graphic = ExtResource("15_3lhr6")
 offset = Vector2(-94.8, -165.2)
@@ -416,7 +419,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_dvq2k"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_dvq2k")
-use_for_preview = true
 idle_graphic = ExtResource("17_yh2qj")
 hover_graphic = ExtResource("17_vged4")
 offset = Vector2(-95.1, -156.6)
@@ -482,7 +484,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_s50uu"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_dy3nw")
-use_for_preview = true
 idle_graphic = ExtResource("20_dy3nw")
 hover_graphic = ExtResource("19_dvq2k")
 offset = Vector2(-91.85, -163.15)
@@ -550,7 +551,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_omhea"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_omhea")
-use_for_preview = true
 idle_graphic = ExtResource("21_s50uu")
 hover_graphic = ExtResource("21_dy3nw")
 offset = Vector2(-87.25, -160.35)
@@ -614,7 +614,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_h2jn1"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_h2jn1")
-use_for_preview = true
 idle_graphic = SubResource("CompressedTexture2D_omhea")
 hover_graphic = ExtResource("23_uj5r8")
 offset = Vector2(-88.75, -158.6)
@@ -680,7 +679,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_lh0sg"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_lh0sg")
-use_for_preview = true
 idle_graphic = ExtResource("25_h2jn1")
 hover_graphic = ExtResource("24_63fg0")
 offset = Vector2(-92.35, -158.7)
@@ -748,7 +746,6 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_l3acv"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_l3acv")
-use_for_preview = true
 idle_graphic = ExtResource("27_lh0sg")
 hover_graphic = ExtResource("26_0fp8q")
 offset = Vector2(-83.65, -152.1)
@@ -814,42 +811,203 @@ func _item_dropped(item_id):
 [sub_resource type="Resource" id="Resource_gb6n7"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_uk51s")
-use_for_preview = true
 idle_graphic = ExtResource("29_l3acv")
 hover_graphic = ExtResource("28_en4or")
 offset = Vector2(-97.65, -164.3)
 tags = Array[String](["fiona_solved"])
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_en4or"]
+load_path = "res://.godot/imported/FD_Princess_Transform_full_A_01.png-e7f62d8d22ef5f04ab89fb292a5a9c84.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l3acv"]
+load_path = "res://.godot/imported/FD_Princess_Transform_full_A_01.png-e7f62d8d22ef5f04ab89fb292a5a9c84.ctex"
+
 [sub_resource type="GDScript" id="GDScript_gb6n7"]
 script/source = "extends InteractPageSource
 
+
 func _interact():
     pass
+
+
+func _item_dropped(item_id):
+    if item_id == \"royal_crystal\":
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Princess_Yontu alice_stone.png Only two more crystals, young hero. Godspeed!\",
+            \"Shane shane.png The statue! It spoke to me!\"
+        ])
+        a.remove_item()
+        a.add_tag(\"second_crystal\")
+
+
+func _hover_text():
+    if Bootstrap.state.drag_item == \"royal_crystal\":
+        return \"Place Crystal\"
+    return null
 "
 
 [sub_resource type="Resource" id="Resource_uk51s"]
 script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_gb6n7")
 use_for_preview = true
-idle_graphic = ExtResource("28_en4or")
-hover_graphic = ExtResource("28_en4or")
-offset = Vector2(-99.2, -165.65)
+idle_graphic = SubResource("CompressedTexture2D_l3acv")
+hover_graphic = SubResource("CompressedTexture2D_en4or")
+offset = Vector2(-110.1, -258.35)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_wjmpq"]
+script/source = "extends InteractPageSource
+
+
+func _interact():
+    pass
+
+
+func _item_dropped(item_id):
+    if item_id == \"royal_crystal\":
+        a.play_sfx(\"solved\")
+        await a.text([
+            \"Princess_Yontu alice_stone.png One more crystal . . . and I shall be by your side.\",
+            \"Shane shane.png It’s working! I won’t let you down, princess!\"
+        ])
+        a.remove_item()
+        a.add_tag(\"final_crystal\")
+
+
+func _hover_text():
+    if Bootstrap.state.drag_item == \"royal_crystal\":
+        return \"Place Crystal\"
+    return null
+"
+
+[sub_resource type="Resource" id="Resource_wjmpq"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_wjmpq")
+idle_graphic = SubResource("CompressedTexture2D_l3acv")
+hover_graphic = SubResource("CompressedTexture2D_en4or")
+offset = Vector2(-110.1, -258.35)
+tags = Array[String](["second_crystal"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_wui37"]
+script/source = "extends InteractPageSource
+
+
+func _interact():
+    pass
+
+
+func _item_dropped(item_id):
+    if item_id == \"royal_crystal\":
+        a.play_sfx(\"solved\")
+        a.play_bgm(\"menu\")
+        
+        if true:
+            var anim = a.find(\"PrincessTransformation\")
+            anim.show()
+            anim.play(\"main\")
+            await anim.animation_finished
+        
+        await a.text([
+            \"Shane shane.png I did it! The princess! She’s alive!\",
+            \"Princess_Yontu alice.png Oh, Shane. Words cannot express how grateful I am.\",
+            \"Shane shane.png I was simply doing my duty, princess. Think nothing of it.\",
+            \"Princess_Yontu alice.png Then continue doing your duty by my side . . . as Prince Shane!\",
+        ])
+        a.remove_item()
+        a.add_tag(\"game_end\")
+        await Bootstrap.get_tree().create_timer(1).timeout
+        await Bootstrap.fade.fade_in(2)
+        var title_screen = load(\"res://ui/main_menu/main_menu.tscn\")
+        Bootstrap.get_tree().change_scene_to_packed(title_screen)
+        await Bootstrap.fade.fade_out()
+
+
+
+
+func _hover_text():
+    if Bootstrap.state.drag_item == \"royal_crystal\":
+        return \"Place Crystal\"
+    return null
+"
+
+[sub_resource type="Resource" id="Resource_wui37"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_wui37")
+idle_graphic = SubResource("CompressedTexture2D_l3acv")
+hover_graphic = SubResource("CompressedTexture2D_en4or")
+offset = Vector2(-110.1, -258.35)
+tags = Array[String](["final_crystal"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="GDScript" id="GDScript_7gyvt"]
+script/source = "extends InteractPageSource
+
+func _interact():
+    pass
+    
+func _item_dropped(item_id):
+    pass
+    
+func _hover_text():
+    return null
+"
+
+[sub_resource type="Resource" id="Resource_ilhur"]
+script = ExtResource("19_dy3nw")
+source = SubResource("GDScript_7gyvt")
+idle_graphic = SubResource("CompressedTexture2D_l3acv")
+hover_graphic = SubResource("CompressedTexture2D_en4or")
+offset = Vector2(-110.1, -258.35)
+tags = Array[String](["game_end"])
+metadata/_custom_type_script = "uid://b04vc5drymud0"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f30dw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_afs1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_s5c8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dhc3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_va5sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ofnbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_qs1cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_h4dku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_755f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bho2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mdho0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_d3ic6")
+}],
+"loop": false,
+"name": &"main",
+"speed": 9.0
+}]
 
 [node name="Main" type="Node2D" unique_id=351564680]
 y_sort_enabled = true
 script = ExtResource("1_wtcfe")
-metadata/_edit_vertical_guides_ = [3824.0]
-metadata/_edit_horizontal_guides_ = [2790.0]
-
-[node name="Control" type="ColorRect" parent="." unique_id=876497405]
-visible = false
-material = SubResource("ShaderMaterial_omhea")
-custom_minimum_size = Vector2(300, 300)
-offset_right = 8419.0
-offset_bottom = 4727.0
-mouse_filter = 1
 
 [node name="PlayerClickArea" type="ReferenceRect" parent="." unique_id=606853029]
 offset_right = 9053.0
@@ -858,7 +1016,6 @@ border_width = 6.0
 script = ExtResource("3_omhea")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=534642288]
-modulate = Color(0.30569223, 0.3056922, 0.30569223, 1)
 texture = ExtResource("4_sqa4f")
 centered = false
 
@@ -870,7 +1027,7 @@ navigation_polygon = SubResource("NavigationPolygon_yh2qj")
 y_sort_enabled = true
 
 [node name="Bonnie" parent="InteractClickGroup" unique_id=508760350 instance=ExtResource("18_s50uu")]
-position = Vector2(6228, 1991)
+position = Vector2(5551, 1991)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_oclhf"), SubResource("Resource_sqa4f")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Bonnie" index="0" unique_id=542249545]
@@ -890,7 +1047,7 @@ offset_right = 46.5
 offset_bottom = 6.0
 
 [node name="Skoldrax" parent="InteractClickGroup" unique_id=1199634330 instance=ExtResource("18_s50uu")]
-position = Vector2(6109.3335, 2161.2876)
+position = Vector2(6612, 3141)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_cpsu2"), SubResource("Resource_rw7ub")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Skoldrax" index="0" unique_id=542249545]
@@ -910,7 +1067,7 @@ offset_right = 41.77246
 offset_bottom = 6.341797
 
 [node name="Lilian" parent="InteractClickGroup" unique_id=1085238624 instance=ExtResource("18_s50uu")]
-position = Vector2(6325, 1993)
+position = Vector2(2102, 3089)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_hn1gb"), SubResource("Resource_1fdnp")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Lilian" index="0" unique_id=542249545]
@@ -930,7 +1087,7 @@ offset_right = 44.5
 offset_bottom = 0.0
 
 [node name="Ulli" parent="InteractClickGroup" unique_id=1786745625 instance=ExtResource("18_s50uu")]
-position = Vector2(6342.7705, 2081.1174)
+position = Vector2(3469, 1229)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_yh2qj"), SubResource("Resource_eec3g")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Ulli" index="0" unique_id=542249545]
@@ -950,7 +1107,7 @@ offset_right = 38.08496
 offset_bottom = 4.561035
 
 [node name="Toby" parent="InteractClickGroup" unique_id=1825899756 instance=ExtResource("18_s50uu")]
-position = Vector2(6145, 2050)
+position = Vector2(3272, 3147)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_3lhr6"), SubResource("Resource_vged4")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Toby" index="0" unique_id=542249545]
@@ -970,7 +1127,7 @@ offset_right = 39.9292
 offset_bottom = 2.4375
 
 [node name="LittleLorx" parent="InteractClickGroup" unique_id=395805951 instance=ExtResource("18_s50uu")]
-position = Vector2(5981.907, 2043.5022)
+position = Vector2(1784, 2068)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_u4gi4"), SubResource("Resource_dvq2k")])
 
 [node name="Sprite2D" parent="InteractClickGroup/LittleLorx" index="0" unique_id=542249545]
@@ -990,7 +1147,7 @@ offset_right = 37.5
 offset_bottom = 21.0
 
 [node name="Necros" parent="InteractClickGroup" unique_id=788114617 instance=ExtResource("18_s50uu")]
-position = Vector2(6216, 2087)
+position = Vector2(6888, 2171)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_uj5r8"), SubResource("Resource_s50uu")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Necros" index="0" unique_id=542249545]
@@ -1010,7 +1167,7 @@ offset_right = 40.2041
 offset_bottom = 8.379883
 
 [node name="Father" parent="InteractClickGroup" unique_id=374844560 instance=ExtResource("18_s50uu")]
-position = Vector2(6222, 2180)
+position = Vector2(5036, 3959)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_dy3nw"), SubResource("Resource_omhea")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Father" index="0" unique_id=542249545]
@@ -1030,7 +1187,7 @@ offset_right = 46.5
 offset_bottom = 9.0
 
 [node name="Marsha" parent="InteractClickGroup" unique_id=1300340557 instance=ExtResource("18_s50uu")]
-position = Vector2(5900, 2149)
+position = Vector2(5298, 1224)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_63fg0"), SubResource("Resource_h2jn1")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Marsha" index="0" unique_id=542249545]
@@ -1050,7 +1207,7 @@ offset_right = 51.5
 offset_bottom = 8.0
 
 [node name="Victor" parent="InteractClickGroup" unique_id=2116833203 instance=ExtResource("18_s50uu")]
-position = Vector2(6013, 2230)
+position = Vector2(3324, 1929)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_0fp8q"), SubResource("Resource_lh0sg")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Victor" index="0" unique_id=542249545]
@@ -1070,7 +1227,7 @@ offset_right = 40.71924
 offset_bottom = 4.4108887
 
 [node name="Baltazar" parent="InteractClickGroup" unique_id=19081812 instance=ExtResource("18_s50uu")]
-position = Vector2(5760, 2091)
+position = Vector2(5755, 3421)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_en4or"), SubResource("Resource_l3acv")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Baltazar" index="0" unique_id=542249545]
@@ -1090,7 +1247,7 @@ offset_right = 48.5
 offset_bottom = 11.0
 
 [node name="Fiona" parent="InteractClickGroup" unique_id=1636087960 instance=ExtResource("18_s50uu")]
-position = Vector2(5808, 2256)
+position = Vector2(3742, 4056)
 interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_dga76"), SubResource("Resource_gb6n7")])
 
 [node name="Sprite2D" parent="InteractClickGroup/Fiona" index="0" unique_id=542249545]
@@ -1110,24 +1267,46 @@ offset_right = 38.5
 offset_bottom = 10.0
 
 [node name="PrincessStatue" parent="InteractClickGroup" unique_id=416886487 instance=ExtResource("18_s50uu")]
-position = Vector2(5229, 2023)
-interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_uk51s")])
+position = Vector2(4345, 2697)
+interact_pages = Array[ExtResource("19_dy3nw")]([SubResource("Resource_uk51s"), SubResource("Resource_wjmpq"), SubResource("Resource_wui37"), SubResource("Resource_ilhur")])
+_interact_distance = 200
 
 [node name="Sprite2D" parent="InteractClickGroup/PrincessStatue" index="0" unique_id=542249545]
-texture = ExtResource("28_en4or")
-offset = Vector2(-99.2, -165.65)
+texture = SubResource("CompressedTexture2D_l3acv")
+offset = Vector2(-110.1, -258.35)
 
 [node name="HintContainer" parent="InteractClickGroup/PrincessStatue" index="1" unique_id=134591522]
-offset_left = -4.0
-offset_top = -158.0
-offset_right = -4.0
-offset_bottom = -158.0
+offset_left = 3.0
+offset_top = -275.0
+offset_right = 3.0
+offset_bottom = -275.0
 
 [node name="NinePatchRect" parent="InteractClickGroup/PrincessStatue" index="2" unique_id=809710394]
-offset_left = -45.0
-offset_top = -135.0
-offset_right = 35.5
-offset_bottom = 8.0
+offset_left = -90.0
+offset_top = -254.0
+offset_right = 108.0
+offset_bottom = 38.0
+
+[node name="PrincessTransformation" type="AnimatedSprite2D" parent="." unique_id=1177527596]
+visible = false
+z_index = 1
+position = Vector2(4347, 2588)
+sprite_frames = SubResource("SpriteFrames_f30dw")
+animation = &"main"
+frame = 10
+frame_progress = 1.0
+
+[node name="FdOthersLillianBooks01" type="Sprite2D" parent="." unique_id=779184255]
+position = Vector2(2014, 3002)
+texture = ExtResource("40_dhc3m")
+
+[node name="FdOthersNecrosCampFire01" type="Sprite2D" parent="." unique_id=1067308263]
+position = Vector2(6730, 2100)
+texture = ExtResource("41_va5sf")
+
+[node name="FdOthersUlliCauldron01" type="Sprite2D" parent="." unique_id=179233948]
+position = Vector2(3562, 1157)
+texture = ExtResource("42_ofnbn")
 
 [editable path="InteractClickGroup/Bonnie"]
 [editable path="InteractClickGroup/Skoldrax"]

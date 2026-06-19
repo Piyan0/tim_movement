@@ -45,10 +45,12 @@ func _pick_item(event):
     if is_empty: return
     
     Bootstrap.state.current_item = item_id
+    Bootstrap.state.drag_item = item_id
     item_picked.emit()
     var dragable_item = DragableItem.spawn(global_position + event.position, item_id, icon)
     dragable_item.item_dropped.connect(func(id, pos):
         item_dropped.emit()
         _tr_item.show()  
+        Bootstrap.state.drag_item = ""
     , CONNECT_ONE_SHOT)
     _tr_item.hide()

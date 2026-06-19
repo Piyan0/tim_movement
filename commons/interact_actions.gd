@@ -69,3 +69,28 @@ func remove_item(id = Bootstrap.state.current_item):
             to_remove = value
             break
     Bootstrap.items.erase(to_remove)
+
+
+func wait(second):
+    await Bootstrap.get_tree().create_timer(second).timeout
+
+
+func find(name):
+    return Bootstrap.get_tree().current_scene.find_child(name)
+
+
+func image(path, delay = 1):
+    var image = load(path)
+    var tr = TextureRect.new()
+    tr.texture = image
+    tr.modulate.a = 0
+    tr.set_anchors_and_offsets_preset(Control.LayoutPreset.PRESET_FULL_RECT)
+    Bootstrap.canvas.add_child(tr)
+    var t = tr.create_tween()
+    t.finished.connect(func():
+        tr.queue_free()    
+    )
+    t.tween_property(tr, "modulate:a", 1, 0.5)
+    t.tween_interval(delay)
+    t.tween_property(tr, "modulate:a", 0, 0.5)
+    await t.finished

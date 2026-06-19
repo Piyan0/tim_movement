@@ -91,7 +91,8 @@ func handle_item_drop(item_id, drop_position):
     if !_can_interact(): return
     if !get_click_rect().has_point(drop_position):
         return
-    _interact(func():
+
+    await _interact(func():
         await _active_page.item_dropped(item_id)    
     )
 
@@ -105,7 +106,8 @@ func refresh_page(tag_list):
     interact_pages.reverse()
 
     for page in interact_pages:
-        if page.is_active(tag_list):
+        var debug = page.use_for_preview && OS.is_debug_build()
+        if page.is_active(tag_list) || debug:
             _active_page = page
             _update_page(page)
             return

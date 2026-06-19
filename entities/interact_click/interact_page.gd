@@ -20,7 +20,8 @@ signal prop_changed(name, value)
 
 var hover_text:
     get():
-        return source.new()._hover_text()
+        var hover_text = source.new()._hover_text() 
+        return hover_text if hover_text != null else ""
 
 
 func interact():

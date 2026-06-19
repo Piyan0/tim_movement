@@ -95,7 +95,7 @@ theme_override_constants/margin_right = 24
 [node name="Label" type="Label" parent="PanelContainer2/HBoxContainer/MarginContainer" unique_id=1938471105]
 custom_minimum_size = Vector2(108, 0)
 layout_mode = 2
-text = "ITEMS"
+text = "CRYSTAL"
 label_settings = ExtResource("3_f8eej")
 horizontal_alignment = 1
 

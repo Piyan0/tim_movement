@@ -9,7 +9,7 @@ func _hover_text():
     if Bootstrap.state.item_being_dragged:
         return "Give"
     else:
-        return "talk"
+        return "Talk"
     
 
 func _interact():

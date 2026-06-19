@@ -41,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 shortcut = SubResource("Shortcut_x0p7c")
+shortcut_in_tooltip = false
 flat = true
 
 [node name="MapBG" type="TextureRect" parent="." unique_id=1397156497]

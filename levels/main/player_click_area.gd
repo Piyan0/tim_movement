@@ -8,8 +8,10 @@ func _ready() -> void:
 
 
 func _gui_input(event: InputEvent) -> void:
+    if Bootstrap.state.is_interact: return
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
+            # print(1)
             Player.instance.move_to_click_pos(event.position)
     elif event is InputEventScreenTouch:
         if event.pressed:
