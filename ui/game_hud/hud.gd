@@ -28,7 +28,7 @@ func _ready() -> void:
         inventory.from_data(Bootstrap.items)
         _inventory = inventory
         _inventory_place.add_child(inventory)
-        inventory.set_offsets_preset(PRESET_CENTER_BOTTOM)
+        inventory.set_offsets_preset(PRESET_BOTTOM_RIGHT)
         inventory.tree_exited.connect(func():
             Bootstrap.state.is_showing_overlay = false
             _inventory = null

@@ -11,6 +11,7 @@ func _ready() -> void:
     get_tree().call_group("interact_click", "refresh_page", Bootstrap.tags)
     
     if Bootstrap.state.new_game:
+        return
         actions = InteractActions.new()
         Bootstrap.state.is_interact = true
         Player.instance.set_facing_to_pos(Vector2(4345, 2697))
