@@ -21,6 +21,7 @@ func _ready() -> void:
     # new game options.
     _buttons[0].cb = func():
         Bootstrap.fresh()
+        Bootstrap.state.new_game = true
         var starting_scene_file = FileAccess.open("res://.starting_scene", FileAccess.READ)
         var scene = starting_scene_file.get_line()
         var initial_player_pos = starting_scene_file.get_line()

@@ -7,6 +7,7 @@ enum GameState {
     MENU,
 }
 
+var new_game = false
 var current_state = GameState.FREE
 var is_holding_item = false
 var is_interact = false

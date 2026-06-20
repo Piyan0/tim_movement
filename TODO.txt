@@ -1,6 +1,7 @@
-implement naration intro.
-replace navigation rect.
 
+
+@implement naration intro.
+@ replace navigation rect.
 @ implement all event progression.
 @ erase tooltip when hovering on mini map close button.
 @ fix map scaling issue.

@@ -201,6 +201,7 @@ grow_horizontal = 0
 title = "MENU"
 
 [node name="InventoryPos" type="Control" parent="." unique_id=59065793]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -216,4 +217,5 @@ grow_vertical = 0
 layout_mode = 1
 
 [node name="MiniMap" parent="." unique_id=1066272785 instance_placeholder="res://ui/mini_map/mini_map.tscn"]
+visible = false
 layout_mode = 1

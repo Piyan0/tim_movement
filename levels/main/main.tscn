@@ -1,31 +1,55 @@
 [gd_scene format=3 uid="uid://3p8vrrypgi1t"]
 
 [ext_resource type="Script" uid="uid://bbf1h7csh8jc6" path="res://levels/main/main.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dvy6ikgcxuito" path="res://assets/world_map/split/row-1-column-1.png" id="3_dhc3m"]
 [ext_resource type="Script" uid="uid://8tscuyqv0q57" path="res://levels/main/player_click_area.gd" id="3_omhea"]
-[ext_resource type="Texture2D" uid="uid://bx2m0r6rkmh8o" path="res://assets/world_map/world_map.png" id="4_sqa4f"]
+[ext_resource type="Texture2D" uid="uid://bko5qsrvbaceq" path="res://assets/world_map/split/row-1-column-2.png" id="4_qs1cs"]
+[ext_resource type="Texture2D" uid="uid://ot2u084f5c57" path="res://assets/world_map/split/row-2-column-1.png" id="5_h4dku"]
+[ext_resource type="Texture2D" uid="uid://c2xhic77a2aym" path="res://assets/world_map/split/row-1-column-3.png" id="5_qaf2e"]
+[ext_resource type="Texture2D" uid="uid://35c8jkkhussx" path="res://assets/world_map/split/row-2-column-2.png" id="6_755f4"]
+[ext_resource type="Texture2D" uid="uid://dt8f0b6ep50di" path="res://assets/world_map/split/row-1-column-4.png" id="6_yts8c"]
+[ext_resource type="Texture2D" uid="uid://fx0i6ybt58bf" path="res://assets/world_map/split/row-1-column-5.png" id="7_hn8s1"]
 [ext_resource type="Texture2D" uid="uid://v7euea2bgvyb" path="res://assets/characters/npcs/FD_Characters_Skoldrax_hover_BIG_01.png" id="9_20bwc"]
 [ext_resource type="Texture2D" uid="uid://ptu4h847bv57" path="res://assets/characters/npcs/FD_Characters_Skoldrax_idle_BIG_01.png" id="9_sqa4f"]
+[ext_resource type="Texture2D" uid="uid://76jbtatgxb2s" path="res://assets/world_map/split/row-2-column-3.png" id="10_awt2m"]
+[ext_resource type="Texture2D" uid="uid://b6q2560w57swt" path="res://assets/world_map/split/row-2-column-4.png" id="11_87fwo"]
 [ext_resource type="Texture2D" uid="uid://cdwbgokumnpx5" path="res://assets/characters/npcs/FD_Characters_Lillian_hover_BIG_01.png" id="11_rw7ub"]
 [ext_resource type="Texture2D" uid="uid://b2va8yw84tcnh" path="res://assets/characters/npcs/FD_Characters_Lillian_idle_BIG_01.png" id="12_1fdnp"]
+[ext_resource type="Texture2D" uid="uid://bj17wo8m6ok50" path="res://assets/world_map/split/row-2-column-5.png" id="12_5b438"]
+[ext_resource type="Texture2D" uid="uid://ckmnwshkib3q3" path="res://assets/world_map/split/row-3-column-1.png" id="13_0n7h8"]
 [ext_resource type="Texture2D" uid="uid://cqri20lmbxby3" path="res://assets/characters/npcs/FD_Characters_Ulli_hover_BIG_01.png" id="13_eec3g"]
+[ext_resource type="Texture2D" uid="uid://i4fcatnp11vp" path="res://assets/world_map/split/row-3-column-2.png" id="14_0xkd7"]
 [ext_resource type="Texture2D" uid="uid://c64q5chy2qf31" path="res://assets/characters/npcs/FD_Characters_Ulli_idle_BIG_01.png" id="14_hn1gb"]
 [ext_resource type="Texture2D" uid="uid://cvsnwm5vnkgm7" path="res://assets/characters/npcs/FD_Characters_Toby_hover_BIG_01.png" id="15_3lhr6"]
 [ext_resource type="Texture2D" uid="uid://b83uk0ye6qf6o" path="res://assets/characters/npcs/FD_Characters_Toby_idle_BIG_01.png" id="15_hn1gb"]
+[ext_resource type="Texture2D" uid="uid://bc20ga014hbc3" path="res://assets/world_map/split/row-3-column-3.png" id="15_o5wip"]
+[ext_resource type="Texture2D" uid="uid://bkr0ntrr41kyr" path="res://assets/world_map/split/row-3-column-4.png" id="16_efpd5"]
+[ext_resource type="Texture2D" uid="uid://0mi4pmhpl2sc" path="res://assets/world_map/split/row-3-column-5.png" id="17_blnwe"]
 [ext_resource type="Texture2D" uid="uid://cc7arcjbnlygu" path="res://assets/characters/npcs/FD_Characters_Lorx_hover_BIG_01.png" id="17_vged4"]
 [ext_resource type="Texture2D" uid="uid://b7y4g8grsa77p" path="res://assets/characters/npcs/FD_Characters_Lorx_idle_BIG_01.png" id="17_yh2qj"]
+[ext_resource type="Texture2D" uid="uid://corbxydlikh1t" path="res://assets/world_map/split/row-4-column-1.png" id="18_qtcji"]
 [ext_resource type="PackedScene" uid="uid://bbfv1a6s0ooko" path="res://entities/interact_click/interact_click.tscn" id="18_s50uu"]
 [ext_resource type="Texture2D" uid="uid://fr2xmaoxjstv" path="res://assets/characters/npcs/FD_Characters_Necros_hover_BIG_01.png" id="19_dvq2k"]
 [ext_resource type="Script" uid="uid://b04vc5drymud0" path="res://entities/interact_click/interact_page.gd" id="19_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://dx52qgry7y8ob" path="res://assets/world_map/split/row-4-column-2.png" id="19_qqw3q"]
+[ext_resource type="Texture2D" uid="uid://dy2gcw8wmh8gm" path="res://assets/world_map/split/row-4-column-3.png" id="20_35ccc"]
 [ext_resource type="Texture2D" uid="uid://c460ft0fqyc4s" path="res://assets/characters/npcs/FD_Characters_Necros_idle_BIG_01.png" id="20_dy3nw"]
 [ext_resource type="Texture2D" uid="uid://b3m7mvjskh0aa" path="res://assets/characters/npcs/FD_Characters_Bonnie_hover_BIG_01.png" id="20_s50uu"]
 [ext_resource type="Texture2D" uid="uid://cf63c3ccnm3gw" path="res://assets/characters/npcs/FD_Characters_Bonnie_idle_BIG_01.png" id="20_uj5r8"]
 [ext_resource type="Texture2D" uid="uid://cmmxnjf2bbxjn" path="res://assets/characters/npcs/FD_Characters_Father_hover_BIG_01.png" id="21_dy3nw"]
+[ext_resource type="Texture2D" uid="uid://f16novq7m6nn" path="res://assets/world_map/split/row-4-column-4.png" id="21_rp61y"]
 [ext_resource type="Texture2D" uid="uid://4u8x3k4oa0s3" path="res://assets/characters/npcs/FD_Characters_Father_idle_BIG_01.png" id="21_s50uu"]
+[ext_resource type="Texture2D" uid="uid://btytprh32ks2m" path="res://assets/world_map/split/row-4-column-5.png" id="22_st4qy"]
+[ext_resource type="Texture2D" uid="uid://pyp31ahruclr" path="res://assets/world_map/split/row-5-column-1.png" id="23_5v2gb"]
 [ext_resource type="Texture2D" uid="uid://dnatai3ruuuba" path="res://assets/characters/npcs/FD_Characters_Marsha_hover_BIG_01.png" id="23_uj5r8"]
 [ext_resource type="Texture2D" uid="uid://c7rvtjsss0l4a" path="res://assets/characters/npcs/FD_Characters_Victor_hover_BIG_01.png" id="24_63fg0"]
+[ext_resource type="Texture2D" uid="uid://owogwcis56o0" path="res://assets/world_map/split/row-5-column-2.png" id="24_bygxo"]
 [ext_resource type="Texture2D" uid="uid://b1akgkmakqk0k" path="res://assets/characters/npcs/FD_Characters_Victor_idle_BIG_01.png" id="25_h2jn1"]
+[ext_resource type="Texture2D" uid="uid://btvdouw1libt1" path="res://assets/world_map/split/row-5-column-3.png" id="25_wg56s"]
 [ext_resource type="Texture2D" uid="uid://cueliie12cg5i" path="res://assets/characters/npcs/FD_Characters_Baltazar_hover_BIG_01.png" id="26_0fp8q"]
+[ext_resource type="Texture2D" uid="uid://bo0r43yym7yvq" path="res://assets/world_map/split/row-5-column-4.png" id="26_51ilp"]
 [ext_resource type="Texture2D" uid="uid://bvdxiugil3bb5" path="res://assets/characters/npcs/FD_Characters_Baltazar_idle_BIG_01.png" id="27_lh0sg"]
+[ext_resource type="Texture2D" uid="uid://bsjsf34fkk63g" path="res://assets/world_map/split/row-5-column-5.png" id="27_qa73f"]
 [ext_resource type="Texture2D" uid="uid://d27fxjearlxri" path="res://assets/characters/npcs/FD_Characters_Fiona_hover_BIG_01.png" id="28_en4or"]
 [ext_resource type="Texture2D" uid="uid://0ywqbu53reoe" path="res://assets/characters/npcs/FD_Characters_Fiona_idle_BIG_01.png" id="29_l3acv"]
 [ext_resource type="Texture2D" uid="uid://d2p20g1hm0k1j" path="res://assets/characters/princess_statue/FD_Princess_Transform_full_A_01.png" id="30_afs1h"]
@@ -43,11 +67,11 @@
 [ext_resource type="Texture2D" uid="uid://maokop7nu1ih" path="res://assets/world_map/FD_Others_Necros_CampFire_01.png" id="41_va5sf"]
 [ext_resource type="Texture2D" uid="uid://dagup2hai5ura" path="res://assets/world_map/FD_Others_Ulli_Cauldron_01.png" id="42_ofnbn"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_yh2qj"]
-vertices = PackedVector2Array(8160.3984, 2660.2266, 4348.367, 4880.492, 387.67188, 2488.3984, 4383.6875, 610.7969)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(303, 2484, 4385, 566, 8242, 2659, 4348, 4927)])
-agent_radius = 40.0
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qs1cs"]
+vertices = PackedVector2Array(3440.3594, 3607.4922, 3772.2969, 3584.1094, 3920.9766, 3602.4219, 3799.75, 3685.8906, 3645.9922, 3746.8438, 3579.1172, 3766.1406, 3357.6172, 3793.6484, 6558.992, 2901.539, 6668.2813, 2918.2266, 6860.453, 3062.8594, 7074.633, 3284.6875, 6835.9766, 3320.3906, 6232.9688, 3292.3594, 6482.5313, 2962.9063, 2117.1797, 3007.6406, 2031.4922, 2932.7813, 2314.1719, 3032.6719, 5733.3516, 2898.8984, 5895.797, 2835.3203, 6083.883, 2932.5313, 5980.2734, 2987.4297, 5307.633, 4169.7266, 4945.4297, 4016.0625, 5021.961, 3818.1797, 5182.2734, 3782.3438, 5265.75, 3835.25, 5454.5234, 4068.711, 5450.4297, 4179.117, 7206.008, 2418.9063, 7774.078, 2794.4922, 7286.7266, 2752.5703, 6999.9375, 2444.2188, 6666.9375, 2026.7266, 6714.6797, 2012.7109, 6641.3906, 2092.9297, 5297.4063, 1195.9766, 5557.6563, 1346.7109, 5428.547, 1413.0625, 5146.539, 1356.3281, 5053.578, 1251.1328, 3164.2969, 2517.7031, 3275.75, 2602.0703, 3262.1484, 2728.2969, 3080.0234, 2588.6719, 3004.1406, 2490.0313, 3684.3203, 3829.5, 3671.0703, 4014.7969, 3700.9531, 3865.3672, 3753.7578, 3979.25, 3950.4922, 1649.8203, 3990.6797, 1676.8516, 3926.1875, 1801.7813, 3744.9063, 1901.2031, 3559.461, 1919.8984, 3638.961, 1748.7734, 3879.3203, 1657.8672, 7340.672, 3092.0078, 7240.3984, 3060.6406, 5123.1563, 3293.3594, 5425.6094, 3228.0234, 5711.5938, 3248.1406, 5797.3594, 3331.039, 5781.492, 3457.5781, 5697.578, 3491.5313, 5458.8516, 3465.1563, 3618.0625, 1117.7266, 3616.4297, 1115.8828, 3628.6797, 1115.6563, 6769.1875, 1996.7188, 6821.6484, 2120.6484, 3671.5703, 3472.0625, 3432.1875, 3508.2734, 6722.2813, 3462.2578, 6411.8906, 3528.2813, 6172.5234, 3428.3828, 5880.508, 3336.0078, 6289.8984, 2996.6484, 6126.703, 3124.5625, 5791.1563, 3100.1875, 5728.25, 3081.1797, 3614.3125, 2028.3984, 3403.4297, 2152.711, 1859.7734, 2836.4922, 1987.2266, 2912.4766, 1919.2031, 2950.289, 1675.2578, 2892.2813, 6285.9063, 3618.4219, 6088.258, 3537.9219, 5987.8125, 2616.8203, 5992.5234, 2654.9766, 5987.1563, 2653.4219, 5968.1406, 2643.1328, 6003.3906, 2536.2578, 6017.789, 2465.8594, 5957, 2446.5781, 3363.7578, 2658.8906, 4022.1797, 4266.828, 3970.5625, 4397.4688, 3899.4297, 4456.742, 3865.7422, 4355.672, 3876.3516, 4129.711, 3258.1719, 1933.1172, 3235.7969, 1853.0313, 3350.4531, 1861.4688, 6743.9688, 2004.1172, 6766.4297, 2177.9297, 6820.1875, 2360.3438, 6738.9688, 2251.2031, 4475.9766, 3844.5313, 4508.6875, 3873.8906, 4462.578, 3901.5703, 4361.039, 3791.2031, 3612.0469, 3323.2422, 3382.3516, 3408.5938, 3343.4297, 3065.9766, 4518.211, 2711.2734, 4722.508, 2517.039, 4761.203, 2718.2266, 4570.9688, 2839.6094, 4434.1875, 2559.1719, 4665.7734, 2419.9766, 4796.383, 2446.0703, 6015.672, 3600.9063, 6188.75, 3760.7734, 6070.492, 3787.75, 5805.0703, 3725.4375, 5977.5313, 3800.7422, 6807.5313, 2457.5781, 6670.297, 2170.0469, 6582.7813, 2251.2031, 5741.9375, 2594.1719, 5542.3125, 2800.4375, 5578.8516, 2457.1328, 6048.2734, 3844.7578, 5823.117, 3858.3438, 5524.75, 3888.1094, 5775.9375, 3988.2969, 5688.492, 3996.8906, 5517.1094, 3963.5078, 5462.703, 3893.1797, 5030.5938, 3443.1797, 5122.453, 3632.211, 4913.508, 3671.1016, 4873.258, 3488.289, 3756.5938, 1272.3984, 3646.8516, 1202.4297, 3842.3203, 1275.8281, 2340.539, 2110.789, 2211.461, 1977.3672, 2213.1563, 1881.2813, 2410.9219, 1907.8828, 2471.3984, 2225.7188, 4427.25, 925.03125, 4353.2188, 1035.0781, 4285.211, 978.7031, 5162.5703, 1078.3828, 4880.758, 1167.8906, 4936.828, 895.6406, 6310.3203, 1776.4688, 6487.992, 1531.4531, 6518.633, 1766, 6204.0234, 2053.789, 6188.508, 1425.25, 5995.797, 1480.1406, 5961.3203, 1247.9766, 5707.5313, 1381.6016, 5837.8203, 1149.6875, 5127.258, 1570.2578, 5091.211, 1502.2109, 5443.547, 2822.5938, 5304.0234, 2645.961, 5761.492, 2537.2969, 5644.4297, 2257.9531, 3089.3906, 2418.6719, 2620.2734, 2325.9375, 3078.8906, 2814.4297, 3006.2031, 2783.6094, 2910.6406, 2934.1328, 2937.3203, 2830.6797, 2763.4063, 2937.7813, 6455.25, 2115.1719, 2108.0313, 3064.8125, 3534.961, 4133.0938, 3835.3984, 3962.3516, 4914.6094, 1807.6328, 4947.422, 1570.7266, 5166.7734, 1839.8594, 5115.6563, 2010.8438, 4233.547, 2638.6016, 4251.047, 2712.0781, 4091.5469, 2663.7734, 4058.6094, 2535.8281, 5853.25, 2460.1172, 5823.4297, 2497.0938, 5941.4297, 2091.9375, 4443.3125, 747.2031, 4754.3594, 1137.2734, 4655.1563, 1076.2188, 4163.953, 894.64844, 3955.5313, 954.7578, 4124.0313, 1096.7266, 3328.789, 1513.1719, 3557.8906, 1237.6406, 3653.0781, 1483.1016, 3523.961, 1627.8516, 4127.008, 2868.789, 4016.6016, 2832.9688, 4401.6484, 2766.3984, 4288.7188, 2567.0313, 4111.9063, 2458.8984, 4230.5625, 2484.9219, 2952.5234, 3135.8828, 2845.1406, 3141.2578, 2687.7266, 3076.2422, 6108.4766, 2303.9922, 3222.2422, 1340.1875, 3422.3281, 1119.5313, 3474.6094, 1118.5469, 3495.5234, 1208.1875, 3177.3672, 1483.1875, 1919.2031, 3024.7422, 1686.7969, 3155.6797, 1373.3906, 2976.7266, 5567.492, 3571.8438, 5333.1563, 3521.0078, 5223.0938, 3409.7578, 4670.8203, 3578.7031, 4728.789, 3505.0625, 4736.8516, 3693.5703, 4661.7734, 3670.1094, 4601.797, 3624.3516, 4138.547, 3717.039, 4346.242, 4013.0469, 4246.8906, 4036.711, 4165.1875, 3946.8438, 966.0469, 2716.5703, 996.84375, 2624.9531, 1170.4219, 2445.5313, 1562.25, 2660.039, 4038.1328, 3625.4766, 4013.6484, 3876.8125, 3970.2188, 3750.5625, 3482.1875, 3846.1484, 3157.5625, 3910.6719, 6321.367, 2189.4063, 6285.5703, 2305.9297, 4787.7266, 4502.4063, 4607.8984, 4491.7188, 4461.0234, 4422.1484, 4562.1875, 4228.742, 4693.867, 4254.3438, 4867.3438, 4423.742, 5015.3438, 3110.9922, 4813.789, 2870.5078, 3716.8516, 3122.5469, 3622.1875, 3041.1094, 3238.3125, 3052.8281, 3228.7969, 3361.5234, 3193.2969, 3112.5469, 3039.5703, 3146.211, 3130.1328, 3354.8672, 3001.9375, 3263.4531, 2532.6719, 3038.0703, 2672.4766, 2928, 2556.289, 3161.2266, 2474.961, 3227.3125, 2008.4297, 2410.3516, 1937.6797, 2447.0703, 1690.5391, 2045.3125, 1778.4531, 1971.6016, 1991.3828, 2093.2734, 2129.8438, 2237.211, 5245.0703, 4334.203, 5098.047, 4334.203, 4885.711, 4153.961, 4304.5703, 4403.672, 4406.2266, 4599.9297, 4250.3125, 4556.422, 4186.6094, 4323.6563, 3535.7266, 4014.7969, 3257.7734, 3804.4375, 3166.6797, 3769.4063, 2726.75, 3719.7578, 2985.6484, 3612.0625, 3159.75, 3669.5, 2852.7813, 3592.3281, 2649.8594, 3447.961, 2261.6563, 3439.9063, 2523.8672, 3410.3906, 1945.5938, 3236.9375, 2044.6094, 3102.1172, 1673.4375, 2553.7969, 1349.0391, 2241.1016, 1558.0781, 2075.4063, 2570.711, 1822.6563, 2623.3906, 2073.3828, 6609.1406, 1878.1172, 3204.4531, 2235.5234, 2934.5781, 2253.2031, 5399.8984, 1974.2188, 5540.6875, 1883.7109, 5393.2734, 2118.6797, 4753.578, 1637.1172, 4763.7813, 1598.5625, 4380.008, 1383.4766, 4510.8984, 1406.1719, 4609.992, 1472.5391, 4586.328, 1625.6875, 4346.203, 1508.7266, 4260, 1462.8828, 3752.3594, 1576.1797, 3109.8828, 1613.8672, 2875.5, 1638.7813, 2909.3672, 1780.9609, 2703.7266, 1933.4063, 2714.5, 2182.461, 3176.289, 2078.6875, 3652.2969, 2210.7578, 3788.2031, 2437.6875, 3812.7734, 2237.6797, 3911.211, 2335.1563, 4358.9375, 2518.0938, 4883.3984, 2409.8594, 4842.2188, 2450.0469, 4826.633, 2315.1094, 5052.9766, 2186.8281, 4963.539, 2411.9375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), PackedInt32Array(7, 8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 33, 34), PackedInt32Array(35, 36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43, 44), PackedInt32Array(4, 45, 5), PackedInt32Array(46, 47, 48), PackedInt32Array(49, 50, 51, 52, 53, 54, 55), PackedInt32Array(30, 29, 56, 57), PackedInt32Array(58, 59, 60, 61, 62, 63, 64), PackedInt32Array(65, 66, 67), PackedInt32Array(68, 28, 31, 69), PackedInt32Array(70, 1, 0, 71), PackedInt32Array(57, 56, 10, 9), PackedInt32Array(12, 11, 72, 73, 74), PackedInt32Array(61, 75, 62), PackedInt32Array(76, 13, 12, 77), PackedInt32Array(19, 76, 77, 20), PackedInt32Array(17, 20, 78, 79), PackedInt32Array(53, 52, 80, 81), PackedInt32Array(82, 83, 84, 85), PackedInt32Array(74, 73, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(88, 91, 92), PackedInt32Array(93, 88, 92), PackedInt32Array(93, 92, 94), PackedInt32Array(41, 95, 42), PackedInt32Array(96, 97, 98, 99, 100), PackedInt32Array(81, 101, 102, 103, 53), PackedInt32Array(69, 104, 68), PackedInt32Array(105, 69, 31, 106, 107), PackedInt32Array(108, 109, 110, 111), PackedInt32Array(112, 70, 71, 113, 114), PackedInt32Array(115, 116, 117, 118), PackedInt32Array(116, 115, 119, 120, 121), PackedInt32Array(122, 87, 86, 123, 124), PackedInt32Array(125, 122, 124, 126), PackedInt32Array(79, 78, 60, 59), PackedInt32Array(31, 127, 106), PackedInt32Array(128, 105, 107, 129), PackedInt32Array(130, 18, 17, 131, 132), PackedInt32Array(124, 133, 126), PackedInt32Array(125, 126, 134, 135), PackedInt32Array(135, 134, 136, 137, 138), PackedInt32Array(139, 135, 138, 26), PackedInt32Array(140, 141, 24, 23, 142, 143), PackedInt32Array(144, 145, 65, 67, 146), PackedInt32Array(147, 148, 149, 150, 151), PackedInt32Array(152, 153, 154), PackedInt32Array(155, 35, 39, 156, 157), PackedInt32Array(158, 159, 160, 161), PackedInt32Array(162, 159, 158, 163), PackedInt32Array(164, 162, 163, 165), PackedInt32Array(166, 164, 165, 36), PackedInt32Array(36, 165, 37), PackedInt32Array(38, 37, 167, 168), PackedInt32Array(169, 170, 132, 131), PackedInt32Array(171, 130, 132, 172), PackedInt32Array(173, 40, 44, 174), PackedInt32Array(43, 42, 175, 176), PackedInt32Array(176, 175, 177, 178), PackedInt32Array(179, 178, 177), PackedInt32Array(128, 129, 180, 34), PackedInt32Array(181, 14, 16), PackedInt32Array(182, 46, 48, 183, 100, 99), PackedInt32Array(184, 185, 168, 167, 186, 187), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 171, 172, 194), PackedInt32Array(195, 157, 156, 196, 197, 152), PackedInt32Array(198, 195, 152, 154), PackedInt32Array(199, 198, 154, 200, 146, 67), PackedInt32Array(201, 202, 145, 144, 203, 204), PackedInt32Array(205, 206, 190, 189, 207, 118), PackedInt32Array(208, 188, 191, 209, 210), PackedInt32Array(179, 177, 211, 212, 213), PackedInt32Array(214, 93, 94, 194, 161), PackedInt32Array(215, 216, 217, 218, 201, 219), PackedInt32Array(85, 84, 220, 221, 222), PackedInt32Array(63, 223, 64), PackedInt32Array(58, 64, 224, 225), PackedInt32Array(140, 58, 225, 141), PackedInt32Array(226, 227, 143, 142, 228, 229), PackedInt32Array(230, 226, 229, 108, 111), PackedInt32Array(231, 111, 110, 232, 233, 234), PackedInt32Array(222, 235, 236, 237, 238, 85), PackedInt32Array(239, 231, 234, 240, 241, 2), PackedInt32Array(2, 241, 3), PackedInt32Array(6, 5, 242, 243), PackedInt32Array(244, 245, 214, 161), PackedInt32Array(246, 247, 248, 249, 250, 251), PackedInt32Array(59, 58, 252), PackedInt32Array(253, 59, 252, 118), PackedInt32Array(117, 253, 118), PackedInt32Array(207, 115, 118), PackedInt32Array(206, 205, 254, 255), PackedInt32Array(255, 254, 112, 114), PackedInt32Array(256, 114, 113, 257, 258), PackedInt32Array(259, 258, 257, 260, 261), PackedInt32Array(259, 261, 212, 211), PackedInt32Array(262, 263, 179, 213, 264), PackedInt32Array(16, 262, 264, 265), PackedInt32Array(266, 267, 268, 269, 270, 271), PackedInt32Array(22, 21, 272, 273, 274), PackedInt32Array(25, 139, 26), PackedInt32Array(274, 273, 251, 250), PackedInt32Array(275, 248, 247, 276, 277, 97), PackedInt32Array(278, 275, 97, 96), PackedInt32Array(279, 46, 182), PackedInt32Array(279, 182, 243, 242), PackedInt32Array(280, 6, 243), PackedInt32Array(281, 280, 243, 282), PackedInt32Array(283, 284, 281, 282, 285), PackedInt32Array(286, 285, 282, 287, 288), PackedInt32Array(181, 16, 265, 288, 287, 289, 290), PackedInt32Array(220, 290, 289, 221), PackedInt32Array(291, 238, 237, 292, 293), PackedInt32Array(267, 291, 293, 268), PackedInt32Array(271, 270, 148, 147), PackedInt32Array(174, 151, 150, 294, 295), PackedInt32Array(161, 160, 296, 32, 34, 180), PackedInt32Array(161, 180, 244), PackedInt32Array(194, 94, 192), PackedInt32Array(297, 173, 174, 298), PackedInt32Array(299, 300, 194), PackedInt32Array(187, 299, 194, 301), PackedInt32Array(186, 299, 187), PackedInt32Array(185, 184, 302, 303), PackedInt32Array(304, 305, 306, 303, 302, 307, 308, 309), PackedInt32Array(309, 308, 50, 49), PackedInt32Array(310, 55, 54, 204), PackedInt32Array(203, 310, 204), PackedInt32Array(218, 202, 201), PackedInt32Array(219, 201, 311, 312), PackedInt32Array(294, 312, 311, 313, 314), PackedInt32Array(294, 314, 295), PackedInt32Array(174, 295, 315), PackedInt32Array(174, 315, 298), PackedInt32Array(297, 298, 316, 81), PackedInt32Array(81, 316, 101), PackedInt32Array(81, 80, 317), PackedInt32Array(318, 81, 317), PackedInt32Array(318, 317, 319, 320, 191), PackedInt32Array(191, 320, 209), PackedInt32Array(208, 210, 321, 119), PackedInt32Array(119, 321, 120), PackedInt32Array(322, 323, 121, 120, 324, 325), PackedInt32Array(326, 322, 325, 301), PackedInt32Array(301, 325, 187), PackedInt32Array(301, 194, 172)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1676, 2016, 1544, 2046, 1327, 2218, 1147, 2424, 969, 2608, 928, 2730, 1357, 3004, 1674, 3185, 1932, 3266, 2245, 3467, 2712, 3748, 3143, 3939, 3518, 4160, 3839, 4376, 3884, 4511, 3974, 4436, 4238, 4586, 4410, 4634, 4615, 4524, 4800, 4535, 4885, 4451, 5104, 4366, 5267, 4366, 5329, 4203, 5481, 4213, 5486, 4078, 5533, 3999, 5687, 4029, 5799, 4018, 5848, 3883, 5974, 3836, 6064, 3892, 6094, 3815, 6208, 3789, 6309, 3641, 6425, 3558, 6740, 3491, 6853, 3350, 7087, 3315, 7359, 3118, 7831, 2794, 7226, 2394, 6778, 1961, 6686, 1988, 6637, 1862, 6549, 1753, 6517, 1508, 6204, 1397, 5981, 1223, 5839, 1110, 5556, 1309, 5316, 1170, 5183, 1054, 4952, 867, 4440, 713, 4152, 865, 3944, 925, 3621, 1084, 3408, 1088, 3194, 1324, 3151, 1461, 2860, 1611, 2555, 1795, 2405, 1875, 2182, 1845, 2180, 1958, 1992, 2057, 1775, 1933)])
+agent_radius = 31.8
 
 [sub_resource type="GDScript" id="GDScript_q42nm"]
 script/source = "extends InteractPageSource
@@ -376,7 +400,7 @@ func _item_dropped(item_id):
         a.remove_item()
         await a.text([
             \"Little_Lorx little_lorx.png Wow! Look at how sturdy that travel bag is! Now I can finally go on an adventure!\",
-            \"Little_Lorx little_lorx.png Wow! Here, take this bottle of mead. It’s fine stuff. And all yours!\",
+            \"Little_Lorx little_lorx.png Here, take this bottle of mead. It’s fine stuff. And all yours!\",
         ])
         a.play_sfx(\"solved\")
         await a.text([
@@ -712,7 +736,7 @@ func _item_dropped(item_id):
     else:
         a.play_sfx(\"unsolved\")
         await a.text([
-            \"Baltazar baltazar.png Nope. Not for me, thanks.\"
+            \"Baltazar baltazar.png Are you insulting me, stranger?!\"
         ])
                 
 "
@@ -731,14 +755,14 @@ script/source = "extends InteractPageSource
 
 func _interact():
     await a.text([
-        \"Baltazar baltazar.png This is the finest skull I’ve ever seen. Thank you, Shane!\",
+        \"Baltazar baltazar.png No one dares to oppose me now. Thanks!\",
     ])
 
 
 func _item_dropped(item_id):
     a.play_sfx(\"unsolved\")
     await a.text([
-        \"Baltazar baltazar.png Nope. Not for me, thanks.\"
+        \"Baltazar baltazar.png Are you insulting me, stranger?!\"
     ])
         
 "
@@ -1015,13 +1039,175 @@ offset_bottom = 4871.0
 border_width = 6.0
 script = ExtResource("3_omhea")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=534642288]
-texture = ExtResource("4_sqa4f")
-centered = false
+[node name="BG" type="GridContainer" parent="." unique_id=1711884104]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_behavior_recursive = 1
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 5
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="BG" unique_id=1299470559]
+layout_mode = 2
+texture = ExtResource("3_dhc3m")
+
+[node name="TextureRect2" type="TextureRect" parent="BG" unique_id=1071034180]
+layout_mode = 2
+texture = ExtResource("4_qs1cs")
+
+[node name="TextureRect3" type="TextureRect" parent="BG" unique_id=1345024114]
+layout_mode = 2
+texture = ExtResource("5_qaf2e")
+
+[node name="TextureRect4" type="TextureRect" parent="BG" unique_id=1268667859]
+layout_mode = 2
+texture = ExtResource("6_yts8c")
+
+[node name="TextureRect5" type="TextureRect" parent="BG" unique_id=1571839530]
+layout_mode = 2
+texture = ExtResource("7_hn8s1")
+
+[node name="TextureRect6" type="TextureRect" parent="BG" unique_id=193381600]
+layout_mode = 2
+texture = ExtResource("5_h4dku")
+
+[node name="TextureRect7" type="TextureRect" parent="BG" unique_id=142837901]
+layout_mode = 2
+texture = ExtResource("6_755f4")
+metadata/_edit_group_ = true
+
+[node name="TextureRect8" type="TextureRect" parent="BG" unique_id=2058023896]
+layout_mode = 2
+texture = ExtResource("10_awt2m")
+
+[node name="TextureRect9" type="TextureRect" parent="BG" unique_id=1196673293]
+layout_mode = 2
+texture = ExtResource("11_87fwo")
+
+[node name="TextureRect10" type="TextureRect" parent="BG" unique_id=226226131]
+layout_mode = 2
+texture = ExtResource("12_5b438")
+
+[node name="TextureRect11" type="TextureRect" parent="BG" unique_id=2088680689]
+layout_mode = 2
+texture = ExtResource("13_0n7h8")
+
+[node name="TextureRect12" type="TextureRect" parent="BG" unique_id=1724129522]
+layout_mode = 2
+texture = ExtResource("14_0xkd7")
+
+[node name="TextureRect13" type="TextureRect" parent="BG" unique_id=1275017648]
+layout_mode = 2
+texture = ExtResource("15_o5wip")
+
+[node name="TextureRect14" type="TextureRect" parent="BG" unique_id=521604719]
+layout_mode = 2
+texture = ExtResource("16_efpd5")
+
+[node name="TextureRect15" type="TextureRect" parent="BG" unique_id=400882679]
+layout_mode = 2
+texture = ExtResource("17_blnwe")
+
+[node name="TextureRect16" type="TextureRect" parent="BG" unique_id=1522900390]
+layout_mode = 2
+texture = ExtResource("18_qtcji")
+
+[node name="TextureRect17" type="TextureRect" parent="BG" unique_id=422917772]
+layout_mode = 2
+texture = ExtResource("19_qqw3q")
+
+[node name="TextureRect18" type="TextureRect" parent="BG" unique_id=1312041392]
+layout_mode = 2
+texture = ExtResource("20_35ccc")
+
+[node name="TextureRect19" type="TextureRect" parent="BG" unique_id=366623579]
+layout_mode = 2
+texture = ExtResource("21_rp61y")
+
+[node name="TextureRect20" type="TextureRect" parent="BG" unique_id=217699795]
+layout_mode = 2
+texture = ExtResource("22_st4qy")
+
+[node name="TextureRect21" type="TextureRect" parent="BG" unique_id=2055957423]
+layout_mode = 2
+texture = ExtResource("23_5v2gb")
+
+[node name="TextureRect22" type="TextureRect" parent="BG" unique_id=211535620]
+layout_mode = 2
+texture = ExtResource("24_bygxo")
+
+[node name="TextureRect23" type="TextureRect" parent="BG" unique_id=327659568]
+layout_mode = 2
+texture = ExtResource("25_wg56s")
+
+[node name="TextureRect24" type="TextureRect" parent="BG" unique_id=1089328975]
+layout_mode = 2
+texture = ExtResource("26_51ilp")
+
+[node name="TextureRect25" type="TextureRect" parent="BG" unique_id=1921736205]
+layout_mode = 2
+texture = ExtResource("27_qa73f")
 
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." unique_id=1381908389]
 visible = false
-navigation_polygon = SubResource("NavigationPolygon_yh2qj")
+navigation_polygon = SubResource("NavigationPolygon_qs1cs")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1264258065]
+polygon = PackedVector2Array(2946, 2948, 3095, 2842, 3278, 2756, 3480, 2618, 3373, 2627, 3294, 2576, 3187, 2495, 3128, 2417, 3226, 2261, 3399, 2189, 3773, 2466, 4032, 2560, 4058, 2661, 3992, 2810, 3613, 3010, 3344, 3034, 3224, 3019, 3175, 3084, 3038, 3114, 2979, 3107)
+
+[node name="Polygon2D2" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1346763942]
+polygon = PackedVector2Array(3647, 3325, 3741, 3145, 4137, 2900, 4563, 2872, 4992, 3134, 5086, 3293, 5010, 3416, 4867, 3457, 4712, 3475, 4649, 3555, 4584, 3598, 4356, 3756, 4155, 3689, 4053, 3596, 3926, 3571, 3788, 3554, 3699, 3455)
+
+[node name="Polygon2D3" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1182810178]
+polygon = PackedVector2Array(4757, 2528, 4808, 2479, 4854, 2483, 4896, 2442, 4973, 2444, 5395, 2156, 5606, 2273, 5552, 2437, 5258, 2639, 5431, 2858, 5538, 2834, 5701, 2918, 5697, 3061, 5427, 3192, 4840, 2849, 4792, 2710)
+
+[node name="Polygon2D4" type="Polygon2D" parent="NavigationRegion2D2" unique_id=631268045]
+polygon = PackedVector2Array(4278, 2688, 4400, 2732, 4474, 2697, 4416, 2592, 4305, 2598, 4268, 2646)
+
+[node name="Polygon2D5" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1745049885]
+polygon = PackedVector2Array(4358, 2485, 4652, 2391, 4810, 2288, 5027, 2165, 5079, 2019, 4892, 1830, 4739, 1668, 4578, 1657, 4346, 1544, 4014, 1701, 3950, 1825, 3764, 1927, 3649, 2039, 3679, 2183, 3828, 2208, 3931, 2310, 4124, 2429, 4238, 2454)
+
+[node name="Polygon2D6" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1843929034]
+polygon = PackedVector2Array(5399, 1937, 5539, 1847, 5947, 2059, 6181, 2025, 6273, 1785, 5979, 1508, 5704, 1414, 5438, 1444, 5162, 1588, 5196, 1820)
+
+[node name="Polygon2D7" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1119191692]
+polygon = PackedVector2Array(5777, 2590, 5918, 2811, 6096, 2903, 6292, 2964, 6469, 2933, 6550, 2868, 6681, 2888, 6871, 3031, 7213, 3029, 7253, 2763, 6987, 2477, 6771, 2492, 6787, 2369, 6723, 2283, 6569, 2283, 6449, 2155, 6348, 2211, 6309, 2338, 6127, 2336, 6048, 2477, 6020, 2618, 6030, 2699, 5975, 2683, 5914, 2650, 5938, 2633, 5969, 2539, 5939, 2481, 5870, 2490, 5845, 2521, 5788, 2558)
+
+[node name="Polygon2D8" type="Polygon2D" parent="NavigationRegion2D2" unique_id=786305365]
+polygon = PackedVector2Array(5811, 3300, 5928, 3307, 5969, 3330, 5902, 3360, 5801, 3484, 5712, 3520, 5563, 3612, 5452, 3503, 5326, 3559, 5233, 3465, 5157, 3633, 5208, 3761, 5279, 3806, 5466, 3861, 5515, 3857, 5789, 3698, 5997, 3575, 6065, 3516, 6145, 3412, 6197, 3295, 6102, 3145, 5976, 3027, 5815, 3123, 5751, 3242)
+
+[node name="Polygon2D9" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1726733865]
+polygon = PackedVector2Array(4734, 3726, 4899, 3705, 4986, 3823, 4916, 4004, 4861, 4131, 4689, 4221, 4545, 4193, 4443, 4388, 4316, 4373, 4201, 4295, 4039, 4239, 3905, 4113, 3859, 3925, 3772, 3943, 3689, 3764, 3800, 3720, 3945, 3775, 3988, 3900, 4146, 3973, 4236, 4072, 4362, 4042, 4482, 3927, 4562, 3879, 4523, 3844, 4670, 3706)
+
+[node name="Polygon2D10" type="Polygon2D" parent="NavigationRegion2D2" unique_id=115181273]
+polygon = PackedVector2Array(3559, 3983, 3519, 3857, 3582, 3805, 3670, 3858, 3645, 3983)
+
+[node name="Polygon2D11" type="Polygon2D" parent="NavigationRegion2D2" unique_id=301266364]
+polygon = PackedVector2Array(3336, 3764, 3262, 3772, 3197, 3747, 3190, 3646, 2993, 3581, 2865, 3562, 2664, 3419, 2550, 3385, 2511, 3239, 2575, 3187, 2691, 3112, 2829, 3169, 2983, 3289, 3119, 3386, 3223, 3393, 3360, 3435, 3401, 3517, 3408, 3602)
+
+[node name="Polygon2D12" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1456887188]
+polygon = PackedVector2Array(1692, 2854, 1864, 2802, 2020, 2895, 2320, 3001, 2522, 3006, 2663, 2895, 2756, 2905, 2920, 2804, 2980, 2763, 3044, 2594, 2984, 2516, 2605, 2354, 2452, 2251, 2337, 2150, 2152, 2261, 2030, 2435, 1951, 2476, 1691, 2581, 1601, 2667)
+
+[node name="Polygon2D13" type="Polygon2D" parent="NavigationRegion2D2" unique_id=430749176]
+polygon = PackedVector2Array(2929, 2218, 3152, 2057, 3224, 1929, 3193, 1818, 3356, 1830, 3542, 1882, 3601, 1755, 3504, 1653, 3327, 1549, 3127, 1641, 2929, 1806, 2728, 1955, 2662, 2070, 2733, 2155)
+
+[node name="Polygon2D14" type="Polygon2D" parent="NavigationRegion2D2" unique_id=849889577]
+polygon = PackedVector2Array(3559, 1203, 3607, 1184, 3590, 1134, 3575, 1117, 3509, 1126, 3523, 1186)
+
+[node name="Polygon2D15" type="Polygon2D" parent="NavigationRegion2D2" unique_id=161783751]
+polygon = PackedVector2Array(3940, 1619, 4243, 1436, 4373, 1350, 4523, 1376, 4629, 1447, 4773, 1565, 4938, 1540, 5066, 1479, 5110, 1363, 5034, 1277, 4870, 1198, 4742, 1167, 4638, 1103, 4436, 969, 4360, 1082, 4284, 1019, 4142, 1123, 3851, 1308, 3776, 1305, 3692, 1476, 3772, 1551, 3887, 1625)
+
+[node name="Polygon2D16" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1446714791]
+polygon = PackedVector2Array(1996, 2944, 2083, 3020, 2079, 3045, 2045, 3065, 1951, 3007, 1951, 2969)
+
+[node name="Polygon2D17" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1750036622]
+polygon = PackedVector2Array(6678, 2100, 6731, 2042, 6781, 2117, 6754, 2145, 6693, 2140)
+
+[node name="Polygon2D18" type="Polygon2D" parent="NavigationRegion2D2" unique_id=250982364]
+polygon = PackedVector2Array(6678, 2100, 6731, 2042, 6781, 2117, 6754, 2145, 6693, 2140)
 
 [node name="InteractClickGroup" type="Node2D" parent="." unique_id=337414484]
 y_sort_enabled = true

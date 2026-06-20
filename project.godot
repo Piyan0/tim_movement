@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="tim"
-run/main_scene="uid://mipiwewsfv4q"
+config/name="The Petrified Princess"
+run/main_scene="uid://egmm5itqnfih"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="uid://bx8mr4doopt34"
 run/main_scene.release="uid://egmm5itqnfih"

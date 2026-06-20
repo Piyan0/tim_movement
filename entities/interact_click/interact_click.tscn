@@ -43,6 +43,7 @@ grow_vertical = 2
 text = "label"
 label_settings = SubResource("LabelSettings_n2amf")
 horizontal_alignment = 1
+uppercase = true
 
 [node name="NinePatchRect" type="ReferenceRect" parent="." unique_id=809710394]
 offset_left = -12.0
