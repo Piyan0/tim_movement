@@ -1075,7 +1075,6 @@ texture = ExtResource("5_h4dku")
 [node name="TextureRect7" type="TextureRect" parent="BG" unique_id=142837901]
 layout_mode = 2
 texture = ExtResource("6_755f4")
-metadata/_edit_group_ = true
 
 [node name="TextureRect8" type="TextureRect" parent="BG" unique_id=2058023896]
 layout_mode = 2
