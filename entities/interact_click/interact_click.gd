@@ -18,11 +18,6 @@ var _active_page: InteractPage
 var _input: InputHandler
 
 func _ready() -> void:
-    # print(name, interactable)
-    if !interactable:
-        lb_hover.text = ""
-        click_area.queue_free()
-        return
 
     if interact_pages.is_empty():
         return
@@ -44,8 +39,16 @@ func _ready() -> void:
         
         return
 
-    lb_hover.text = ""
     add_to_group("interact_click")
+
+    # print(name, interactable)
+    if !interactable:
+        lb_hover.text = ""
+        if !Engine.is_editor_hint():
+            click_area.queue_free()
+        return
+
+    lb_hover.text = ""
    
     # since this is smaller project, I just assign the logic here for player to reach the interact point.
     pre_interact = func(pos):
@@ -110,6 +113,7 @@ func get_click_rect():
 
 
 func refresh_page(tag_list):
+    print(name)
     var interact_pages = interact_pages.duplicate()
     interact_pages.reverse()
 
@@ -151,5 +155,5 @@ func _update_page(page: InteractPage):
 
 
 func _can_interact():
-    var conditions = [!_is_interact, !Bootstrap.state.is_interact]
+    var conditions = [!_is_interact, !Bootstrap.state.is_interact, self.interactable]
     return conditions.all(func(cond): return cond == true) 

@@ -178,15 +178,6 @@ horizontal_alignment = 1
 autowrap_mode = 2
 visible_characters_behavior = 1
 
-[node name="ReferenceRect" type="ReferenceRect" parent="PanelContainer/BottomContainer/MarginContainer/MarginContainer/VBoxContainer2/Label" unique_id=1194247209]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-border_width = 3.0
-
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/BottomContainer" unique_id=2038056020]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g8xwt")
@@ -208,7 +199,6 @@ size_flags_vertical = 3
 title = "WORLD MAP"
 
 [node name="HoverableButton" parent="." unique_id=887348440 instance=ExtResource("6_g8xwt")]
-visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -221,9 +211,7 @@ grow_horizontal = 0
 title = "MENU"
 
 [node name="PauseMenu" parent="." unique_id=319822962 instance_placeholder="res://ui/pause_menu/pause_menu.tscn"]
-visible = false
 layout_mode = 1
 
 [node name="MiniMap" parent="." unique_id=1066272785 instance_placeholder="res://ui/mini_map/mini_map.tscn"]
-visible = false
 layout_mode = 1
