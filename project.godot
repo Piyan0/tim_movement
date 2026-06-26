@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="The Petrified Princess"
-run/main_scene="uid://egmm5itqnfih"
+run/main_scene="uid://mipiwewsfv4q"
 config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/show_image=false
 config/icon="uid://bx8mr4doopt34"
 run/main_scene.release="uid://egmm5itqnfih"
 

@@ -6,7 +6,11 @@ func text(arr = ["Shane shane.png owh is that right"]):
 
     for el in arr:
         var split = Array(el.split(" "))
-        var name = split[0].replace("_", " ")
+        var name: String = split[0].replace("_", " ")
+        # this is bad...
+        if name.to_lower() == "info":
+            name = ""
+
         var portrait_id = split[1]
         var content = split.slice(2)
         content = " ".join(content)

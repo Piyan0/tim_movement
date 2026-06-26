@@ -1,6 +1,7 @@
 @tool
 extends Node2D
 
+@export var interactable = true
 @export var interact_pages: Array[InteractPage]
 @export var _interact_distance = 120
 @export_category("Node References")
@@ -17,8 +18,15 @@ var _active_page: InteractPage
 var _input: InputHandler
 
 func _ready() -> void:
+    # print(name, interactable)
+    if !interactable:
+        lb_hover.text = ""
+        click_area.queue_free()
+        return
+
     if interact_pages.is_empty():
         return
+
     if Engine.is_editor_hint():
         for page: InteractPage in interact_pages:
             if page.use_for_preview:
@@ -36,8 +44,8 @@ func _ready() -> void:
         
         return
 
-    add_to_group("interact_click")
     lb_hover.text = ""
+    add_to_group("interact_click")
    
     # since this is smaller project, I just assign the logic here for player to reach the interact point.
     pre_interact = func(pos):

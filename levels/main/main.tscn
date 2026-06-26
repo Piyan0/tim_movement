@@ -878,7 +878,7 @@ source = SubResource("GDScript_gb6n7")
 use_for_preview = true
 idle_graphic = SubResource("CompressedTexture2D_l3acv")
 hover_graphic = SubResource("CompressedTexture2D_en4or")
-offset = Vector2(-110.1, -258.35)
+offset = Vector2(-110, -258)
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
 [sub_resource type="GDScript" id="GDScript_wjmpq"]
@@ -911,7 +911,7 @@ script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_wjmpq")
 idle_graphic = SubResource("CompressedTexture2D_l3acv")
 hover_graphic = SubResource("CompressedTexture2D_en4or")
-offset = Vector2(-110.1, -258.35)
+offset = Vector2(-110, -258)
 tags = Array[String](["second_crystal"])
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
@@ -962,7 +962,7 @@ script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_wui37")
 idle_graphic = SubResource("CompressedTexture2D_l3acv")
 hover_graphic = SubResource("CompressedTexture2D_en4or")
-offset = Vector2(-110.1, -258.35)
+offset = Vector2(-110, -258)
 tags = Array[String](["final_crystal"])
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
@@ -984,7 +984,7 @@ script = ExtResource("19_dy3nw")
 source = SubResource("GDScript_7gyvt")
 idle_graphic = SubResource("CompressedTexture2D_l3acv")
 hover_graphic = SubResource("CompressedTexture2D_en4or")
-offset = Vector2(-110.1, -258.35)
+offset = Vector2(-110, -258)
 tags = Array[String](["game_end"])
 metadata/_custom_type_script = "uid://b04vc5drymud0"
 
@@ -1038,6 +1038,7 @@ offset_right = 9053.0
 offset_bottom = 4871.0
 border_width = 6.0
 script = ExtResource("3_omhea")
+metadata/_edit_lock_ = true
 
 [node name="BG" type="GridContainer" parent="." unique_id=1711884104]
 offset_right = 40.0
@@ -1152,7 +1153,6 @@ texture = ExtResource("27_qa73f")
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_qs1cs")
 metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D2" unique_id=1264258065]
 polygon = PackedVector2Array(2946, 2948, 3095, 2842, 3278, 2756, 3480, 2618, 3373, 2627, 3294, 2576, 3187, 2495, 3128, 2417, 3226, 2261, 3399, 2189, 3773, 2466, 4032, 2560, 4058, 2661, 3992, 2810, 3613, 3010, 3344, 3034, 3224, 3019, 3175, 3084, 3038, 3114, 2979, 3107)
@@ -1304,12 +1304,17 @@ offset_left = -2.6801758
 offset_top = -164.37036
 offset_right = -2.6801758
 offset_bottom = -164.37036
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="InteractClickGroup/Toby/HintContainer" index="0" unique_id=18356781]
+metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" parent="InteractClickGroup/Toby" index="2" unique_id=809710394]
 offset_left = -40.5708
 offset_top = -140.5625
 offset_right = 39.9292
 offset_bottom = 2.4375
+metadata/_edit_use_anchors_ = true
 
 [node name="LittleLorx" parent="InteractClickGroup" unique_id=395805951 instance=ExtResource("18_s50uu")]
 position = Vector2(1784, 2068)
@@ -1324,6 +1329,10 @@ offset_left = -4.0
 offset_top = -134.0
 offset_right = -4.0
 offset_bottom = -134.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" parent="InteractClickGroup/LittleLorx/HintContainer" index="0" unique_id=18356781]
+metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" parent="InteractClickGroup/LittleLorx" index="2" unique_id=809710394]
 offset_left = -43.0
@@ -1458,7 +1467,7 @@ _interact_distance = 200
 
 [node name="Sprite2D" parent="InteractClickGroup/PrincessStatue" index="0" unique_id=542249545]
 texture = SubResource("CompressedTexture2D_l3acv")
-offset = Vector2(-110.1, -258.35)
+offset = Vector2(-110, -258)
 
 [node name="HintContainer" parent="InteractClickGroup/PrincessStatue" index="1" unique_id=134591522]
 offset_left = 3.0
@@ -1475,11 +1484,12 @@ offset_bottom = 38.0
 [node name="PrincessTransformation" type="AnimatedSprite2D" parent="." unique_id=1177527596]
 visible = false
 z_index = 1
-position = Vector2(4347, 2588)
+position = Vector2(4348, 2737)
 sprite_frames = SubResource("SpriteFrames_f30dw")
 animation = &"main"
 frame = 10
 frame_progress = 1.0
+offset = Vector2(-0.3, -148.35)
 
 [node name="FdOthersLillianBooks01" type="Sprite2D" parent="." unique_id=779184255]
 position = Vector2(2014, 3002)
@@ -1492,6 +1502,10 @@ texture = ExtResource("41_va5sf")
 [node name="FdOthersUlliCauldron01" type="Sprite2D" parent="." unique_id=179233948]
 position = Vector2(3562, 1157)
 texture = ExtResource("42_ofnbn")
+
+[node name="InteractClick" parent="." unique_id=22481349 instance=ExtResource("18_s50uu")]
+position = Vector2(4574, 2561)
+interactable = false
 
 [editable path="InteractClickGroup/Bonnie"]
 [editable path="InteractClickGroup/Skoldrax"]

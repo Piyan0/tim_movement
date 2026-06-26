@@ -7,6 +7,7 @@ class_name HUDDialogue
 @export var _deco: Array[Label]
 @export var _lb_content: Label
 @export var _click_target: Control
+@export var _name_container: Control
 
 
 var _base_dlg: DialogueBase
@@ -16,7 +17,16 @@ func _ready() -> void:
     _base_dlg = DialogueBase.new(owner)
     _base_dlg.speed = _dlg_speed
     _base_dlg.on_progress = func(dialogue: DialogueWithPortrait, vis_chars, just_changed):
+
         if just_changed:
+            print(">>", dialogue.speaker)
+            if dialogue.speaker.is_empty():
+                print("empty")
+                _effect_dialogue_without_name()
+            else:
+                print("gas")
+                _effect_dialogue_with_name()
+
             if dialogue.portrait != null:
                 _tr_portrait.show()
                 _tr_portrait.texture = dialogue.portrait
@@ -53,6 +63,18 @@ func reset_content():
     _tr_portrait.hide()
     _lb_content.text = ""
     _lb_name.text = ""
+
+
+func _effect_dialogue_without_name():
+    _name_container.hide()
+    _lb_content.size_flags_vertical = Control.SIZE_SHRINK_CENTER | Control.SIZE_EXPAND
+    _lb_content.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+
+
+func _effect_dialogue_with_name():
+    _name_container.show()
+    _lb_content.size_flags_vertical = Control.SIZE_SHRINK_BEGIN | Control.SIZE_EXPAND
+    _lb_content.vertical_alignment = VERTICAL_ALIGNMENT_TOP
 
 
 class DialogueWithPortrait:
